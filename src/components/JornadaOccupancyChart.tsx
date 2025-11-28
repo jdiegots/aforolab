@@ -31,9 +31,12 @@ export const JornadaOccupancyChart: React.FC<JornadaOccupancyChartProps> = ({
             ? data.primera
             : data.segunda;
 
-    const width = typeof window !== 'undefined' ? Math.min(window.innerWidth - 100, 1000) : 1000;
+    const isClient = typeof window !== 'undefined';
+    const viewportWidth = isClient ? window.innerWidth : 1000;
+    const isNarrow = viewportWidth < 640;
+    const width = isClient ? Math.min(viewportWidth - 60, 1000) : 1000;
     const height = 300;
-    const padding = { top: 20, right: 20, bottom: 40, left: 60 };
+    const padding = { top: 20, right: 20, bottom: isNarrow ? 60 : 40, left: 60 };
     const chartWidth = width - padding.left - padding.right;
     const chartHeight = height - padding.top - padding.bottom;
 
@@ -57,6 +60,9 @@ export const JornadaOccupancyChart: React.FC<JornadaOccupancyChartProps> = ({
             return `${i === 0 ? 'M' : 'L'} ${x} ${y}`;
         }).join(' ');
     };
+
+    const labelStep = Math.max(1, Math.ceil(displayData.length / (isNarrow ? 6 : 10)));
+    const xLabelY = chartHeight + (isNarrow ? 30 : 20);
 
     return (
         <div className="w-full bg-transparent p-2">
@@ -87,12 +93,13 @@ export const JornadaOccupancyChart: React.FC<JornadaOccupancyChartProps> = ({
                             </g>
                         ))}
 
-                        {displayData.filter((_, i) => i % 2 === 0).map(d => (
+                        {displayData.filter((_, i) => i % labelStep === 0).map(d => (
                             <text
                                 key={`x-${d.jornada}-${d.division}`}
                                 x={xScale(d.jornada)}
-                                y={chartHeight + 20}
-                                textAnchor="middle"
+                                y={xLabelY}
+                                textAnchor={isNarrow ? "end" : "middle"}
+                                transform={isNarrow ? `rotate(-35 ${xScale(d.jornada)} ${xLabelY})` : undefined}
                                 className="text-xs fill-white/20"
                             >
                                 J{d.jornada}
