@@ -1,0 +1,1698 @@
+{
+  "generated_at": "2025-11-27T16:30:55.327Z",
+  "totals": {
+    "stadiums_count": 43,
+    "matches_count": 295
+  },
+  "all_stadiums": [
+    {
+      "stadium_name": "Estadio Santiago Bernabéu",
+      "team_primary": "Real Madrid",
+      "capacity": 83186,
+      "att_avg": 73782,
+      "occ_avg_pct": 88.7,
+      "matches": 6,
+      "municipality": "Madrid",
+      "province": "Madrid",
+      "ccaa": "Comunidad de Madrid",
+      "pop_muni": 3416771,
+      "pop_prov": 7056184,
+      "pop_ccaa": 7056184
+    },
+    {
+      "stadium_name": "Riyadh Air Metropolitano",
+      "team_primary": "Atlético de Madrid",
+      "capacity": 70692,
+      "att_avg": 62153,
+      "occ_avg_pct": 87.92,
+      "matches": 7,
+      "municipality": "Madrid",
+      "province": "Madrid",
+      "ccaa": "Comunidad de Madrid",
+      "pop_muni": 3416771,
+      "pop_prov": 7056184,
+      "pop_ccaa": 7056184
+    },
+    {
+      "stadium_name": "Estadio Olímpico de la Cartuja",
+      "team_primary": "Real Betis",
+      "capacity": 71374,
+      "att_avg": 58032,
+      "occ_avg_pct": 81.31,
+      "matches": 7,
+      "municipality": "Sevilla",
+      "province": "Sevilla",
+      "ccaa": "Andalucía",
+      "pop_muni": 687488,
+      "pop_prov": 1968624,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "matches": 7,
+      "municipality": "Bilbao",
+      "province": "Vizcaya",
+      "ccaa": "País Vasco",
+      "pop_muni": 348089,
+      "pop_prov": 1159368,
+      "pop_ccaa": 2227684
+    },
+    {
+      "stadium_name": "Estadio Olímpico Lluís Companys",
+      "team_primary": "FC Barcelona",
+      "capacity": 49472,
+      "att_avg": 45882,
+      "occ_avg_pct": 92.74,
+      "matches": 3,
+      "municipality": "Barcelona",
+      "province": "Barcelona",
+      "ccaa": "Catalunya",
+      "pop_muni": 1702547,
+      "pop_prov": 5877672,
+      "pop_ccaa": 8067989
+    },
+    {
+      "stadium_name": "Spotify Camp Nou",
+      "team_primary": "FC Barcelona",
+      "capacity": 99354,
+      "att_avg": 45157,
+      "occ_avg_pct": 45.45,
+      "matches": 1,
+      "municipality": "Barcelona",
+      "province": "Barcelona",
+      "ccaa": "Catalunya",
+      "pop_muni": 1702547,
+      "pop_prov": 5877672,
+      "pop_ccaa": 8067989
+    },
+    {
+      "stadium_name": "Camp de Mestalla",
+      "team_primary": "Valencia CF",
+      "capacity": 49430,
+      "att_avg": 44976,
+      "occ_avg_pct": 90.99,
+      "matches": 7,
+      "municipality": "Valencia",
+      "province": "Valencia",
+      "ccaa": "Comunitat Valenciana",
+      "pop_muni": 825948,
+      "pop_prov": 2710808,
+      "pop_ccaa": 5319285
+    },
+    {
+      "stadium_name": "Ramón Sánchez-Pizjuán",
+      "team_primary": "Sevilla FC",
+      "capacity": 43864,
+      "att_avg": 37565,
+      "occ_avg_pct": 85.64,
+      "matches": 6,
+      "municipality": "Sevilla",
+      "province": "Sevilla",
+      "ccaa": "Andalucía",
+      "pop_muni": 687488,
+      "pop_prov": 1968624,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "matches": 6,
+      "municipality": "San Sebastián",
+      "province": "Guipuzcoa",
+      "ccaa": "País Vasco",
+      "pop_muni": 189093,
+      "pop_prov": 729722,
+      "pop_ccaa": 2227684
+    },
+    {
+      "stadium_name": "RCDE Stadium",
+      "team_primary": "RCD Espanyol",
+      "capacity": 38529,
+      "att_avg": 28823,
+      "occ_avg_pct": 74.81,
+      "matches": 8,
+      "municipality": "Cornellá de Llobregat",
+      "province": "Barcelona",
+      "ccaa": "Catalunya",
+      "pop_muni": 91589,
+      "pop_prov": 5877672,
+      "pop_ccaa": 8067989
+    },
+    {
+      "stadium_name": "Estadio Martínez Valero",
+      "team_primary": "Elche CF",
+      "capacity": 33732,
+      "att_avg": 27968,
+      "occ_avg_pct": 82.91,
+      "matches": 7,
+      "municipality": "Elche",
+      "province": "Alicante",
+      "ccaa": "Comunitat Valenciana",
+      "pop_muni": 243128,
+      "pop_prov": 1991259,
+      "pop_ccaa": 5319285
+    },
+    {
+      "stadium_name": "Estadio Carlos Tartiere",
+      "team_primary": "Real Oviedo",
+      "capacity": 30500,
+      "att_avg": 26040,
+      "occ_avg_pct": 85.38,
+      "matches": 7,
+      "municipality": "Oviedo",
+      "province": "Asturias",
+      "ccaa": "Principado de Asturias",
+      "pop_muni": 220543,
+      "pop_prov": 1017000,
+      "pop_ccaa": 1017000
+    },
+    {
+      "stadium_name": "La Rosaleda",
+      "team_primary": "Málaga CF",
+      "capacity": 30044,
+      "att_avg": 24617,
+      "occ_avg_pct": 81.94,
+      "matches": 8,
+      "municipality": "Málaga",
+      "province": "Málaga",
+      "ccaa": "Andalucía",
+      "pop_muni": 591637,
+      "pop_prov": 1789103,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "El Molinón-Enrique Castro \"Quini\"",
+      "team_primary": "Real Sporting",
+      "capacity": 29371,
+      "att_avg": 23492,
+      "occ_avg_pct": 79.98,
+      "matches": 8,
+      "municipality": "Gijón",
+      "province": "Asturias",
+      "ccaa": "Principado de Asturias",
+      "pop_muni": 268561,
+      "pop_prov": 1017000,
+      "pop_ccaa": 1017000
+    },
+    {
+      "stadium_name": "Estadio ABANCA-RIAZOR",
+      "team_primary": "RC Deportivo",
+      "capacity": 32490,
+      "att_avg": 23217,
+      "occ_avg_pct": 71.46,
+      "matches": 7,
+      "municipality": "A Coruña",
+      "province": "A Coruña",
+      "ccaa": "Galicia",
+      "pop_muni": 249261,
+      "pop_prov": 1128449,
+      "pop_ccaa": 2705833
+    },
+    {
+      "stadium_name": "Estadio Ciutat de València",
+      "team_primary": "Levante UD",
+      "capacity": 26354,
+      "att_avg": 21708,
+      "occ_avg_pct": 82.37,
+      "matches": 5,
+      "municipality": "Valencia",
+      "province": "Valencia",
+      "ccaa": "Comunitat Valenciana",
+      "pop_muni": 825948,
+      "pop_prov": 2710808,
+      "pop_ccaa": 5319285
+    },
+    {
+      "stadium_name": "El Sardinero",
+      "team_primary": "Real Racing Club",
+      "capacity": 22308,
+      "att_avg": 20760,
+      "occ_avg_pct": 93.06,
+      "matches": 8,
+      "municipality": "Santander",
+      "province": "Cantabria",
+      "ccaa": "Cantabria",
+      "pop_muni": 173635,
+      "pop_prov": 590851,
+      "pop_ccaa": 590851
+    },
+    {
+      "stadium_name": "Estadio El Sadar",
+      "team_primary": "CA Osasuna",
+      "capacity": 23576,
+      "att_avg": 20425,
+      "occ_avg_pct": 86.63,
+      "matches": 6,
+      "municipality": "Pamplona",
+      "province": "Navarra",
+      "ccaa": "Comunidad Foral de Navarra",
+      "pop_muni": 208243,
+      "pop_prov": 678333,
+      "pop_ccaa": 678333
+    },
+    {
+      "stadium_name": "Estadio ABANCA Balaídos",
+      "team_primary": "RC Celta",
+      "capacity": 22800,
+      "att_avg": 20247,
+      "occ_avg_pct": 88.8,
+      "matches": 7,
+      "municipality": "Vigo",
+      "province": "Pontevedra",
+      "ccaa": "Galicia",
+      "pop_muni": 293977,
+      "pop_prov": 947869,
+      "pop_ccaa": 2705833
+    },
+    {
+      "stadium_name": "Estadio de Gran Canaria",
+      "team_primary": "UD Las Palmas",
+      "capacity": 32392,
+      "att_avg": 19368,
+      "occ_avg_pct": 59.79,
+      "matches": 8,
+      "municipality": "Las Palmas de Gran Canaria",
+      "province": "Las Palmas",
+      "ccaa": "Islas Canarias",
+      "pop_muni": 380436,
+      "pop_prov": 1140258,
+      "pop_ccaa": 2268035
+    },
+    {
+      "stadium_name": "Estadio de la Cerámica",
+      "team_primary": "Villarreal CF",
+      "capacity": 23500,
+      "att_avg": 18013,
+      "occ_avg_pct": 76.65,
+      "matches": 7,
+      "municipality": "Villarreal",
+      "province": "Castellón",
+      "ccaa": "Comunitat Valenciana",
+      "pop_muni": 52505,
+      "pop_prov": 615188,
+      "pop_ccaa": 5319285
+    },
+    {
+      "stadium_name": "Estadi Mallorca Son Moix",
+      "team_primary": "RCD Mallorca",
+      "capacity": 26020,
+      "att_avg": 17894,
+      "occ_avg_pct": 68.77,
+      "matches": 6,
+      "municipality": "Palma",
+      "province": "Islas Baleares",
+      "ccaa": "Islas Baleares",
+      "pop_muni": 431521,
+      "pop_prov": 1231768,
+      "pop_ccaa": 1231768
+    },
+    {
+      "stadium_name": "Estadio Municipal José Zorrilla",
+      "team_primary": "Real Valladolid CF",
+      "capacity": 27618,
+      "att_avg": 17051,
+      "occ_avg_pct": 61.74,
+      "matches": 8,
+      "municipality": "Valladolid",
+      "province": "Valladolid",
+      "ccaa": "Castilla y León",
+      "pop_muni": 300618,
+      "pop_prov": 525398,
+      "pop_ccaa": 2391682
+    },
+    {
+      "stadium_name": "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba",
+      "team_primary": "Córdoba CF",
+      "capacity": 21822,
+      "att_avg": 16712,
+      "occ_avg_pct": 76.58,
+      "matches": 7,
+      "municipality": "Córdoba",
+      "province": "Córdoba",
+      "ccaa": "Andalucía",
+      "pop_muni": 322811,
+      "pop_prov": 774313,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Mendizorroza",
+      "team_primary": "Deportivo Alavés",
+      "capacity": 19840,
+      "att_avg": 16272,
+      "occ_avg_pct": 82.02,
+      "matches": 7,
+      "municipality": "Vitoria",
+      "province": "Álava",
+      "ccaa": "País Vasco",
+      "pop_muni": 257968,
+      "pop_prov": 338594,
+      "pop_ccaa": 2227684
+    },
+    {
+      "stadium_name": "Ibercaja Estadio",
+      "team_primary": "Real Zaragoza",
+      "capacity": 20071,
+      "att_avg": 15208,
+      "occ_avg_pct": 75.77,
+      "matches": 7,
+      "municipality": "Zaragoza",
+      "province": "Zaragoza",
+      "ccaa": "Aragón",
+      "pop_muni": 686986,
+      "pop_prov": 987763,
+      "pop_ccaa": 1351591
+    },
+    {
+      "stadium_name": "Estadio Nuevo Mirandilla",
+      "team_primary": "Cádiz CF",
+      "capacity": 20724,
+      "att_avg": 15133,
+      "occ_avg_pct": 73.02,
+      "matches": 8,
+      "municipality": "Cádiz",
+      "province": "Cádiz",
+      "ccaa": "Andalucía",
+      "pop_muni": 110914,
+      "pop_prov": 1258730,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Nuevo Los Cármenes",
+      "team_primary": "Granada CF",
+      "capacity": 22524,
+      "att_avg": 14054,
+      "occ_avg_pct": 62.4,
+      "matches": 8,
+      "municipality": "Granada",
+      "province": "Granada",
+      "ccaa": "Andalucía",
+      "pop_muni": 232717,
+      "pop_prov": 940974,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Estadio de Vallecas",
+      "team_primary": "Rayo Vallecano",
+      "capacity": 14708,
+      "att_avg": 13350,
+      "occ_avg_pct": 90.77,
+      "matches": 5,
+      "municipality": "Madrid",
+      "province": "Madrid",
+      "ccaa": "Comunidad de Madrid",
+      "pop_muni": 3416771,
+      "pop_prov": 7056184,
+      "pop_ccaa": 7056184
+    },
+    {
+      "stadium_name": "UD Almería Stadium",
+      "team_primary": "UD Almería",
+      "capacity": 18331,
+      "att_avg": 13291,
+      "occ_avg_pct": 72.51,
+      "matches": 7,
+      "municipality": "Almería",
+      "province": "Almería",
+      "ccaa": "Andalucía",
+      "pop_muni": 202675,
+      "pop_prov": 760964,
+      "pop_ccaa": 8618616
+    },
+    {
+      "stadium_name": "Estadio SkyFi Castalia",
+      "team_primary": "CD Castellón",
+      "capacity": 15500,
+      "att_avg": 11585,
+      "occ_avg_pct": 74.74,
+      "matches": 7,
+      "municipality": "Castellón de la Plana",
+      "province": "Castellón",
+      "ccaa": "Comunitat Valenciana",
+      "pop_muni": 180379,
+      "pop_prov": 615188,
+      "pop_ccaa": 5319285
+    },
+    {
+      "stadium_name": "Estadio Municipal de Montilivi",
+      "team_primary": "Girona FC",
+      "capacity": 14624,
+      "att_avg": 11183,
+      "occ_avg_pct": 76.47,
+      "matches": 7,
+      "municipality": "Girona",
+      "province": "Girona",
+      "ccaa": "Catalunya",
+      "pop_muni": 107032,
+      "pop_prov": 821108,
+      "pop_ccaa": 8067989
+    },
+    {
+      "stadium_name": "Carlos Belmonte",
+      "team_primary": "Albacete Balompié",
+      "capacity": 17524,
+      "att_avg": 10580,
+      "occ_avg_pct": 60.37,
+      "matches": 7,
+      "municipality": "Albacete",
+      "province": "Albacete",
+      "ccaa": "Castilla-La Mancha",
+      "pop_muni": 174137,
+      "pop_prov": 389070,
+      "pop_ccaa": 2104433
+    },
+    {
+      "stadium_name": "Estadio Ontime Butarque",
+      "team_primary": "CD Leganés",
+      "capacity": 14436,
+      "att_avg": 10575,
+      "occ_avg_pct": 73.25,
+      "matches": 7,
+      "municipality": "Leganés",
+      "province": "Madrid",
+      "ccaa": "Comunidad de Madrid",
+      "pop_muni": 194084,
+      "pop_prov": 7056184,
+      "pop_ccaa": 7056184
+    },
+    {
+      "stadium_name": "El Plantío",
+      "team_primary": "Burgos CF",
+      "capacity": 12642,
+      "att_avg": 9717,
+      "occ_avg_pct": 76.86,
+      "matches": 8,
+      "municipality": "Burgos",
+      "province": "Burgos",
+      "ccaa": "Castilla y León",
+      "pop_muni": 176551,
+      "pop_prov": 359740,
+      "pop_ccaa": 2391682
+    },
+    {
+      "stadium_name": "Estadio Reino de León",
+      "team_primary": "Cultural Leonesa",
+      "capacity": 13451,
+      "att_avg": 9483,
+      "occ_avg_pct": 70.5,
+      "matches": 7,
+      "municipality": "León",
+      "province": "León",
+      "ccaa": "Castilla y León",
+      "pop_muni": 122243,
+      "pop_prov": 447802,
+      "pop_ccaa": 2391682
+    },
+    {
+      "stadium_name": "Coliseum",
+      "team_primary": "Getafe CF",
+      "capacity": 16500,
+      "att_avg": 8584,
+      "occ_avg_pct": 52.02,
+      "matches": 6,
+      "municipality": "Getafe",
+      "province": "Madrid",
+      "ccaa": "Comunidad de Madrid",
+      "pop_muni": 189906,
+      "pop_prov": 7056184,
+      "pop_ccaa": 7056184
+    },
+    {
+      "stadium_name": "El Alcoraz",
+      "team_primary": "SD Huesca",
+      "capacity": 9128,
+      "att_avg": 5797,
+      "occ_avg_pct": 63.51,
+      "matches": 8,
+      "municipality": "Huesca",
+      "province": "Huesca",
+      "ccaa": "Aragón",
+      "pop_muni": 54704,
+      "pop_prov": 228519,
+      "pop_ccaa": 1351591
+    },
+    {
+      "stadium_name": "Estadio Johan Cruyff",
+      "team_primary": "FC Barcelona",
+      "capacity": 6000,
+      "att_avg": 5787,
+      "occ_avg_pct": 96.45,
+      "matches": 2,
+      "municipality": "Sant Joan Despí",
+      "province": "Barcelona",
+      "ccaa": "Catalunya",
+      "pop_muni": 35083,
+      "pop_prov": 5877672,
+      "pop_ccaa": 8067989
+    },
+    {
+      "stadium_name": "Alfonso Murube",
+      "team_primary": "AD Ceuta FC",
+      "capacity": 6500,
+      "att_avg": 4784,
+      "occ_avg_pct": 73.6,
+      "matches": 7,
+      "municipality": "Ceuta",
+      "province": "Ceuta",
+      "ccaa": "Ceuta",
+      "pop_muni": 83052,
+      "pop_prov": 83052,
+      "pop_ccaa": 83052
+    },
+    {
+      "stadium_name": "Municipal de Ipurua",
+      "team_primary": "SD Eibar",
+      "capacity": 8164,
+      "att_avg": 4707,
+      "occ_avg_pct": 57.66,
+      "matches": 8,
+      "municipality": "Eibar",
+      "province": "Guipuzcoa",
+      "ccaa": "País Vasco",
+      "pop_muni": 27362,
+      "pop_prov": 729722,
+      "pop_ccaa": 2227684
+    },
+    {
+      "stadium_name": "Estadio Municipal de Anduva",
+      "team_primary": "CD Mirandés",
+      "capacity": 5759,
+      "att_avg": 3523,
+      "occ_avg_pct": 61.17,
+      "matches": 7,
+      "municipality": "Miranda de Ebro",
+      "province": "Burgos",
+      "ccaa": "Castilla y León",
+      "pop_muni": 36025,
+      "pop_prov": 359740,
+      "pop_ccaa": 2391682
+    },
+    {
+      "stadium_name": "Nou Estadi Encamp",
+      "team_primary": "FC Andorra",
+      "capacity": 5108,
+      "att_avg": 3208,
+      "occ_avg_pct": 62.8,
+      "matches": 7,
+      "municipality": "Encamp",
+      "province": "Andorra",
+      "ccaa": "Andorra",
+      "pop_muni": 12212,
+      "pop_prov": 85101,
+      "pop_ccaa": 85101
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad B",
+      "capacity": 40000,
+      "att_avg": 3041,
+      "occ_avg_pct": 7.6,
+      "matches": 8,
+      "municipality": "San Sebastián",
+      "province": "Guipuzcoa",
+      "ccaa": "País Vasco",
+      "pop_muni": 189093,
+      "pop_prov": 729722,
+      "pop_ccaa": 2227684
+    }
+  ],
+  "top_total_attendance": [
+    {
+      "stadium_name": "Estadio Santiago Bernabéu",
+      "team_primary": "Real Madrid",
+      "capacity": 83186,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 6,
+      "att_total": 442691,
+      "att_avg": 73782,
+      "occ_avg_pct": 88.7,
+      "metric": 442691
+    },
+    {
+      "stadium_name": "Riyadh Air Metropolitano",
+      "team_primary": "Atlético de Madrid",
+      "capacity": 70692,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 7,
+      "att_total": 435068,
+      "att_avg": 62153,
+      "occ_avg_pct": 87.92,
+      "metric": 435068
+    },
+    {
+      "stadium_name": "Estadio Olímpico de la Cartuja",
+      "team_primary": "Real Betis",
+      "capacity": 71374,
+      "municipality_name": "Sevilla",
+      "province_name": "Sevilla",
+      "ccaa_name": "Andalucía",
+      "matches": 7,
+      "att_total": 406227,
+      "att_avg": 58032,
+      "occ_avg_pct": 81.31,
+      "metric": 406227
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 334768
+    },
+    {
+      "stadium_name": "Camp de Mestalla",
+      "team_primary": "Valencia CF",
+      "capacity": 49430,
+      "municipality_name": "Valencia",
+      "province_name": "Valencia",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 314832,
+      "att_avg": 44976,
+      "occ_avg_pct": 90.99,
+      "metric": 314832
+    },
+    {
+      "stadium_name": "RCDE Stadium",
+      "team_primary": "RCD Espanyol",
+      "capacity": 38529,
+      "municipality_name": "Cornellá de Llobregat",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 8,
+      "att_total": 230580,
+      "att_avg": 28823,
+      "occ_avg_pct": 74.81,
+      "metric": 230580
+    },
+    {
+      "stadium_name": "Ramón Sánchez-Pizjuán",
+      "team_primary": "Sevilla FC",
+      "capacity": 43864,
+      "municipality_name": "Sevilla",
+      "province_name": "Sevilla",
+      "ccaa_name": "Andalucía",
+      "matches": 6,
+      "att_total": 225390,
+      "att_avg": 37565,
+      "occ_avg_pct": 85.64,
+      "metric": 225390
+    },
+    {
+      "stadium_name": "La Rosaleda",
+      "team_primary": "Málaga CF",
+      "capacity": 30044,
+      "municipality_name": "Málaga",
+      "province_name": "Málaga",
+      "ccaa_name": "Andalucía",
+      "matches": 8,
+      "att_total": 196933,
+      "att_avg": 24617,
+      "occ_avg_pct": 81.94,
+      "metric": 196933
+    },
+    {
+      "stadium_name": "Estadio Martínez Valero",
+      "team_primary": "Elche CF",
+      "capacity": 33732,
+      "municipality_name": "Elche",
+      "province_name": "Alicante",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 195773,
+      "att_avg": 27968,
+      "occ_avg_pct": 82.91,
+      "metric": 195773
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "municipality_name": "San Sebastián",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 6,
+      "att_total": 190855,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "metric": 190855
+    }
+  ],
+  "top_avg_attendance": [
+    {
+      "stadium_name": "Estadio Santiago Bernabéu",
+      "team_primary": "Real Madrid",
+      "capacity": 83186,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 6,
+      "att_total": 442691,
+      "att_avg": 73782,
+      "occ_avg_pct": 88.7,
+      "metric": 73782
+    },
+    {
+      "stadium_name": "Riyadh Air Metropolitano",
+      "team_primary": "Atlético de Madrid",
+      "capacity": 70692,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 7,
+      "att_total": 435068,
+      "att_avg": 62153,
+      "occ_avg_pct": 87.92,
+      "metric": 62153
+    },
+    {
+      "stadium_name": "Estadio Olímpico de la Cartuja",
+      "team_primary": "Real Betis",
+      "capacity": 71374,
+      "municipality_name": "Sevilla",
+      "province_name": "Sevilla",
+      "ccaa_name": "Andalucía",
+      "matches": 7,
+      "att_total": 406227,
+      "att_avg": 58032,
+      "occ_avg_pct": 81.31,
+      "metric": 58032
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 47824
+    },
+    {
+      "stadium_name": "Estadio Olímpico Lluís Companys",
+      "team_primary": "FC Barcelona",
+      "capacity": 49472,
+      "municipality_name": "Barcelona",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 3,
+      "att_total": 137645,
+      "att_avg": 45882,
+      "occ_avg_pct": 92.74,
+      "metric": 45882
+    },
+    {
+      "stadium_name": "Spotify Camp Nou",
+      "team_primary": "FC Barcelona",
+      "capacity": 99354,
+      "municipality_name": "Barcelona",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 1,
+      "att_total": 45157,
+      "att_avg": 45157,
+      "occ_avg_pct": 45.45,
+      "metric": 45157
+    },
+    {
+      "stadium_name": "Camp de Mestalla",
+      "team_primary": "Valencia CF",
+      "capacity": 49430,
+      "municipality_name": "Valencia",
+      "province_name": "Valencia",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 314832,
+      "att_avg": 44976,
+      "occ_avg_pct": 90.99,
+      "metric": 44976
+    },
+    {
+      "stadium_name": "Ramón Sánchez-Pizjuán",
+      "team_primary": "Sevilla FC",
+      "capacity": 43864,
+      "municipality_name": "Sevilla",
+      "province_name": "Sevilla",
+      "ccaa_name": "Andalucía",
+      "matches": 6,
+      "att_total": 225390,
+      "att_avg": 37565,
+      "occ_avg_pct": 85.64,
+      "metric": 37565
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "municipality_name": "San Sebastián",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 6,
+      "att_total": 190855,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "metric": 31809
+    },
+    {
+      "stadium_name": "RCDE Stadium",
+      "team_primary": "RCD Espanyol",
+      "capacity": 38529,
+      "municipality_name": "Cornellá de Llobregat",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 8,
+      "att_total": 230580,
+      "att_avg": 28823,
+      "occ_avg_pct": 74.81,
+      "metric": 28823
+    }
+  ],
+  "top_occ_pct": [
+    {
+      "stadium_name": "Estadio Johan Cruyff",
+      "team_primary": "FC Barcelona",
+      "capacity": 6000,
+      "municipality_name": "Sant Joan Despí",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 2,
+      "att_total": 11573,
+      "att_avg": 5787,
+      "occ_avg_pct": 96.45,
+      "metric": 96.45
+    },
+    {
+      "stadium_name": "El Sardinero",
+      "team_primary": "Real Racing Club",
+      "capacity": 22308,
+      "municipality_name": "Santander",
+      "province_name": "Cantabria",
+      "ccaa_name": "Cantabria",
+      "matches": 8,
+      "att_total": 166082,
+      "att_avg": 20760,
+      "occ_avg_pct": 93.06,
+      "metric": 93.06
+    },
+    {
+      "stadium_name": "Estadio Olímpico Lluís Companys",
+      "team_primary": "FC Barcelona",
+      "capacity": 49472,
+      "municipality_name": "Barcelona",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 3,
+      "att_total": 137645,
+      "att_avg": 45882,
+      "occ_avg_pct": 92.74,
+      "metric": 92.74
+    },
+    {
+      "stadium_name": "Camp de Mestalla",
+      "team_primary": "Valencia CF",
+      "capacity": 49430,
+      "municipality_name": "Valencia",
+      "province_name": "Valencia",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 314832,
+      "att_avg": 44976,
+      "occ_avg_pct": 90.99,
+      "metric": 90.99
+    },
+    {
+      "stadium_name": "Estadio de Vallecas",
+      "team_primary": "Rayo Vallecano",
+      "capacity": 14708,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 5,
+      "att_total": 66748,
+      "att_avg": 13350,
+      "occ_avg_pct": 90.77,
+      "metric": 90.77
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 89.74
+    },
+    {
+      "stadium_name": "Estadio ABANCA Balaídos",
+      "team_primary": "RC Celta",
+      "capacity": 22800,
+      "municipality_name": "Vigo",
+      "province_name": "Pontevedra",
+      "ccaa_name": "Galicia",
+      "matches": 7,
+      "att_total": 141732,
+      "att_avg": 20247,
+      "occ_avg_pct": 88.8,
+      "metric": 88.8
+    },
+    {
+      "stadium_name": "Estadio Santiago Bernabéu",
+      "team_primary": "Real Madrid",
+      "capacity": 83186,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 6,
+      "att_total": 442691,
+      "att_avg": 73782,
+      "occ_avg_pct": 88.7,
+      "metric": 88.7
+    },
+    {
+      "stadium_name": "Riyadh Air Metropolitano",
+      "team_primary": "Atlético de Madrid",
+      "capacity": 70692,
+      "municipality_name": "Madrid",
+      "province_name": "Madrid",
+      "ccaa_name": "Comunidad de Madrid",
+      "matches": 7,
+      "att_total": 435068,
+      "att_avg": 62153,
+      "occ_avg_pct": 87.92,
+      "metric": 87.92
+    },
+    {
+      "stadium_name": "Estadio El Sadar",
+      "team_primary": "CA Osasuna",
+      "capacity": 23576,
+      "municipality_name": "Pamplona",
+      "province_name": "Navarra",
+      "ccaa_name": "Comunidad Foral de Navarra",
+      "matches": 6,
+      "att_total": 122549,
+      "att_avg": 20425,
+      "occ_avg_pct": 86.63,
+      "metric": 86.63
+    }
+  ],
+  "top_per1k_muni": [
+    {
+      "stadium_name": "Estadio de la Cerámica",
+      "team_primary": "Villarreal CF",
+      "capacity": 23500,
+      "municipality_name": "Villarreal",
+      "province_name": "Castellón",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 126092,
+      "att_avg": 18013,
+      "occ_avg_pct": 76.65,
+      "metric": 343.07
+    },
+    {
+      "stadium_name": "RCDE Stadium",
+      "team_primary": "RCD Espanyol",
+      "capacity": 38529,
+      "municipality_name": "Cornellá de Llobregat",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 8,
+      "att_total": 230580,
+      "att_avg": 28823,
+      "occ_avg_pct": 74.81,
+      "metric": 314.7
+    },
+    {
+      "stadium_name": "Nou Estadi Encamp",
+      "team_primary": "FC Andorra",
+      "capacity": 5108,
+      "municipality_name": "Encamp",
+      "province_name": "Andorra",
+      "ccaa_name": "Andorra",
+      "matches": 7,
+      "att_total": 22453,
+      "att_avg": 3208,
+      "occ_avg_pct": 62.8,
+      "metric": 262.69
+    },
+    {
+      "stadium_name": "Municipal de Ipurua",
+      "team_primary": "SD Eibar",
+      "capacity": 8164,
+      "municipality_name": "Eibar",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 8,
+      "att_total": 37653,
+      "att_avg": 4707,
+      "occ_avg_pct": 57.66,
+      "metric": 172.03
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "municipality_name": "San Sebastián",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 6,
+      "att_total": 190855,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "metric": 168.22
+    },
+    {
+      "stadium_name": "Estadio Johan Cruyff",
+      "team_primary": "FC Barcelona",
+      "capacity": 6000,
+      "municipality_name": "Sant Joan Despí",
+      "province_name": "Barcelona",
+      "ccaa_name": "Catalunya",
+      "matches": 2,
+      "att_total": 11573,
+      "att_avg": 5787,
+      "occ_avg_pct": 96.45,
+      "metric": 164.95
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 137.39
+    },
+    {
+      "stadium_name": "Estadio Nuevo Mirandilla",
+      "team_primary": "Cádiz CF",
+      "capacity": 20724,
+      "municipality_name": "Cádiz",
+      "province_name": "Cádiz",
+      "ccaa_name": "Andalucía",
+      "matches": 8,
+      "att_total": 121060,
+      "att_avg": 15133,
+      "occ_avg_pct": 73.02,
+      "metric": 136.44
+    },
+    {
+      "stadium_name": "El Sardinero",
+      "team_primary": "Real Racing Club",
+      "capacity": 22308,
+      "municipality_name": "Santander",
+      "province_name": "Cantabria",
+      "ccaa_name": "Cantabria",
+      "matches": 8,
+      "att_total": 166082,
+      "att_avg": 20760,
+      "occ_avg_pct": 93.06,
+      "metric": 119.56
+    },
+    {
+      "stadium_name": "Estadio Carlos Tartiere",
+      "team_primary": "Real Oviedo",
+      "capacity": 30500,
+      "municipality_name": "Oviedo",
+      "province_name": "Asturias",
+      "ccaa_name": "Principado de Asturias",
+      "matches": 7,
+      "att_total": 182278,
+      "att_avg": 26040,
+      "occ_avg_pct": 85.38,
+      "metric": 118.07
+    }
+  ],
+  "top_per1k_prov": [
+    {
+      "stadium_name": "Alfonso Murube",
+      "team_primary": "AD Ceuta FC",
+      "capacity": 6500,
+      "municipality_name": "Ceuta",
+      "province_name": "Ceuta",
+      "ccaa_name": "Ceuta",
+      "matches": 7,
+      "att_total": 33491,
+      "att_avg": 4784,
+      "occ_avg_pct": 73.6,
+      "metric": 57.6
+    },
+    {
+      "stadium_name": "Mendizorroza",
+      "team_primary": "Deportivo Alavés",
+      "capacity": 19840,
+      "municipality_name": "Vitoria",
+      "province_name": "Álava",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 113902,
+      "att_avg": 16272,
+      "occ_avg_pct": 82.02,
+      "metric": 48.06
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "municipality_name": "San Sebastián",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 6,
+      "att_total": 190855,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "metric": 43.59
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 41.25
+    },
+    {
+      "stadium_name": "Nou Estadi Encamp",
+      "team_primary": "FC Andorra",
+      "capacity": 5108,
+      "municipality_name": "Encamp",
+      "province_name": "Andorra",
+      "ccaa_name": "Andorra",
+      "matches": 7,
+      "att_total": 22453,
+      "att_avg": 3208,
+      "occ_avg_pct": 62.8,
+      "metric": 37.7
+    },
+    {
+      "stadium_name": "El Sardinero",
+      "team_primary": "Real Racing Club",
+      "capacity": 22308,
+      "municipality_name": "Santander",
+      "province_name": "Cantabria",
+      "ccaa_name": "Cantabria",
+      "matches": 8,
+      "att_total": 166082,
+      "att_avg": 20760,
+      "occ_avg_pct": 93.06,
+      "metric": 35.14
+    },
+    {
+      "stadium_name": "Estadio Municipal José Zorrilla",
+      "team_primary": "Real Valladolid CF",
+      "capacity": 27618,
+      "municipality_name": "Valladolid",
+      "province_name": "Valladolid",
+      "ccaa_name": "Castilla y León",
+      "matches": 8,
+      "att_total": 136405,
+      "att_avg": 17051,
+      "occ_avg_pct": 61.74,
+      "metric": 32.45
+    },
+    {
+      "stadium_name": "Estadio El Sadar",
+      "team_primary": "CA Osasuna",
+      "capacity": 23576,
+      "municipality_name": "Pamplona",
+      "province_name": "Navarra",
+      "ccaa_name": "Comunidad Foral de Navarra",
+      "matches": 6,
+      "att_total": 122549,
+      "att_avg": 20425,
+      "occ_avg_pct": 86.63,
+      "metric": 30.11
+    },
+    {
+      "stadium_name": "Estadio Olímpico de la Cartuja",
+      "team_primary": "Real Betis",
+      "capacity": 71374,
+      "municipality_name": "Sevilla",
+      "province_name": "Sevilla",
+      "ccaa_name": "Andalucía",
+      "matches": 7,
+      "att_total": 406227,
+      "att_avg": 58032,
+      "occ_avg_pct": 81.31,
+      "metric": 29.48
+    },
+    {
+      "stadium_name": "Estadio de la Cerámica",
+      "team_primary": "Villarreal CF",
+      "capacity": 23500,
+      "municipality_name": "Villarreal",
+      "province_name": "Castellón",
+      "ccaa_name": "Comunitat Valenciana",
+      "matches": 7,
+      "att_total": 126092,
+      "att_avg": 18013,
+      "occ_avg_pct": 76.65,
+      "metric": 29.28
+    }
+  ],
+  "top_per1k_ccaa": [
+    {
+      "stadium_name": "Alfonso Murube",
+      "team_primary": "AD Ceuta FC",
+      "capacity": 6500,
+      "municipality_name": "Ceuta",
+      "province_name": "Ceuta",
+      "ccaa_name": "Ceuta",
+      "matches": 7,
+      "att_total": 33491,
+      "att_avg": 4784,
+      "occ_avg_pct": 73.6,
+      "metric": 57.6
+    },
+    {
+      "stadium_name": "Nou Estadi Encamp",
+      "team_primary": "FC Andorra",
+      "capacity": 5108,
+      "municipality_name": "Encamp",
+      "province_name": "Andorra",
+      "ccaa_name": "Andorra",
+      "matches": 7,
+      "att_total": 22453,
+      "att_avg": 3208,
+      "occ_avg_pct": 62.8,
+      "metric": 37.7
+    },
+    {
+      "stadium_name": "El Sardinero",
+      "team_primary": "Real Racing Club",
+      "capacity": 22308,
+      "municipality_name": "Santander",
+      "province_name": "Cantabria",
+      "ccaa_name": "Cantabria",
+      "matches": 8,
+      "att_total": 166082,
+      "att_avg": 20760,
+      "occ_avg_pct": 93.06,
+      "metric": 35.14
+    },
+    {
+      "stadium_name": "Estadio El Sadar",
+      "team_primary": "CA Osasuna",
+      "capacity": 23576,
+      "municipality_name": "Pamplona",
+      "province_name": "Navarra",
+      "ccaa_name": "Comunidad Foral de Navarra",
+      "matches": 6,
+      "att_total": 122549,
+      "att_avg": 20425,
+      "occ_avg_pct": 86.63,
+      "metric": 30.11
+    },
+    {
+      "stadium_name": "Estadio Carlos Tartiere",
+      "team_primary": "Real Oviedo",
+      "capacity": 30500,
+      "municipality_name": "Oviedo",
+      "province_name": "Asturias",
+      "ccaa_name": "Principado de Asturias",
+      "matches": 7,
+      "att_total": 182278,
+      "att_avg": 26040,
+      "occ_avg_pct": 85.38,
+      "metric": 25.6
+    },
+    {
+      "stadium_name": "El Molinón-Enrique Castro \"Quini\"",
+      "team_primary": "Real Sporting",
+      "capacity": 29371,
+      "municipality_name": "Gijón",
+      "province_name": "Asturias",
+      "ccaa_name": "Principado de Asturias",
+      "matches": 8,
+      "att_total": 187932,
+      "att_avg": 23492,
+      "occ_avg_pct": 79.98,
+      "metric": 23.1
+    },
+    {
+      "stadium_name": "Estadio San Mamés",
+      "team_primary": "Athletic Bilbao",
+      "capacity": 53289,
+      "municipality_name": "Bilbao",
+      "province_name": "Vizcaya",
+      "ccaa_name": "País Vasco",
+      "matches": 7,
+      "att_total": 334768,
+      "att_avg": 47824,
+      "occ_avg_pct": 89.74,
+      "metric": 21.47
+    },
+    {
+      "stadium_name": "Estadi Mallorca Son Moix",
+      "team_primary": "RCD Mallorca",
+      "capacity": 26020,
+      "municipality_name": "Palma",
+      "province_name": "Islas Baleares",
+      "ccaa_name": "Islas Baleares",
+      "matches": 6,
+      "att_total": 107365,
+      "att_avg": 17894,
+      "occ_avg_pct": 68.77,
+      "metric": 14.53
+    },
+    {
+      "stadium_name": "Anoeta",
+      "team_primary": "Real Sociedad",
+      "capacity": 40000,
+      "municipality_name": "San Sebastián",
+      "province_name": "Guipuzcoa",
+      "ccaa_name": "País Vasco",
+      "matches": 6,
+      "att_total": 190855,
+      "att_avg": 31809,
+      "occ_avg_pct": 79.52,
+      "metric": 14.28
+    },
+    {
+      "stadium_name": "Ibercaja Estadio",
+      "team_primary": "Real Zaragoza",
+      "capacity": 20071,
+      "municipality_name": "Zaragoza",
+      "province_name": "Zaragoza",
+      "ccaa_name": "Aragón",
+      "matches": 7,
+      "att_total": 106457,
+      "att_avg": 15208,
+      "occ_avg_pct": 75.77,
+      "metric": 11.25
+    }
+  ],
+  "top_by_weekday": {
+    "0": [
+      {
+        "stadium_name": "Estadio Santiago Bernabéu",
+        "matches": 1,
+        "att_avg": 78107
+      },
+      {
+        "stadium_name": "Estadio Olímpico de la Cartuja",
+        "matches": 4,
+        "att_avg": 58568
+      },
+      {
+        "stadium_name": "Estadio San Mamés",
+        "matches": 2,
+        "att_avg": 48172
+      },
+      {
+        "stadium_name": "Estadio Olímpico Lluís Companys",
+        "matches": 2,
+        "att_avg": 47237
+      },
+      {
+        "stadium_name": "Camp de Mestalla",
+        "matches": 1,
+        "att_avg": 45820
+      },
+      {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "matches": 1,
+        "att_avg": 41040
+      },
+      {
+        "stadium_name": "RCDE Stadium",
+        "matches": 3,
+        "att_avg": 30723
+      },
+      {
+        "stadium_name": "Estadio Martínez Valero",
+        "matches": 4,
+        "att_avg": 28503
+      },
+      {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "matches": 2,
+        "att_avg": 26721
+      },
+      {
+        "stadium_name": "La Rosaleda",
+        "matches": 5,
+        "att_avg": 23873
+      }
+    ],
+    "1": [
+      {
+        "stadium_name": "Estadio Olímpico de la Cartuja",
+        "matches": 1,
+        "att_avg": 57537
+      },
+      {
+        "stadium_name": "Estadio San Mamés",
+        "matches": 1,
+        "att_avg": 48703
+      },
+      {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "matches": 1,
+        "att_avg": 36697
+      },
+      {
+        "stadium_name": "Estadio Martínez Valero",
+        "matches": 1,
+        "att_avg": 28585
+      },
+      {
+        "stadium_name": "RCDE Stadium",
+        "matches": 2,
+        "att_avg": 25624
+      },
+      {
+        "stadium_name": "El Molinón-Enrique Castro \"Quini\"",
+        "matches": 1,
+        "att_avg": 24896
+      },
+      {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "matches": 1,
+        "att_avg": 23795
+      },
+      {
+        "stadium_name": "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba",
+        "matches": 2,
+        "att_avg": 16717
+      },
+      {
+        "stadium_name": "Ibercaja Estadio",
+        "matches": 1,
+        "att_avg": 15704
+      },
+      {
+        "stadium_name": "Mendizorroza",
+        "matches": 1,
+        "att_avg": 15564
+      }
+    ],
+    "2": [
+      {
+        "stadium_name": "Estadio Santiago Bernabéu",
+        "matches": 1,
+        "att_avg": 68407
+      },
+      {
+        "stadium_name": "Estadio San Mamés",
+        "matches": 1,
+        "att_avg": 45739
+      },
+      {
+        "stadium_name": "Camp de Mestalla",
+        "matches": 1,
+        "att_avg": 40364
+      },
+      {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "matches": 1,
+        "att_avg": 38145
+      },
+      {
+        "stadium_name": "RCDE Stadium",
+        "matches": 1,
+        "att_avg": 26802
+      },
+      {
+        "stadium_name": "Estadio Ciutat de València",
+        "matches": 1,
+        "att_avg": 23361
+      }
+    ],
+    "3": [
+      {
+        "stadium_name": "Riyadh Air Metropolitano",
+        "matches": 1,
+        "att_avg": 54098
+      },
+      {
+        "stadium_name": "Estadio ABANCA Balaídos",
+        "matches": 1,
+        "att_avg": 20302
+      },
+      {
+        "stadium_name": "Anoeta",
+        "matches": 2,
+        "att_avg": 12019
+      },
+      {
+        "stadium_name": "Coliseum",
+        "matches": 1,
+        "att_avg": 8005
+      },
+      {
+        "stadium_name": "Alfonso Murube",
+        "matches": 1,
+        "att_avg": 3623
+      }
+    ],
+    "4": [
+      {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "matches": 1,
+        "att_avg": 29850
+      },
+      {
+        "stadium_name": "Estadio El Sadar",
+        "matches": 1,
+        "att_avg": 19475
+      }
+    ],
+    "5": [
+      {
+        "stadium_name": "Estadio Olímpico de la Cartuja",
+        "matches": 2,
+        "att_avg": 57210
+      },
+      {
+        "stadium_name": "Camp de Mestalla",
+        "matches": 2,
+        "att_avg": 45876
+      },
+      {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "matches": 1,
+        "att_avg": 37331
+      },
+      {
+        "stadium_name": "Estadio Martínez Valero",
+        "matches": 2,
+        "att_avg": 26589
+      },
+      {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "matches": 1,
+        "att_avg": 25625
+      },
+      {
+        "stadium_name": "El Molinón-Enrique Castro \"Quini\"",
+        "matches": 1,
+        "att_avg": 25146
+      },
+      {
+        "stadium_name": "Estadio ABANCA-RIAZOR",
+        "matches": 1,
+        "att_avg": 23206
+      },
+      {
+        "stadium_name": "Estadio El Sadar",
+        "matches": 1,
+        "att_avg": 19895
+      },
+      {
+        "stadium_name": "El Sardinero",
+        "matches": 1,
+        "att_avg": 18723
+      },
+      {
+        "stadium_name": "Estadio de la Cerámica",
+        "matches": 1,
+        "att_avg": 18333
+      }
+    ],
+    "6": [
+      {
+        "stadium_name": "Estadio Santiago Bernabéu",
+        "matches": 4,
+        "att_avg": 74044
+      },
+      {
+        "stadium_name": "Riyadh Air Metropolitano",
+        "matches": 6,
+        "att_avg": 63495
+      },
+      {
+        "stadium_name": "Estadio San Mamés",
+        "matches": 3,
+        "att_avg": 47994
+      },
+      {
+        "stadium_name": "Camp de Mestalla",
+        "matches": 3,
+        "att_avg": 45632
+      },
+      {
+        "stadium_name": "Spotify Camp Nou",
+        "matches": 1,
+        "att_avg": 45157
+      },
+      {
+        "stadium_name": "Estadio Olímpico Lluís Companys",
+        "matches": 1,
+        "att_avg": 43172
+      },
+      {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "matches": 2,
+        "att_avg": 36089
+      },
+      {
+        "stadium_name": "RCDE Stadium",
+        "matches": 2,
+        "att_avg": 30180
+      },
+      {
+        "stadium_name": "La Rosaleda",
+        "matches": 3,
+        "att_avg": 25856
+      },
+      {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "matches": 2,
+        "att_avg": 24783
+      }
+    ]
+  }
+}

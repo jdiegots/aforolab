@@ -1,0 +1,31 @@
+date,home_team,away_team,competition,stadium,capacity,attendance,city,country,kickoff_time,tv_broadcast,weather_temp_c,precipitation_mm
+2023-08-13,UD Las Palmas,RCD Mallorca,LaLiga 23/24,Estadio de Gran Canaria,32500,27750,Las Palmas,ES,19:30,Yes,26,0
+2023-08-14,Sevilla FC,Valencia CF,LaLiga 23/24,Ramón Sánchez-Pizjuán,43000,37100,Sevilla,ES,21:30,Yes,33,0
+2023-08-20,FC Barcelona,Cádiz CF,LaLiga 23/24,Estadi Olímpic Lluís Companys,55000,49850,Barcelona,ES,19:30,Yes,29,0
+2023-08-20,Real Madrid,Getafe CF,LaLiga 23/24,Santiago Bernabéu,81000,74800,Madrid,ES,21:00,Yes,31,0
+2023-08-25,Valencia CF,CA Osasuna,LaLiga 23/24,Mestalla,49000,40700,Valencia,ES,21:30,Yes,30,0
+2023-09-01,Athletic Club,Real Betis,LaLiga 23/24,San Mamés,53000,50120,Bilbao,ES,21:00,Yes,22,1
+2023-09-02,Real Sociedad,Granada CF,LaLiga 23/24,Reale Arena,39000,35200,Donostia,ES,16:15,Yes,21,0
+2023-09-03,Atlético de Madrid,Sevilla FC,LaLiga 23/24,Metropolitano,68000,61650,Madrid,ES,18:30,Yes,30,0
+2023-09-16,UD Las Palmas,Real Sociedad,LaLiga 23/24,Estadio de Gran Canaria,32500,28900,Las Palmas,ES,17:30,Yes,27,0
+2023-09-17,Real Madrid,Real Sociedad,LaLiga 23/24,Santiago Bernabéu,81000,76000,Madrid,ES,21:00,Yes,27,0
+2023-09-24,FC Barcelona,Celta de Vigo,LaLiga 23/24,Estadi Olímpic Lluís Companys,55000,51200,Barcelona,ES,18:30,Yes,26,0
+2023-09-27,Villarreal CF,Girona FC,LaLiga 23/24,La Cerámica,23500,20800,Vila-real,ES,19:00,Yes,24,0
+2023-10-01,Real Betis,Valencia CF,LaLiga 23/24,Benito Villamarín,60000,54200,Sevilla,ES,18:30,Yes,28,0
+2023-10-07,Getafe CF,Real Madrid,LaLiga 23/24,Coliseum,17000,15650,Getafe,ES,16:15,Yes,25,0
+2023-10-08,Real Sociedad,Athletic Club,LaLiga 23/24,Reale Arena,39000,37450,Donostia,ES,21:00,Yes,20,0
+2023-10-20,UD Las Palmas,Rayo Vallecano,LaLiga 23/24,Estadio de Gran Canaria,32500,30020,Las Palmas,ES,20:00,Yes,25,0
+2023-10-22,Valencia CF,Cádiz CF,LaLiga 23/24,Mestalla,49000,41520,Valencia,ES,18:30,Yes,23,0
+2023-10-28,Real Madrid,FC Barcelona,LaLiga 23/24,Santiago Bernabéu,81000,80350,Madrid,ES,16:15,Yes,19,0
+2023-11-05,Sevilla FC,Real Betis,LaLiga 23/24,Ramón Sánchez-Pizjuán,43000,42120,Sevilla,ES,21:00,Yes,18,0
+2023-11-12,Atlético de Madrid,Villarreal CF,LaLiga 23/24,Metropolitano,68000,59500,Madrid,ES,18:30,Yes,16,0
+2023-11-25,UD Las Palmas,Alavés,LaLiga 23/24,Estadio de Gran Canaria,32500,29750,Las Palmas,ES,14:00,Yes,22,0
+2023-12-03,Real Sociedad,Real Madrid,LaLiga 23/24,Reale Arena,39000,38200,Donostia,ES,21:00,Yes,14,0
+2023-12-10,FC Barcelona,Atlético de Madrid,LaLiga 23/24,Estadi Olímpic Lluís Companys,55000,52000,Barcelona,ES,21:00,Yes,13,0
+2023-12-16,Valencia CF,Real Madrid,LaLiga 23/24,Mestalla,49000,47000,Valencia,ES,18:30,Yes,12,0
+2024-01-07,Real Betis,UD Las Palmas,LaLiga 23/24,Benito Villamarín,60000,52800,Sevilla,ES,16:15,Yes,11,0
+2024-01-14,UD Las Palmas,Sevilla FC,LaLiga 23/24,Estadio de Gran Canaria,32500,30700,Las Palmas,ES,18:30,Yes,19,0
+2024-01-21,Atlético de Madrid,Real Madrid,LaLiga 23/24,Metropolitano,68000,64800,Madrid,ES,21:00,Yes,7,0
+2024-02-04,Real Sociedad,Valencia CF,LaLiga 23/24,Reale Arena,39000,36000,Donostia,ES,18:30,Yes,9,0
+2024-02-11,Getafe CF,FC Barcelona,LaLiga 23/24,Coliseum,17000,16200,Getafe,ES,16:15,Yes,10,0
+2024-02-25,Villarreal CF,Real Betis,LaLiga 23/24,La Cerámica,23500,21400,Vila-real,ES,18:30,Yes,12,0

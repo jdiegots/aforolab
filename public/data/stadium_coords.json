@@ -1,0 +1,303 @@
+[
+    {
+        "stadium_name": "Estadio San Mamés",
+        "team_primary": "Athletic Club",
+        "municipality_name": "Bilbao",
+        "lat": 43.264205,
+        "lng": -2.949369
+    },
+    {
+        "stadium_name": "Riyadh Air Metropolitano",
+        "team_primary": "Atlético de Madrid",
+        "municipality_name": "Madrid",
+        "lat": 40.436111,
+        "lng": -3.599444
+    },
+    {
+        "stadium_name": "Estadio El Sadar",
+        "team_primary": "CA Osasuna",
+        "municipality_name": "Pamplona",
+        "lat": 42.796667,
+        "lng": -1.636944
+    },
+    {
+        "stadium_name": "Estadio ABANCA Balaídos",
+        "team_primary": "RC Celta",
+        "municipality_name": "Vigo",
+        "lat": 42.2117805,
+        "lng": -8.7397149
+    },
+    {
+        "stadium_name": "Mendizorroza",
+        "team_primary": "Deportivo Alavés",
+        "municipality_name": "Vitoria",
+        "lat": 42.837111,
+        "lng": -2.688044
+    },
+    {
+        "stadium_name": "Estadio Martínez Valero",
+        "team_primary": "Elche CF",
+        "municipality_name": "Elche",
+        "lat": 38.266944,
+        "lng": -0.663333
+    },
+    {
+        "stadium_name": "Spotify Camp Nou",
+        "team_primary": "FC Barcelona",
+        "municipality_name": "Barcelona",
+        "lat": 41.380833333333,
+        "lng": 2.122777777778
+    },
+    {
+        "stadium_name": "Coliseum",
+        "team_primary": "Getafe CF",
+        "municipality_name": "Getafe",
+        "lat": 40.325556,
+        "lng": -3.714722
+    },
+    {
+        "stadium_name": "Estadio Municipal de Montilivi",
+        "team_primary": "Girona FC",
+        "municipality_name": "Girona",
+        "lat": 41.961389,
+        "lng": 2.828611
+    },
+    {
+        "stadium_name": "Estadio Ciutat de València",
+        "team_primary": "Levante UD",
+        "municipality_name": "Valencia",
+        "lat": 39.494722,
+        "lng": -0.364167
+    },
+    {
+        "stadium_name": "Estadio de Vallecas",
+        "team_primary": "Rayo Vallecano",
+        "municipality_name": "Madrid",
+        "lat": 40.391944,
+        "lng": -3.658961
+    },
+    {
+        "stadium_name": "RCDE Stadium",
+        "team_primary": "RCD Espanyol",
+        "municipality_name": "Cornellá de Llobregat",
+        "lat": 41.347861,
+        "lng": 2.075667
+    },
+    {
+        "stadium_name": "Estadi Mallorca Son Moix",
+        "team_primary": "RCD Mallorca",
+        "municipality_name": "Palma",
+        "lat": 39.59,
+        "lng": 2.63
+    },
+    {
+        "stadium_name": "Estadio Olímpico de la Cartuja",
+        "team_primary": "Real Betis",
+        "municipality_name": "Sevilla",
+        "lat": 37.417236,
+        "lng": -6.004564
+    },
+    {
+        "stadium_name": "Estadio Santiago Bernabéu",
+        "team_primary": "Real Madrid",
+        "municipality_name": "Madrid",
+        "lat": 40.45306,
+        "lng": -3.68835
+    },
+    {
+        "stadium_name": "Estadio Carlos Tartiere",
+        "team_primary": "Real Oviedo",
+        "municipality_name": "Oviedo",
+        "lat": 43.360783,
+        "lng": -5.870222
+    },
+    {
+        "stadium_name": "Anoeta",
+        "team_primary": "Real Sociedad",
+        "municipality_name": "San Sebastián",
+        "lat": 43.301378,
+        "lng": -1.973617
+    },
+    {
+        "stadium_name": "Ramón Sánchez-Pizjuán",
+        "team_primary": "Sevilla FC",
+        "municipality_name": "Sevilla",
+        "lat": 37.383878,
+        "lng": -5.970467
+    },
+    {
+        "stadium_name": "Camp de Mestalla",
+        "team_primary": "Valencia CF",
+        "municipality_name": "Valencia",
+        "lat": 39.474722,
+        "lng": -0.358333
+    },
+    {
+        "stadium_name": "Estadio de la Cerámica",
+        "team_primary": "Villarreal CF",
+        "municipality_name": "Villarreal",
+        "lat": 39.944167,
+        "lng": -0.103611
+    },
+    {
+        "stadium_name": "Alfonso Murube",
+        "team_primary": "AD Ceuta FC",
+        "municipality_name": "Ceuta",
+        "lat": 35.8854,
+        "lng": -5.3279
+    },
+    {
+        "stadium_name": "Carlos Belmonte",
+        "team_primary": "Albacete BP",
+        "municipality_name": "Albacete",
+        "lat": 38.981117,
+        "lng": -1.852142
+    },
+    {
+        "stadium_name": "El Plantío",
+        "team_primary": "Burgos CF",
+        "municipality_name": "Burgos",
+        "lat": 42.344167,
+        "lng": -3.680556
+    },
+    {
+        "stadium_name": "Estadio Nuevo Mirandilla",
+        "team_primary": "Cádiz CF",
+        "municipality_name": "Cádiz",
+        "lat": 36.502778,
+        "lng": -6.273056
+    },
+    {
+        "stadium_name": "Estadio SkyFi Castalia",
+        "team_primary": "CD Castellón",
+        "municipality_name": "Castellón de la Plana",
+        "lat": 39.996053,
+        "lng": -0.038792
+    },
+    {
+        "stadium_name": "Estadio Ontime Butarque",
+        "team_primary": "CD Leganés",
+        "municipality_name": "Leganés",
+        "lat": 40.3404,
+        "lng": -3.7607
+    },
+    {
+        "stadium_name": "Estadio Municipal de Anduva",
+        "team_primary": "CD Mirandés",
+        "municipality_name": "Miranda de Ebro",
+        "lat": 42.680785019974024,
+        "lng": -2.9354873
+    },
+    {
+        "stadium_name": "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba",
+        "team_primary": "Córdoba CF",
+        "municipality_name": "Córdoba",
+        "lat": 37.872294,
+        "lng": -4.764642
+    },
+    {
+        "stadium_name": "Estadio Reino de León",
+        "team_primary": "Cultural Leonesa",
+        "municipality_name": "León",
+        "lat": 42.587482,
+        "lng": -5.576699
+    },
+    {
+        "stadium_name": "Nou Estadi Encamp",
+        "team_primary": "FC Andorra",
+        "municipality_name": "Encamp",
+        "lat": 42.533527,
+        "lng": 1.575941
+    },
+    {
+        "stadium_name": "Nuevo Los Cármenes",
+        "team_primary": "Granada CF",
+        "municipality_name": "Granada",
+        "lat": 37.151077,
+        "lng": -3.596265
+    },
+    {
+        "stadium_name": "La Rosaleda",
+        "team_primary": "Málaga CF",
+        "municipality_name": "Málaga",
+        "lat": 36.734092,
+        "lng": -4.426422
+    },
+    {
+        "stadium_name": "El Sardinero",
+        "team_primary": "R. Racing Club",
+        "municipality_name": "Santander",
+        "lat": 43.476389,
+        "lng": -3.793333
+    },
+    {
+        "stadium_name": "Estadio ABANCA-RIAZOR",
+        "team_primary": "RC Deportivo",
+        "municipality_name": "A Coruña",
+        "lat": 43.368667,
+        "lng": -8.417372
+    },
+    {
+        "stadium_name": "El Molinón-Enrique Castro \"Quini\"",
+        "team_primary": "Real Sporting",
+        "municipality_name": "Gijón",
+        "lat": 43.536111,
+        "lng": -5.637222
+    },
+    {
+        "stadium_name": "Estadio Municipal José Zorrilla",
+        "team_primary": "Real Valladolid CF",
+        "municipality_name": "Valladolid",
+        "lat": 41.644444,
+        "lng": -4.761111
+    },
+    {
+        "stadium_name": "Ibercaja Estadio",
+        "team_primary": "Real Zaragoza",
+        "municipality_name": "Zaragoza",
+        "lat": 41.682605640219094,
+        "lng": -0.8964932656292420
+    },
+    {
+        "stadium_name": "Municipal de Ipurua",
+        "team_primary": "SD Eibar",
+        "municipality_name": "Eibar",
+        "lat": 43.181706,
+        "lng": -2.475803
+    },
+    {
+        "stadium_name": "El Alcoraz",
+        "team_primary": "SD Huesca",
+        "municipality_name": "Huesca",
+        "lat": 42.131944,
+        "lng": -0.424444
+    },
+    {
+        "stadium_name": "UD Almería Stadium",
+        "team_primary": "UD Almería",
+        "municipality_name": "Almería",
+        "lat": 36.84,
+        "lng": -2.435278
+    },
+    {
+        "stadium_name": "Estadio de Gran Canaria",
+        "team_primary": "UD Las Palmas",
+        "municipality_name": "Las Palmas de Gran Canaria",
+        "lat": 28.1,
+        "lng": -15.456667
+    },
+    {
+        "stadium_name": "Estadio Johan Cruyff",
+        "team_primary": "FC Barcelona",
+        "municipality_name": "Sant Joan Despí",
+        "lat": 41.374224,
+        "lng": 2.050506
+    },
+    {
+        "stadium_name": "Estadio Olímpico Lluís Companys",
+        "team_primary": "FC Barcelona",
+        "municipality_name": "Barcelona",
+        "lat": 41.364722,
+        "lng": 2.155556
+    }
+]

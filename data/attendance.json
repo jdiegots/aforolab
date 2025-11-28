@@ -1,0 +1,7 @@
+[
+  { "matchId": 1, "stadium": "Camp Nou", "date": "2024-03-01", "homeTeam": "FCB", "awayTeam": "ATM", "attendance": 85000, "capacity": 99354 },
+  { "matchId": 2, "stadium": "Santiago Bernabéu", "date": "2024-03-01", "homeTeam": "RMA", "awayTeam": "VAL", "attendance": 78000, "capacity": 81044 },
+  { "matchId": 3, "stadium": "Wanda Metropolitano", "date": "2024-03-08", "homeTeam": "ATM", "awayTeam": "CAD", "attendance": 62000, "capacity": 68456 },
+  { "matchId": 4, "stadium": "Estadio de la Cartuja", "date": "2024-03-08", "homeTeam": "BET", "awayTeam": "SEV", "attendance": 55000, "capacity": 60000 },
+  { "matchId": 5, "stadium": "San Mamés", "date": "2024-03-15", "homeTeam": "ATH", "awayTeam": "RSO", "attendance": 48000, "capacity": 53289 }
+]

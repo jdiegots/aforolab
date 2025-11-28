@@ -1,0 +1,457 @@
+{
+  "generated_at": "2025-11-26T21:30:17.426Z",
+  "primera": [
+    {
+      "jornada": 1,
+      "division": "Primera División",
+      "totalAttendance": 259358,
+      "totalCapacity": 311661,
+      "matches": 9,
+      "occupancyPct": 83.21798364248335
+    },
+    {
+      "jornada": 2,
+      "division": "Primera División",
+      "totalAttendance": 291196,
+      "totalCapacity": 355880,
+      "matches": 9,
+      "occupancyPct": 81.8242104080027
+    },
+    {
+      "jornada": 3,
+      "division": "Primera División",
+      "totalAttendance": 329731,
+      "totalCapacity": 378723,
+      "matches": 10,
+      "occupancyPct": 87.06389630415897
+    },
+    {
+      "jornada": 4,
+      "division": "Primera División",
+      "totalAttendance": 239513,
+      "totalCapacity": 288315,
+      "matches": 9,
+      "occupancyPct": 83.07337460763401
+    },
+    {
+      "jornada": 5,
+      "division": "Primera División",
+      "totalAttendance": 292359,
+      "totalCapacity": 342414,
+      "matches": 10,
+      "occupancyPct": 85.38173088717167
+    },
+    {
+      "jornada": 6,
+      "division": "Primera División",
+      "totalAttendance": 242480,
+      "totalCapacity": 312815,
+      "matches": 9,
+      "occupancyPct": 77.51546441187284
+    },
+    {
+      "jornada": 7,
+      "division": "Primera División",
+      "totalAttendance": 303874,
+      "totalCapacity": 419934,
+      "matches": 10,
+      "occupancyPct": 72.3623236032329
+    },
+    {
+      "jornada": 8,
+      "division": "Primera División",
+      "totalAttendance": 271943,
+      "totalCapacity": 316919,
+      "matches": 9,
+      "occupancyPct": 85.80836112697567
+    },
+    {
+      "jornada": 9,
+      "division": "Primera División",
+      "totalAttendance": 282038,
+      "totalCapacity": 337254,
+      "matches": 10,
+      "occupancyPct": 83.6277701672923
+    },
+    {
+      "jornada": 10,
+      "division": "Primera División",
+      "totalAttendance": 298872,
+      "totalCapacity": 361447,
+      "matches": 9,
+      "occupancyPct": 82.68764161827322
+    },
+    {
+      "jornada": 11,
+      "division": "Primera División",
+      "totalAttendance": 362419,
+      "totalCapacity": 431418,
+      "matches": 10,
+      "occupancyPct": 84.00646241000608
+    },
+    {
+      "jornada": 12,
+      "division": "Primera División",
+      "totalAttendance": 260802,
+      "totalCapacity": 314399,
+      "matches": 9,
+      "occupancyPct": 82.9525539203369
+    },
+    {
+      "jornada": 13,
+      "division": "Primera División",
+      "totalAttendance": 300197,
+      "totalCapacity": 356453,
+      "matches": 10,
+      "occupancyPct": 84.21783517041519
+    }
+  ],
+  "segunda": [
+    {
+      "jornada": 1,
+      "division": "Segunda División",
+      "totalAttendance": 150906,
+      "totalCapacity": 242774,
+      "matches": 10,
+      "occupancyPct": 62.159045037771754
+    },
+    {
+      "jornada": 2,
+      "division": "Segunda División",
+      "totalAttendance": 124153,
+      "totalCapacity": 168237,
+      "matches": 10,
+      "occupancyPct": 73.79648947615566
+    },
+    {
+      "jornada": 3,
+      "division": "Segunda División",
+      "totalAttendance": 131514,
+      "totalCapacity": 216801,
+      "matches": 10,
+      "occupancyPct": 60.661159311995796
+    },
+    {
+      "jornada": 4,
+      "division": "Segunda División",
+      "totalAttendance": 132017,
+      "totalCapacity": 203515,
+      "matches": 10,
+      "occupancyPct": 64.86843721593003
+    },
+    {
+      "jornada": 5,
+      "division": "Segunda División",
+      "totalAttendance": 127079,
+      "totalCapacity": 188195,
+      "matches": 10,
+      "occupancyPct": 67.52517335742182
+    },
+    {
+      "jornada": 6,
+      "division": "Segunda División",
+      "totalAttendance": 122026,
+      "totalCapacity": 162988,
+      "matches": 10,
+      "occupancyPct": 74.86808844822932
+    },
+    {
+      "jornada": 7,
+      "division": "Segunda División",
+      "totalAttendance": 114253,
+      "totalCapacity": 200234,
+      "matches": 10,
+      "occupancyPct": 57.05974010407823
+    },
+    {
+      "jornada": 8,
+      "division": "Segunda División",
+      "totalAttendance": 125483,
+      "totalCapacity": 184782,
+      "matches": 10,
+      "occupancyPct": 67.90867075797426
+    },
+    {
+      "jornada": 9,
+      "division": "Segunda División",
+      "totalAttendance": 130565,
+      "totalCapacity": 209381,
+      "matches": 10,
+      "occupancyPct": 62.35761602055583
+    },
+    {
+      "jornada": 10,
+      "division": "Segunda División",
+      "totalAttendance": 118495,
+      "totalCapacity": 204171,
+      "matches": 10,
+      "occupancyPct": 58.03713553834776
+    },
+    {
+      "jornada": 11,
+      "division": "Segunda División",
+      "totalAttendance": 123958,
+      "totalCapacity": 181904,
+      "matches": 10,
+      "occupancyPct": 68.1447356847568
+    },
+    {
+      "jornada": 12,
+      "division": "Segunda División",
+      "totalAttendance": 115812,
+      "totalCapacity": 165708,
+      "matches": 9,
+      "occupancyPct": 69.88920269389529
+    },
+    {
+      "jornada": 13,
+      "division": "Segunda División",
+      "totalAttendance": 124456,
+      "totalCapacity": 213867,
+      "matches": 10,
+      "occupancyPct": 58.19317613283022
+    },
+    {
+      "jornada": 14,
+      "division": "Segunda División",
+      "totalAttendance": 112871,
+      "totalCapacity": 158423,
+      "matches": 9,
+      "occupancyPct": 71.24659929429438
+    },
+    {
+      "jornada": 15,
+      "division": "Segunda División",
+      "totalAttendance": 117399,
+      "totalCapacity": 222544,
+      "matches": 10,
+      "occupancyPct": 52.753163419368754
+    }
+  ],
+  "combined": [
+    {
+      "jornada": 1,
+      "division": "Primera División",
+      "totalAttendance": 259358,
+      "totalCapacity": 311661,
+      "matches": 9,
+      "occupancyPct": 83.21798364248335
+    },
+    {
+      "jornada": 2,
+      "division": "Primera División",
+      "totalAttendance": 291196,
+      "totalCapacity": 355880,
+      "matches": 9,
+      "occupancyPct": 81.8242104080027
+    },
+    {
+      "jornada": 3,
+      "division": "Primera División",
+      "totalAttendance": 329731,
+      "totalCapacity": 378723,
+      "matches": 10,
+      "occupancyPct": 87.06389630415897
+    },
+    {
+      "jornada": 4,
+      "division": "Primera División",
+      "totalAttendance": 239513,
+      "totalCapacity": 288315,
+      "matches": 9,
+      "occupancyPct": 83.07337460763401
+    },
+    {
+      "jornada": 5,
+      "division": "Primera División",
+      "totalAttendance": 292359,
+      "totalCapacity": 342414,
+      "matches": 10,
+      "occupancyPct": 85.38173088717167
+    },
+    {
+      "jornada": 6,
+      "division": "Primera División",
+      "totalAttendance": 242480,
+      "totalCapacity": 312815,
+      "matches": 9,
+      "occupancyPct": 77.51546441187284
+    },
+    {
+      "jornada": 7,
+      "division": "Primera División",
+      "totalAttendance": 303874,
+      "totalCapacity": 419934,
+      "matches": 10,
+      "occupancyPct": 72.3623236032329
+    },
+    {
+      "jornada": 8,
+      "division": "Primera División",
+      "totalAttendance": 271943,
+      "totalCapacity": 316919,
+      "matches": 9,
+      "occupancyPct": 85.80836112697567
+    },
+    {
+      "jornada": 9,
+      "division": "Primera División",
+      "totalAttendance": 282038,
+      "totalCapacity": 337254,
+      "matches": 10,
+      "occupancyPct": 83.6277701672923
+    },
+    {
+      "jornada": 10,
+      "division": "Primera División",
+      "totalAttendance": 298872,
+      "totalCapacity": 361447,
+      "matches": 9,
+      "occupancyPct": 82.68764161827322
+    },
+    {
+      "jornada": 11,
+      "division": "Primera División",
+      "totalAttendance": 362419,
+      "totalCapacity": 431418,
+      "matches": 10,
+      "occupancyPct": 84.00646241000608
+    },
+    {
+      "jornada": 12,
+      "division": "Primera División",
+      "totalAttendance": 260802,
+      "totalCapacity": 314399,
+      "matches": 9,
+      "occupancyPct": 82.9525539203369
+    },
+    {
+      "jornada": 13,
+      "division": "Primera División",
+      "totalAttendance": 300197,
+      "totalCapacity": 356453,
+      "matches": 10,
+      "occupancyPct": 84.21783517041519
+    },
+    {
+      "jornada": 1,
+      "division": "Segunda División",
+      "totalAttendance": 150906,
+      "totalCapacity": 242774,
+      "matches": 10,
+      "occupancyPct": 62.159045037771754
+    },
+    {
+      "jornada": 2,
+      "division": "Segunda División",
+      "totalAttendance": 124153,
+      "totalCapacity": 168237,
+      "matches": 10,
+      "occupancyPct": 73.79648947615566
+    },
+    {
+      "jornada": 3,
+      "division": "Segunda División",
+      "totalAttendance": 131514,
+      "totalCapacity": 216801,
+      "matches": 10,
+      "occupancyPct": 60.661159311995796
+    },
+    {
+      "jornada": 4,
+      "division": "Segunda División",
+      "totalAttendance": 132017,
+      "totalCapacity": 203515,
+      "matches": 10,
+      "occupancyPct": 64.86843721593003
+    },
+    {
+      "jornada": 5,
+      "division": "Segunda División",
+      "totalAttendance": 127079,
+      "totalCapacity": 188195,
+      "matches": 10,
+      "occupancyPct": 67.52517335742182
+    },
+    {
+      "jornada": 6,
+      "division": "Segunda División",
+      "totalAttendance": 122026,
+      "totalCapacity": 162988,
+      "matches": 10,
+      "occupancyPct": 74.86808844822932
+    },
+    {
+      "jornada": 7,
+      "division": "Segunda División",
+      "totalAttendance": 114253,
+      "totalCapacity": 200234,
+      "matches": 10,
+      "occupancyPct": 57.05974010407823
+    },
+    {
+      "jornada": 8,
+      "division": "Segunda División",
+      "totalAttendance": 125483,
+      "totalCapacity": 184782,
+      "matches": 10,
+      "occupancyPct": 67.90867075797426
+    },
+    {
+      "jornada": 9,
+      "division": "Segunda División",
+      "totalAttendance": 130565,
+      "totalCapacity": 209381,
+      "matches": 10,
+      "occupancyPct": 62.35761602055583
+    },
+    {
+      "jornada": 10,
+      "division": "Segunda División",
+      "totalAttendance": 118495,
+      "totalCapacity": 204171,
+      "matches": 10,
+      "occupancyPct": 58.03713553834776
+    },
+    {
+      "jornada": 11,
+      "division": "Segunda División",
+      "totalAttendance": 123958,
+      "totalCapacity": 181904,
+      "matches": 10,
+      "occupancyPct": 68.1447356847568
+    },
+    {
+      "jornada": 12,
+      "division": "Segunda División",
+      "totalAttendance": 115812,
+      "totalCapacity": 165708,
+      "matches": 9,
+      "occupancyPct": 69.88920269389529
+    },
+    {
+      "jornada": 13,
+      "division": "Segunda División",
+      "totalAttendance": 124456,
+      "totalCapacity": 213867,
+      "matches": 10,
+      "occupancyPct": 58.19317613283022
+    },
+    {
+      "jornada": 14,
+      "division": "Segunda División",
+      "totalAttendance": 112871,
+      "totalCapacity": 158423,
+      "matches": 9,
+      "occupancyPct": 71.24659929429438
+    },
+    {
+      "jornada": 15,
+      "division": "Segunda División",
+      "totalAttendance": 117399,
+      "totalCapacity": 222544,
+      "matches": 10,
+      "occupancyPct": 52.753163419368754
+    }
+  ]
+}

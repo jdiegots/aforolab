@@ -1,0 +1,44 @@
+﻿stadium_id;stadium_name;team_primary;team_sec;capacity;municipality_name;province_name;ccaa_name
+1;Estadio San Mamés;Athletic Club;;53289;Bilbao;Vizcaya;País Vasco
+2;Riyadh Air Metropolitano;Atlético de Madrid;;70692;Madrid;Madrid;Comunidad de Madrid
+3;Estadio El Sadar;CA Osasuna;;23576;Pamplona;Navarra;Comunidad Foral de Navarra
+4;Estadio ABANCA Balaídos;RC Celta;;22800;Vigo;Pontevedra;Galicia
+5;Mendizorroza;Deportivo Alavés;;19840;Vitoria;Álava;País Vasco
+6;Estadio Martínez Valero;Elche CF;;33732;Elche;Alicante;Comunitat Valenciana
+7;Spotify Camp Nou;FC Barcelona;;99354;Barcelona;Barcelona;Catalunya
+8;Coliseum;Getafe CF;;16500;Getafe;Madrid;Comunidad de Madrid
+9;Estadio Municipal de Montilivi;Girona FC;;14624;Girona;Girona;Catalunya
+10;Estadio Ciutat de València;Levante UD;;26354;Valencia;Valencia;Comunitat Valenciana
+11;Estadio de Vallecas;Rayo Vallecano;;14708;Madrid;Madrid;Comunidad de Madrid
+12;RCDE Stadium;RCD Espanyol;;38529;Cornellá de Llobregat;Barcelona;Catalunya
+13;Estadi Mallorca Son Moix;RCD Mallorca;;26020;Palma;Islas Baleares;Islas Baleares
+14;Estadio Olímpico de la Cartuja;Real Betis;;71374;Sevilla;Sevilla;Andalucía
+15;Estadio Santiago Bernabéu;Real Madrid;;83186;Madrid;Madrid;Comunidad de Madrid
+16;Estadio Carlos Tartiere;Real Oviedo;;30500;Oviedo;Asturias;Principado de Asturias
+17;Anoeta;Real Sociedad;Real Sociedad B;40000;San Sebastián;Guipuzcoa;País Vasco
+18;Ramón Sánchez-Pizjuán;Sevilla FC;;43864;Sevilla;Sevilla;Andalucía
+19;Camp de Mestalla;Valencia CF;;49430;Valencia;Valencia;Comunitat Valenciana
+20;Estadio de la Cerámica;Villarreal CF;;23500;Villarreal;Castellón;Comunitat Valenciana
+21;Alfonso Murube;AD Ceuta FC;;6500;Ceuta;Ceuta;Ceuta
+22;Carlos Belmonte;Albacete BP;;17524;Albacete;Albacete;Castilla-La Mancha
+23;El Plantío;Burgos CF;;12642;Burgos;Burgos;Castilla y León
+24;Estadio Nuevo Mirandilla;Cádiz CF;;20724;Cádiz;Cádiz;Andalucía
+25;Estadio SkyFi Castalia;CD Castellón;;15500;Castellón de la Plana;Castellón;Comunitat Valenciana
+26;Estadio Ontime Butarque;CD Leganés;;14436;Leganés;Madrid;Comunidad de Madrid
+27;Estadio Municipal de Anduva;CD Mirandés;;5759;Miranda de Ebro;Burgos;Castilla y León
+28;Estadio Bahrain Victorious Nuevo Arcángel de Córdoba;Córdoba CF;;21822;Córdoba;Córdoba;Andalucía
+29;Estadio Reino de León;Cultural Leonesa;;13451;León;León;Castilla y León
+30;Nou Estadi Encamp;FC Andorra;;5108;Encamp;Andorra;Andorra
+31;Nuevo Los Cármenes;Granada CF;;22524;Granada;Granada;Andalucía
+32;La Rosaleda;Málaga CF;;30044;Málaga;Málaga;Andalucía
+33;El Sardinero;R. Racing Club;;22308;Santander;Cantabria;Cantabria
+34;Estadio ABANCA-RIAZOR;RC Deportivo;;32490;A Coruña;A Coruña;Galicia
+35;El Molinón-Enrique Castro "Quini";Real Sporting;;29371;Gijón;Asturias;Principado de Asturias
+36;Estadio Municipal José Zorrilla;Real Valladolid CF;;27618;Valladolid;Valladolid;Castilla y León
+37;Ibercaja Estadio;Real Zaragoza;;20071;Zaragoza;Zaragoza;Aragón
+38;Municipal de Ipurua;SD Eibar;;8164;Eibar;Guipuzcoa;País Vasco
+39;El Alcoraz;SD Huesca;;9128;Huesca;Huesca;Aragón
+40;UD Almería Stadium;UD Almería;;18331;Almería;Almería;Andalucía
+41;Estadio de Gran Canaria;UD Las Palmas;;32392;Las Palmas de Gran Canaria;Las Palmas;Islas Canarias
+42;Estadio Johan Cruyff;FC Barcelona;;6000;Sant Joan Despí;Barcelona;Catalunya
+43;Estadio Olímpico Lluís Companys;FC Barcelona;;49472;Barcelona;Barcelona;Catalunya

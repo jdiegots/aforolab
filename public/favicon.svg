@@ -1,0 +1,8 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0f172a"/>
+  <rect x="100" y="100" width="1000" height="430" rx="24" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <text x="600" y="280" fill="white" font-family="sans-serif" font-weight="bold" font-size="80" text-anchor="middle">Asistencia360</text>
+  <text x="600" y="380" fill="#94a3b8" font-family="sans-serif" font-size="40" text-anchor="middle">Visualizador de Estadios</text>
+  <rect x="550" y="450" width="100" height="12" rx="6" fill="#0ea5e9"/>
+  <path d="M200 450 L300 350 L400 400 L500 250" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+</svg>

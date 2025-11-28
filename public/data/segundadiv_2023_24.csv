@@ -1,0 +1,21 @@
+date,home_team,away_team,competition,stadium,capacity,attendance,city,country,kickoff_time,tv_broadcast,weather_temp_c,precipitation_mm
+2023-09-02,CD Tenerife,Elche CF,Segunda 23/24,Heliodoro Rodríguez López,22667,20450,Santa Cruz de Tenerife,ES,20:30,Yes,25,0
+2023-09-03,Real Zaragoza,Levante UD,Segunda 23/24,La Romareda,33500,28900,Zaragoza,ES,18:30,Yes,30,0
+2023-09-09,Real Oviedo,SD Eibar,Segunda 23/24,Carlos Tartiere,30500,23500,Oviedo,ES,18:30,Yes,24,0
+2023-09-10,UD Levante,CD Leganés,Segunda 23/24,Cuidad de Valencia,26154,22100,Valencia,ES,21:00,Yes,26,0
+2023-09-16,UD Las Palmas Atl.,RC Deportivo,Segunda 23/24,Anexo EGC,3200,2800,Las Palmas,ES,17:00,Yes,27,0
+2023-09-23,CD Tenerife,Real Oviedo,Segunda 23/24,Heliodoro Rodríguez López,22667,21010,Santa Cruz de Tenerife,ES,20:30,Yes,24,0
+2023-10-01,RC Deportivo,Real Zaragoza,Segunda 23/24,Abanca-Riazor,34700,31200,A Coruña,ES,18:30,Yes,18,0
+2023-10-08,SD Eibar,UD Ibiza,Segunda 23/24,Ipurua,8050,6950,Eibar,ES,14:00,Yes,17,0
+2023-10-15,CD Leganés,Real Oviedo,Segunda 23/24,Butarque,12000,10800,Leganés,ES,16:15,Yes,18,0
+2023-10-22,Elche CF,Levante UD,Segunda 23/24,Martínez Valero,33132,28100,Elche,ES,18:30,Yes,22,0
+2023-10-29,Real Zaragoza,CD Tenerife,Segunda 23/24,La Romareda,33500,29950,Zaragoza,ES,16:15,Yes,19,0
+2023-11-05,UD Ibiza,RC Deportivo,Segunda 23/24,Can Misses,10400,9350,Ibiza,ES,12:00,Yes,20,0
+2023-11-12,Real Oviedo,SD Eibar,Segunda 23/24,Carlos Tartiere,30500,24200,Oviedo,ES,18:30,Yes,14,0
+2023-11-19,CD Leganés,Real Zaragoza,Segunda 23/24,Butarque,12000,11250,Leganés,ES,14:00,Yes,12,0
+2023-12-03,RC Deportivo,CD Tenerife,Segunda 23/24,Abanca-Riazor,34700,32050,A Coruña,ES,21:00,Yes,11,0
+2023-12-10,SD Eibar,Elche CF,Segunda 23/24,Ipurua,8050,7200,Eibar,ES,16:15,Yes,9,0
+2023-12-17,CD Tenerife,Real Zaragoza,Segunda 23/24,Heliodoro Rodríguez López,22667,21500,Santa Cruz de Tenerife,ES,20:30,Yes,13,0
+2024-01-07,Real Zaragoza,RC Deportivo,Segunda 23/24,La Romareda,33500,30100,Zaragoza,ES,12:00,Yes,7,0
+2024-01-21,Elche CF,CD Leganés,Segunda 23/24,Martínez Valero,33132,28650,Elche,ES,18:30,Yes,10,0
+2024-02-11,RC Deportivo,Real Oviedo,Segunda 23/24,Abanca-Riazor,34700,31800,A Coruña,ES,16:15,Yes,10,0

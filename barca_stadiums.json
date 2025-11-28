@@ -1,0 +1,30 @@
+[
+  {
+    "stadium_name": "Estadio Olímpico Lluís Companys",
+    "team_primary": "FC Barcelona",
+    "capacity": 49472,
+    "att_avg": 45701,
+    "occ_avg_pct": 92.38,
+    "matches": 4,
+    "municipality": "Barcelona",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 1702547,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  },
+  {
+    "stadium_name": "Estadio Johan Cruyff",
+    "team_primary": "FC Barcelona",
+    "capacity": 6000,
+    "att_avg": 5787,
+    "occ_avg_pct": 96.45,
+    "matches": 2,
+    "municipality": "Sant Joan Despí",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 35083,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  }
+]

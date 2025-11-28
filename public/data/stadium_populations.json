@@ -1,0 +1,346 @@
+{
+  "Estadio San Mamés": {
+    "municipality": "Bilbao",
+    "province": "Vizcaya",
+    "ccaa": "País Vasco",
+    "pop_muni": 348089,
+    "pop_prov": 1159368,
+    "pop_ccaa": 2227684
+  },
+  "Riyadh Air Metropolitano": {
+    "municipality": "Madrid",
+    "province": "Madrid",
+    "ccaa": "Comunidad de Madrid",
+    "pop_muni": 3416771,
+    "pop_prov": 7056184,
+    "pop_ccaa": 7056184
+  },
+  "Estadio El Sadar": {
+    "municipality": "Pamplona",
+    "province": "Navarra",
+    "ccaa": "Comunidad Foral de Navarra",
+    "pop_muni": 208243,
+    "pop_prov": 678333,
+    "pop_ccaa": 678333
+  },
+  "Estadio ABANCA Balaídos": {
+    "municipality": "Vigo",
+    "province": "Pontevedra",
+    "ccaa": "Galicia",
+    "pop_muni": 293977,
+    "pop_prov": 947869,
+    "pop_ccaa": 2705833
+  },
+  "Mendizorroza": {
+    "municipality": "Vitoria",
+    "province": "Álava",
+    "ccaa": "País Vasco",
+    "pop_muni": 257968,
+    "pop_prov": 338594,
+    "pop_ccaa": 2227684
+  },
+  "Estadio Martínez Valero": {
+    "municipality": "Elche",
+    "province": "Alicante",
+    "ccaa": "Comunitat Valenciana",
+    "pop_muni": 243128,
+    "pop_prov": 1991259,
+    "pop_ccaa": 5319285
+  },
+  "Spotify Camp Nou": {
+    "municipality": "Barcelona",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 1702547,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  },
+  "Coliseum": {
+    "municipality": "Getafe",
+    "province": "Madrid",
+    "ccaa": "Comunidad de Madrid",
+    "pop_muni": 189906,
+    "pop_prov": 7056184,
+    "pop_ccaa": 7056184
+  },
+  "Estadio Municipal de Montilivi": {
+    "municipality": "Girona",
+    "province": "Girona",
+    "ccaa": "Catalunya",
+    "pop_muni": 107032,
+    "pop_prov": 821108,
+    "pop_ccaa": 8067989
+  },
+  "Estadio Ciutat de València": {
+    "municipality": "Valencia",
+    "province": "Valencia",
+    "ccaa": "Comunitat Valenciana",
+    "pop_muni": 825948,
+    "pop_prov": 2710808,
+    "pop_ccaa": 5319285
+  },
+  "Estadio de Vallecas": {
+    "municipality": "Madrid",
+    "province": "Madrid",
+    "ccaa": "Comunidad de Madrid",
+    "pop_muni": 3416771,
+    "pop_prov": 7056184,
+    "pop_ccaa": 7056184
+  },
+  "RCDE Stadium": {
+    "municipality": "Cornellá de Llobregat",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 91589,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  },
+  "Estadi Mallorca Son Moix": {
+    "municipality": "Palma",
+    "province": "Islas Baleares",
+    "ccaa": "Islas Baleares",
+    "pop_muni": 431521,
+    "pop_prov": 1231768,
+    "pop_ccaa": 1231768
+  },
+  "Estadio Olímpico de la Cartuja": {
+    "municipality": "Sevilla",
+    "province": "Sevilla",
+    "ccaa": "Andalucía",
+    "pop_muni": 687488,
+    "pop_prov": 1968624,
+    "pop_ccaa": 8618616
+  },
+  "Estadio Santiago Bernabéu": {
+    "municipality": "Madrid",
+    "province": "Madrid",
+    "ccaa": "Comunidad de Madrid",
+    "pop_muni": 3416771,
+    "pop_prov": 7056184,
+    "pop_ccaa": 7056184
+  },
+  "Estadio Carlos Tartiere": {
+    "municipality": "Oviedo",
+    "province": "Asturias",
+    "ccaa": "Principado de Asturias",
+    "pop_muni": 220543,
+    "pop_prov": 1017000,
+    "pop_ccaa": 1017000
+  },
+  "Anoeta": {
+    "municipality": "San Sebastián",
+    "province": "Guipuzcoa",
+    "ccaa": "País Vasco",
+    "pop_muni": 189093,
+    "pop_prov": 729722,
+    "pop_ccaa": 2227684
+  },
+  "Ramón Sánchez-Pizjuán": {
+    "municipality": "Sevilla",
+    "province": "Sevilla",
+    "ccaa": "Andalucía",
+    "pop_muni": 687488,
+    "pop_prov": 1968624,
+    "pop_ccaa": 8618616
+  },
+  "Camp de Mestalla": {
+    "municipality": "Valencia",
+    "province": "Valencia",
+    "ccaa": "Comunitat Valenciana",
+    "pop_muni": 825948,
+    "pop_prov": 2710808,
+    "pop_ccaa": 5319285
+  },
+  "Estadio de la Cerámica": {
+    "municipality": "Villarreal",
+    "province": "Castellón",
+    "ccaa": "Comunitat Valenciana",
+    "pop_muni": 52505,
+    "pop_prov": 615188,
+    "pop_ccaa": 5319285
+  },
+  "Alfonso Murube": {
+    "municipality": "Ceuta",
+    "province": "Ceuta",
+    "ccaa": "Ceuta",
+    "pop_muni": 83052,
+    "pop_prov": 83052,
+    "pop_ccaa": 83052
+  },
+  "Carlos Belmonte": {
+    "municipality": "Albacete",
+    "province": "Albacete",
+    "ccaa": "Castilla-La Mancha",
+    "pop_muni": 174137,
+    "pop_prov": 389070,
+    "pop_ccaa": 2104433
+  },
+  "El Plantío": {
+    "municipality": "Burgos",
+    "province": "Burgos",
+    "ccaa": "Castilla y León",
+    "pop_muni": 176551,
+    "pop_prov": 359740,
+    "pop_ccaa": 2391682
+  },
+  "Estadio Nuevo Mirandilla": {
+    "municipality": "Cádiz",
+    "province": "Cádiz",
+    "ccaa": "Andalucía",
+    "pop_muni": 110914,
+    "pop_prov": 1258730,
+    "pop_ccaa": 8618616
+  },
+  "Estadio SkyFi Castalia": {
+    "municipality": "Castellón de la Plana",
+    "province": "Castellón",
+    "ccaa": "Comunitat Valenciana",
+    "pop_muni": 180379,
+    "pop_prov": 615188,
+    "pop_ccaa": 5319285
+  },
+  "Estadio Ontime Butarque": {
+    "municipality": "Leganés",
+    "province": "Madrid",
+    "ccaa": "Comunidad de Madrid",
+    "pop_muni": 194084,
+    "pop_prov": 7056184,
+    "pop_ccaa": 7056184
+  },
+  "Estadio Municipal de Anduva": {
+    "municipality": "Miranda de Ebro",
+    "province": "Burgos",
+    "ccaa": "Castilla y León",
+    "pop_muni": 36025,
+    "pop_prov": 359740,
+    "pop_ccaa": 2391682
+  },
+  "Estadio Bahrain Victorious Nuevo Arcángel de Córdoba": {
+    "municipality": "Córdoba",
+    "province": "Córdoba",
+    "ccaa": "Andalucía",
+    "pop_muni": 322811,
+    "pop_prov": 774313,
+    "pop_ccaa": 8618616
+  },
+  "Estadio Reino de León": {
+    "municipality": "León",
+    "province": "León",
+    "ccaa": "Castilla y León",
+    "pop_muni": 122243,
+    "pop_prov": 447802,
+    "pop_ccaa": 2391682
+  },
+  "Nou Estadi Encamp": {
+    "municipality": "Encamp",
+    "province": "Andorra",
+    "ccaa": "Andorra",
+    "pop_muni": 12212,
+    "pop_prov": 85101,
+    "pop_ccaa": 85101
+  },
+  "Nuevo Los Cármenes": {
+    "municipality": "Granada",
+    "province": "Granada",
+    "ccaa": "Andalucía",
+    "pop_muni": 232717,
+    "pop_prov": 940974,
+    "pop_ccaa": 8618616
+  },
+  "La Rosaleda": {
+    "municipality": "Málaga",
+    "province": "Málaga",
+    "ccaa": "Andalucía",
+    "pop_muni": 591637,
+    "pop_prov": 1789103,
+    "pop_ccaa": 8618616
+  },
+  "El Sardinero": {
+    "municipality": "Santander",
+    "province": "Cantabria",
+    "ccaa": "Cantabria",
+    "pop_muni": 173635,
+    "pop_prov": 590851,
+    "pop_ccaa": 590851
+  },
+  "Estadio ABANCA-RIAZOR": {
+    "municipality": "A Coruña",
+    "province": "A Coruña",
+    "ccaa": "Galicia",
+    "pop_muni": 249261,
+    "pop_prov": 1128449,
+    "pop_ccaa": 2705833
+  },
+  "El Molinón-Enrique Castro \"Quini\"": {
+    "municipality": "Gijón",
+    "province": "Asturias",
+    "ccaa": "Principado de Asturias",
+    "pop_muni": 268561,
+    "pop_prov": 1017000,
+    "pop_ccaa": 1017000
+  },
+  "Estadio Municipal José Zorrilla": {
+    "municipality": "Valladolid",
+    "province": "Valladolid",
+    "ccaa": "Castilla y León",
+    "pop_muni": 300618,
+    "pop_prov": 525398,
+    "pop_ccaa": 2391682
+  },
+  "Ibercaja Estadio": {
+    "municipality": "Zaragoza",
+    "province": "Zaragoza",
+    "ccaa": "Aragón",
+    "pop_muni": 686986,
+    "pop_prov": 987763,
+    "pop_ccaa": 1351591
+  },
+  "Municipal de Ipurua": {
+    "municipality": "Eibar",
+    "province": "Guipuzcoa",
+    "ccaa": "País Vasco",
+    "pop_muni": 27362,
+    "pop_prov": 729722,
+    "pop_ccaa": 2227684
+  },
+  "El Alcoraz": {
+    "municipality": "Huesca",
+    "province": "Huesca",
+    "ccaa": "Aragón",
+    "pop_muni": 54704,
+    "pop_prov": 228519,
+    "pop_ccaa": 1351591
+  },
+  "UD Almería Stadium": {
+    "municipality": "Almería",
+    "province": "Almería",
+    "ccaa": "Andalucía",
+    "pop_muni": 202675,
+    "pop_prov": 760964,
+    "pop_ccaa": 8618616
+  },
+  "Estadio de Gran Canaria": {
+    "municipality": "Las Palmas de Gran Canaria",
+    "province": "Las Palmas",
+    "ccaa": "Islas Canarias",
+    "pop_muni": 380436,
+    "pop_prov": 1140258,
+    "pop_ccaa": 2268035
+  },
+  "Estadio Johan Cruyff": {
+    "municipality": "Sant Joan Despí",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 35083,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  },
+  "Estadio Olímpico Lluís Companys": {
+    "municipality": "Barcelona",
+    "province": "Barcelona",
+    "ccaa": "Catalunya",
+    "pop_muni": 1702547,
+    "pop_prov": 5877672,
+    "pop_ccaa": 8067989
+  }
+}
