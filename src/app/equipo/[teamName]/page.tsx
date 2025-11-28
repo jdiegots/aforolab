@@ -1113,6 +1113,8 @@ export default function TeamPage() {
         return Math.ceil(max * 1.05);
     }, [scatterData, teamStadium, scatterComparison, fullStadiumData]);
 
+    const isMobile = typeof window !== "undefined" ? window.innerWidth < 768 : false;
+
     // Time helpers moved to shared utils/timeHelpers.ts
 
     if (loading) {
@@ -1169,9 +1171,32 @@ export default function TeamPage() {
             <div className="mx-auto max-w-[1600px] px-6 py-8">
                 {/* Team Header */}
                 <div ref={teamHeaderRef} className="mb-12 pb-8 border-b border-white/10">
-                    <div className="flex items-center gap-4 mb-3">
-                        <TeamInitialsBadge teamName={teamName} size={56} className="rounded-full shadow-lg" />
-                        <h1 className="text-4xl font-bold">{teamName}</h1>
+                    <div className="flex flex-col gap-3 mb-4 sm:flex-row sm:items-center sm:justify-between">
+                        <div className="flex items-center gap-4">
+                            <TeamInitialsBadge teamName={teamName} size={56} className="rounded-full shadow-lg" />
+                            <div>
+                                <h1 className="text-4xl font-bold leading-tight">{teamName}</h1>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-2 text-sm text-white/50 sm:flex-row sm:items-center sm:gap-3">
+                            <span
+                                className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${isDivisionPrimera
+                                    ? "bg-red-500/20 text-red-400 border border-red-500/30"
+                                    : "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
+                                    }`}
+                            >
+                                {division}
+                            </span>
+                            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-2">
+                                <span>{selectedStadium ? teamStadium.stadium_name : "Todos los estadios"}</span>
+                                {teamStadium.municipality && selectedStadium && (
+                                    <div className="flex items-center gap-2 text-white/60">
+                                        <span className="hidden sm:inline">·</span>
+                                        <span>{teamStadium.municipality}</span>
+                                    </div>
+                                )}
+                            </div>
+                        </div>
                     </div>
 
                     {/* Stadium Selector (Discreet Tabs) */}
@@ -1206,24 +1231,6 @@ export default function TeamPage() {
                             ))}
                         </div>
                     )}
-
-                    <div className="flex items-center gap-4 text-sm text-white/50 mb-6">
-                        <span
-                            className={`px-3 py-1 rounded-full text-xs font-medium ${isDivisionPrimera
-                                ? "bg-red-500/20 text-red-400 border border-red-500/30"
-                                : "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
-                                }`}
-                        >
-                            {division}
-                        </span>
-                        <span>{selectedStadium ? teamStadium.stadium_name : "Todos los estadios"}</span>
-                        {teamStadium.municipality && selectedStadium && (
-                            <>
-                                <span>·</span>
-                                <span>{teamStadium.municipality}</span>
-                            </>
-                        )}
-                    </div>
 
                     {
                         stats && (
@@ -1300,19 +1307,19 @@ export default function TeamPage() {
                     < div className="grid grid-cols-1 lg:grid-cols-3 gap-8" >
                         {/* Evolución temporal (2/3) */}
                         < div className="lg:col-span-2" id="chart-evolucion-temporal" >
-                            <div className="flex items-center justify-between mb-2">
+                            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-2">
                                 <h2 className="text-lg font-bold">Evolución temporal</h2>
-                                <div className="flex items-center gap-2">
-                                    <div className="flex bg-white/10 rounded-lg p-0.5 mr-2">
+                                <div className="flex flex-col gap-2 w-full sm:w-auto sm:flex-row sm:items-center sm:justify-end">
+                                    <div className="flex bg-white/10 rounded-lg p-0.5 mr-0 sm:mr-2 w-full sm:w-auto justify-between sm:justify-start">
                                         <button
                                             onClick={() => setEvolutionMetric("attendance")}
-                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors ${evolutionMetric === "attendance" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
+                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors flex-1 sm:flex-none text-center ${evolutionMetric === "attendance" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
                                         >
                                             Asistencia
                                         </button>
                                         <button
                                             onClick={() => setEvolutionMetric("occupancy")}
-                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors ${evolutionMetric === "occupancy" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
+                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors flex-1 sm:flex-none text-center ${evolutionMetric === "occupancy" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
                                         >
                                             % Ocupación
                                         </button>
@@ -1321,7 +1328,7 @@ export default function TeamPage() {
                                     <select
                                         value={timeSeriesComparison}
                                         onChange={(e) => setTimeSeriesComparison(e.target.value)}
-                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none max-w-[120px]"
+                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none w-full sm:w-auto max-w-[160px]"
                                     >
                                         <option value="">Sin comparativa</option>
                                         {comparisonOptions.map((opt) => (
@@ -1553,15 +1560,15 @@ export default function TeamPage() {
                     < div className="grid grid-cols-1 lg:grid-cols-2 gap-8" >
                         {/* Scatter asistencia vs ocupación */}
                         < div id="chart-scatter-asistencia" >
-                            <div className="flex items-center justify-between mb-2">
+                            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-2">
                                 <h2 className="text-lg font-bold">
                                     Relación entre asistencia y ocupación
                                 </h2>
-                                <div className="flex items-center gap-2">
+                                <div className="flex flex-col sm:flex-row sm:items-center gap-2 w-full sm:w-auto sm:justify-end">
                                     <select
                                         value={scatterComparison}
                                         onChange={(e) => setScatterComparison(e.target.value)}
-                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none max-w-[120px]"
+                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none w-full sm:w-auto max-w-[160px]"
                                     >
                                         <option value="">Sin comparativa</option>
                                         {comparisonOptions.map((opt) => (
@@ -1822,7 +1829,10 @@ export default function TeamPage() {
                                         stroke="#ffffff30"
                                         tick={{ fill: "#ffffff50", fontSize: 10 }}
                                         tickLine={false}
-                                        interval={1}
+                                        interval={0}
+                                        tickMargin={12}
+                                        angle={-20}
+                                        textAnchor="end"
                                     />
                                     <YAxis
                                         stroke="#ffffff30"
@@ -1916,9 +1926,9 @@ export default function TeamPage() {
                                             layout="horizontal"
                                             margin={{
                                                 top: 16,
-                                                right: 60,
-                                                bottom: 24,
-                                                left: 110,
+                                                right: isMobile ? 30 : 60,
+                                                bottom: isMobile ? 18 : 24,
+                                                left: isMobile ? 80 : 110,
                                             }}
                                         >
                                             <CartesianGrid
@@ -1943,7 +1953,7 @@ export default function TeamPage() {
                                                 stroke="#ffffff30"
                                                 tick={{ fill: "#ffffff70", fontSize: 11 }}
                                                 tickLine={false}
-                                                width={100}
+                                                width={isMobile ? 80 : 100}
                                             />
                                             <Tooltip
                                                 content={({ active, payload }) => {
@@ -2126,7 +2136,7 @@ export default function TeamPage() {
                                                                     return (
                                                                         <div
                                                                             key={`c2-${dayIdx}-${hour}`}
-                                                                            className={`w-12 h-10 rounded-md border border-white/5 transition-all cursor-pointer hover:ring-2 hover:ring-white/20`}
+                                                                            className={`w-12 h-10 rounded-md border border-white/5 transition-all cursor-pointer hover:ring-2 hover:ring-white/20 flex items-center justify-center text-[10px] font-bold text-white drop-shadow`}
                                                                             style={{ background: bg }}
                                                                             onMouseEnter={(e) => {
                                                                                 const padding = 8; const vw = window.innerWidth; const vh = window.innerHeight;
@@ -2143,7 +2153,9 @@ export default function TeamPage() {
                                                                                 setHeatmapTooltip((s) => ({ ...s, left, top }));
                                                                             }}
                                                                             onMouseLeave={() => setHeatmapTooltip({ visible: false, left: 0, top: 0, matches: [], title: '' })}
-                                                                        />
+                                                                        >
+                                                                            {has ? count : ""}
+                                                                        </div>
                                                                     );
                                                                 })}
                                                             </div>

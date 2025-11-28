@@ -34,7 +34,8 @@ const MapRender = ({
     scale,
     onHover,
     hoveredStadium,
-    isInset = false
+    isInset = false,
+    isMobile = false
 }: {
     geoData: any;
     pointData: any[];
@@ -43,6 +44,7 @@ const MapRender = ({
     onHover: (s: any) => void;
     hoveredStadium: any | null;
     isInset?: boolean;
+    isMobile?: boolean;
 }) => (
     <ComposableMap
         projection="geoMercator"
@@ -91,7 +93,7 @@ const MapRender = ({
                 stadium.stadium_name?.toLowerCase().includes("palmas");
 
             // Base radius: Normal = 5, Las Palmas = 12 (much larger)
-            const baseRadius = isLasPalmas ? 16 : 5;
+            const baseRadius = isLasPalmas && !isMobile ? 16 : 5;
             const radius = isHovered ? baseRadius * 1.5 : baseRadius;
 
             return (
@@ -100,13 +102,7 @@ const MapRender = ({
                         className="cursor-pointer transition-all duration-200"
                         onMouseEnter={() => onHover(stadium)}
                         onMouseLeave={() => onHover(null)}
-                        onClick={() => {
-                            const teamName = stadium.team_primary || stadium.team || stadium.team_name || "";
-                            if (teamName) {
-                                const slug = getTeamSlug(teamName);
-                                window.location.href = `/equipo/${slug}`;
-                            }
-                        }}
+                        onClick={() => onHover(stadium)}
                     >
                         {/* Dot marker */}
                         <circle
@@ -132,6 +128,19 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
     const [hovered, setHovered] = useState<any | null>(null);
     const [hoveredFromList, setHoveredFromList] = useState<any | null>(null);
     const [searchTerm, setSearchTerm] = useState("");
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (typeof window !== "undefined") {
+                setIsMobile(window.innerWidth < 768);
+            }
+        };
+
+        handleResize();
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     // Cargar datos
     useEffect(() => {
@@ -252,6 +261,7 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                         scale={2200}
                         onHover={handleMapHover}
                         hoveredStadium={highlightedStadium}
+                        isMobile={isMobile}
                     />
                 </div>
 
@@ -265,12 +275,13 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                         onHover={handleMapHover}
                         hoveredStadium={highlightedStadium}
                         isInset={true}
+                        isMobile={isMobile}
                     />
                 </div>
 
                 {/* Fixed Tooltip - SOLO cuando se pasa por el mapa */}
                 {hovered && (
-                    <div className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 w-[320px] shadow-2xl z-50 pointer-events-none">
+                    <div className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 w-[320px] shadow-2xl z-50 pointer-events-auto">
                         <div className="text-xs text-white/50 uppercase tracking-wider mb-1">
                             {hovered.stadium_name}
                         </div>
@@ -310,6 +321,24 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                                     </span>
                                 </div>
                             </div>
+
+                            {(() => {
+                                const teamName = hovered.team_primary || hovered.team || hovered.team_name || "";
+                                const slug = teamName ? getTeamSlug(teamName) : "";
+
+                                if (!slug) return null;
+
+                                return (
+                                    <div className="pt-3 border-t border-white/10">
+                                        <a
+                                            href={`/equipo/${slug}`}
+                                            className="text-sm font-semibold text-cyan-300 hover:text-cyan-200"
+                                        >
+                                            Ir a la página del equipo
+                                        </a>
+                                    </div>
+                                );
+                            })()}
                         </div>
                     </div>
                 )}
