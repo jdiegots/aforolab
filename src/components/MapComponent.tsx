@@ -16,10 +16,6 @@ interface MapProps {
     stadiums?: any[];
     onStadiumClick?: (stadium: any) => void;
     showStadiumList?: boolean;
-    /**
-     * Permite ocultar la lista de estadios solo en móvil manteniéndola en escritorio.
-     */
-    hideListOnMobile?: boolean;
 }
 
 // Ruta pública al GeoJSON (en /public/data)
@@ -96,8 +92,8 @@ const MapRender = ({
             const isLasPalmas = stadium.team_primary?.toLowerCase().includes("palmas") ||
                 stadium.stadium_name?.toLowerCase().includes("palmas");
 
-            // Base radius: Normal = 5 (desktop), 7 (mobile) — Las Palmas enlarged only on desktop
-            const baseRadius = isLasPalmas && !isMobile ? 16 : isMobile ? 7 : 5;
+            // Base radius: Normal = 5, Las Palmas = 12 (much larger)
+            const baseRadius = isLasPalmas && !isMobile ? 16 : 5;
             const radius = isHovered ? baseRadius * 1.5 : baseRadius;
 
             return (
@@ -126,12 +122,7 @@ const MapRender = ({
     </ComposableMap>
 );
 
-export const MapComponent: React.FC<MapProps> = ({
-    stadiums: propStadiums,
-    onStadiumClick,
-    showStadiumList = true,
-    hideListOnMobile = false
-}) => {
+export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onStadiumClick, showStadiumList = true }) => {
     const [spainGeo, setSpainGeo] = useState<SpainGeoJSON | null>(null);
     const [mapData, setMapData] = useState<any[]>([]);
     const [hovered, setHovered] = useState<any | null>(null);
@@ -256,27 +247,11 @@ export const MapComponent: React.FC<MapProps> = ({
     const highlightedStadium = hovered || hoveredFromList;
 
     const shouldShowList = showStadiumList !== false;
-    const mapHeightClass = isMobile ? "h-[640px]" : "h-[600px]";
-    const listWrapperClasses = shouldShowList
-        ? hideListOnMobile
-            ? `hidden md:flex w-56 h-[400px]`
-            : `flex w-56 h-[400px]`
-        : "hidden";
-    const containerClasses = shouldShowList
-        ? hideListOnMobile
-            ? `w-full ${mapHeightClass} relative md:flex md:gap-4`
-            : `w-full ${mapHeightClass} relative flex gap-4`
-        : `w-full ${mapHeightClass} relative`;
-    const mapWrapperClasses = shouldShowList
-        ? hideListOnMobile
-            ? `w-full h-full relative flex items-center justify-center md:flex-1`
-            : `flex-1 relative flex items-center justify-center`
-        : `w-full h-full relative flex items-center justify-center`;
 
     return (
-        <div className={containerClasses}>
+        <div className={`w-full h-[600px] relative ${shouldShowList ? "flex gap-4" : ""}`}>
             {/* Mapa */}
-            <div className={mapWrapperClasses}>
+            <div className={shouldShowList ? "flex-1 relative flex items-center justify-center" : "w-full h-full relative flex items-center justify-center"}>
                 {/* Mapa Península + Baleares */}
                 <div className="w-full h-full">
                     <MapRender
@@ -371,7 +346,7 @@ export const MapComponent: React.FC<MapProps> = ({
 
             {/* Panel de búsqueda - Más compacto y corto */}
             {shouldShowList && (
-                <div className={`${listWrapperClasses} bg-black/20 backdrop-blur-sm border border-white/5 rounded-xl p-3 overflow-hidden flex flex-col`}>
+                <div className="w-56 h-[400px] bg-black/20 backdrop-blur-sm border border-white/5 rounded-xl p-3 overflow-hidden flex flex-col">
                     <div className="mb-3">
                         <div className="group relative flex items-center overflow-hidden rounded-full bg-white/5 p-1 shadow-sm ring-1 ring-white/5 backdrop-blur-sm transition-all focus-within:bg-white/10 focus-within:ring-white/20">
                             <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-neutral-400">
@@ -402,7 +377,13 @@ export const MapComponent: React.FC<MapProps> = ({
                                         }`}
                                     onMouseEnter={() => handleListHover(stadium)}
                                     onMouseLeave={() => setHoveredFromList(null)}
-                                    onClick={() => handleListHover(stadium)}
+                                    onClick={() => {
+                                        const teamName = stadium.team_primary || stadium.team || stadium.team_name || "";
+                                        if (teamName) {
+                                            const slug = getTeamSlug(teamName);
+                                            window.location.href = `/equipo/${slug}`;
+                                        }
+                                    }}
                                 >
                                     <div className="text-white/70 text-xs leading-snug">
                                         {stadium.stadium_name}

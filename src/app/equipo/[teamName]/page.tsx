@@ -1835,8 +1835,8 @@ export default function TeamPage() {
                                         tick={{ fill: "#ffffff50", fontSize: 11 }}
                                         tickLine={false}
                                         interval={0}
-                                        tickMargin={18}
-                                        angle={-28}
+                                        tickMargin={12}
+                                        angle={-20}
                                         textAnchor="end"
                                     />
                                     <YAxis
@@ -1929,13 +1929,13 @@ export default function TeamPage() {
                                     >
                                         <ScatterChart
                                             layout="horizontal"
-                                                margin={{
-                                                    top: 16,
-                                                    right: isMobile ? 30 : 60,
-                                                    bottom: isMobile ? 18 : 24,
-                                                    left: isMobile ? 12 : 110,
-                                                }}
-                                            >
+                                            margin={{
+                                                top: 16,
+                                                right: isMobile ? 30 : 60,
+                                                bottom: isMobile ? 18 : 24,
+                                                left: isMobile ? 80 : 110,
+                                            }}
+                                        >
                                             <CartesianGrid
                                                 strokeDasharray="3 3"
                                                 stroke="#ffffff08"
@@ -1958,7 +1958,7 @@ export default function TeamPage() {
                                                 stroke="#ffffff30"
                                                 tick={{ fill: "#ffffff70", fontSize: 11 }}
                                                 tickLine={false}
-                                                width={isMobile ? 120 : 100}
+                                                width={isMobile ? 80 : 100}
                                             />
                                             <Tooltip
                                                 content={({ active, payload }) => {
