@@ -1007,7 +1007,9 @@ export default function TeamPage() {
     const densityData = useMemo(() => {
         const createBuckets = (dataMatches: any[]) => {
             const buckets = Array.from({ length: 20 }, (_, i) => ({
-                range: `${i * 5}-${(i + 1) * 5}%`,
+                range: `${(i + 1) * 5}%`,
+                min: i * 5,
+                max: (i + 1) * 5,
                 count: 0,
                 matches: [] as any[],
             }));
@@ -1850,9 +1852,10 @@ export default function TeamPage() {
                                         content={({ active, payload, label }) => {
                                             if (!active || !payload || !payload.length) return null;
                                             const data = payload[0].payload;
+                                            const rangeLabel = `${data.min}-${data.max}%`;
                                             return (
                                                 <div className="bg-black/95 border border-white/20 px-3 py-2.5 rounded-lg text-xs space-y-2 max-w-[250px]">
-                                                    <div className="font-bold text-white mb-1">Rango: {label}</div>
+                                                    <div className="font-bold text-white mb-1">Rango: {rangeLabel}</div>
                                                     <div className="flex items-center justify-between gap-4">
                                                         <span style={{ color: payload[0].color }}>{teamName}</span>
                                                         <span className="font-mono">{data.freq.toFixed(1)}% ({data.count} partidos)</span>
