@@ -272,7 +272,13 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                 </div>
 
                 {/* Mapa Canarias (Inset) */}
-                <div className="absolute bottom-4 left-4 w-48 h-32 border border-white/10 bg-black/80 rounded-lg overflow-hidden shadow-lg">
+                <div
+                    className={`${
+                        isMobile
+                            ? "relative mt-3 w-40 h-28"
+                            : "absolute bottom-4 left-4 w-48 h-32"
+                    } border border-white/10 bg-black/80 rounded-lg overflow-hidden shadow-lg`}
+                >
                     <MapRender
                         geoData={canariasGeo}
                         pointData={canaryStadiums}
