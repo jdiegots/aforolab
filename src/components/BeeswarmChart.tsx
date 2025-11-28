@@ -6,7 +6,6 @@ import * as d3 from "d3-force";
 import { scaleLinear, scaleSqrt } from "d3-scale";
 import TeamInitialsBadge from "./TeamInitialsBadge";
 import { getTeamDisplayName, getTeamSlug } from "@/utils/teamMappings";
-import { useRouter } from "next/navigation";
 
 type Stadium = {
     stadium_name: string;
@@ -48,7 +47,6 @@ function resolveTeamName(node: Stadium): string {
 }
 
 export function BeeswarmChart({ data }: { data: Stadium[] }) {
-    const router = useRouter();
     const [nodes, setNodes] = useState<Node[]>([]);
     const [hovered, setHovered] = useState<Stadium | null>(null);
     const containerRef = useRef<HTMLDivElement>(null);
@@ -201,11 +199,7 @@ export function BeeswarmChart({ data }: { data: Stadium[] }) {
                             key={node.stadium_name}
                             onMouseEnter={() => setHovered(node)}
                             onMouseLeave={() => setHovered(null)}
-                            onClick={() => {
-                                const logoTeamName = getTeamDisplayName(resolveTeamName(node));
-                                const slug = getTeamSlug(logoTeamName);
-                                router.push(`/equipo/${encodeURIComponent(slug)}`);
-                            }}
+                            onClick={() => setHovered(node)}
                             className="cursor-pointer transition-all"
                             style={{
                                 filter: isHovered
@@ -259,7 +253,7 @@ export function BeeswarmChart({ data }: { data: Stadium[] }) {
                 <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 min-w-[250px] shadow-2xl z-50"
+                    className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-3 sm:p-4 w-[min(360px,90vw)] sm:w-[320px] shadow-2xl z-50"
                 >
                     <div className="text-xs text-white/50 uppercase tracking-wider mb-1">
                         {hovered.stadium_name}
@@ -291,6 +285,20 @@ export function BeeswarmChart({ data }: { data: Stadium[] }) {
                             </div>
                         </div>
                     </div>
+                    {(() => {
+                        const slug = getTeamSlug(getTeamDisplayName(resolveTeamName(hovered)));
+                        if (!slug) return null;
+                        return (
+                            <div className="pt-3 mt-2 border-t border-white/10">
+                                <a
+                                    href={`/equipo/${encodeURIComponent(slug)}`}
+                                    className="text-sm font-semibold text-cyan-300 hover:text-cyan-200"
+                                >
+                                    Ir a la página del equipo
+                                </a>
+                            </div>
+                        );
+                    })()}
                 </motion.div>
             )}
         </div>
