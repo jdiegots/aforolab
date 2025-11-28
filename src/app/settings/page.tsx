@@ -10,7 +10,7 @@ export default function SettingsPage() {
           Ajustes
         </h1>
         <p className="max-w-xl text-sm text-neutral-600 dark:text-neutral-300">
-          Configura cómo quieres trabajar con Asistencia360: tema claro/oscuri
+          Configura cómo quieres trabajar con AforoLab: tema claro/oscuri
           y idioma de la interfaz. El resto del comportamiento es local: no
           se envían tus preferencias a ningún servidor.
         </p>

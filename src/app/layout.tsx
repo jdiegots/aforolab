@@ -5,21 +5,21 @@ import { ReactNode } from "react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Asistencia360 · Visualizador de estadios y ocupación",
+  title: "AforoLab · Visualizador de estadios y ocupación",
   description:
-    "Asistencia360 es un visualizador de asistencia y ocupación en estadios de fútbol. Explora métricas por estadio, municipio, provincia y comunidad autónoma.",
+    "AforoLab es un visualizador de asistencia y ocupación en estadios de fútbol. Explora métricas por estadio, municipio, provincia y comunidad autónoma.",
   openGraph: {
-    title: "Asistencia360 · Visualizador de estadios y ocupación",
+    title: "AforoLab · Visualizador de estadios y ocupación",
     description:
       "Explora asistencia y ocupación de estadios de fútbol, ajustado a población de municipio, provincia y CCAA.",
-    url: "https://asistencia360.local",
-    siteName: "Asistencia360",
+    url: "https://aforolab.local",
+    siteName: "AforoLab",
     images: [
       {
         url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Asistencia360 · Visualizador de estadios y ocupación",
+        alt: "AforoLab · Visualizador de estadios y ocupación",
       },
     ],
     type: "website",

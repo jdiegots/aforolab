@@ -246,11 +246,11 @@ async function exportChartAsPng(
             });
         }
 
-        // Añadir "Fuente: Asistencia360" discreto
+        // Añadir "Fuente: AforoLab" discreto
         ctx.font = `${10 * scale}px Inter, sans-serif`;
         ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
         ctx.textAlign = "right";
-        ctx.fillText("Fuente: Asistencia360", width - margin, height - (10 * scale));
+        ctx.fillText("Fuente: AforoLab", width - margin, height - (10 * scale));
 
         URL.revokeObjectURL(url);
 
@@ -1826,18 +1826,18 @@ export default function TeamPage() {
                                     data={densityData}
                                     barGap={0}
                                     barCategoryGap="10%"
-                                    margin={{ top: 8, left: 0, right: 0, bottom: 82 }}
+                                    margin={{ top: 12, left: 6, right: 10, bottom: 90 }}
                                 >
                                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff08" vertical={false} />
                                     <XAxis
                                         dataKey="range"
                                         stroke="#ffffff30"
-                                        tick={{ fill: "#ffffff50", fontSize: 11, dy: 4 }}
+                                        tick={{ fill: "#ffffff50", fontSize: 11, dy: 10 }}
                                         tickLine={false}
                                         interval={0}
-                                        tickMargin={4}
-                                        angle={-90}
-                                        textAnchor="start"
+                                        tickMargin={12}
+                                        angle={-70}
+                                        textAnchor="end"
                                     />
                                     <YAxis
                                         stroke="#ffffff30"
@@ -1931,9 +1931,9 @@ export default function TeamPage() {
                                             layout="horizontal"
                                             margin={{
                                                 top: 16,
-                                                right: isMobile ? 20 : 60,
+                                                right: isMobile ? 16 : 48,
                                                 bottom: isMobile ? 18 : 24,
-                                                left: isMobile ? 56 : 110,
+                                                left: isMobile ? 44 : 92,
                                             }}
                                         >
                                             <CartesianGrid
