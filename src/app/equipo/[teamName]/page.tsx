@@ -1821,12 +1821,12 @@ export default function TeamPage() {
                             <p className="text-sm text-white/50 mb-6">
                                 Frecuencia relativa de partidos por rango de ocupación
                             </p>
-                            <ResponsiveContainer width="100%" height={330}>
+                            <ResponsiveContainer width="100%" height={320}>
                                 <BarChart
                                     data={densityData}
                                     barGap={0}
                                     barCategoryGap="10%"
-                                    margin={{ top: 8, left: 0, right: 0, bottom: 64 }}
+                                    margin={{ top: 8, left: 0, right: 0, bottom: 28 }}
                                 >
                                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff08" vertical={false} />
                                     <XAxis
@@ -1835,9 +1835,9 @@ export default function TeamPage() {
                                         tick={{ fill: "#ffffff50", fontSize: 11 }}
                                         tickLine={false}
                                         interval={0}
-                                        tickMargin={8}
-                                        angle={-90}
-                                        textAnchor="middle"
+                                        tickMargin={12}
+                                        angle={-20}
+                                        textAnchor="end"
                                     />
                                     <YAxis
                                         stroke="#ffffff30"
@@ -1929,13 +1929,13 @@ export default function TeamPage() {
                                     >
                                         <ScatterChart
                                             layout="horizontal"
-                                                margin={{
-                                                    top: 16,
-                                                    right: isMobile ? 30 : 60,
-                                                    bottom: isMobile ? 18 : 24,
-                                                    left: isMobile ? 6 : 110,
-                                                }}
-                                            >
+                                            margin={{
+                                                top: 16,
+                                                right: isMobile ? 30 : 60,
+                                                bottom: isMobile ? 18 : 24,
+                                                left: isMobile ? 80 : 110,
+                                            }}
+                                        >
                                             <CartesianGrid
                                                 strokeDasharray="3 3"
                                                 stroke="#ffffff08"
@@ -1958,7 +1958,7 @@ export default function TeamPage() {
                                                 stroke="#ffffff30"
                                                 tick={{ fill: "#ffffff70", fontSize: 11 }}
                                                 tickLine={false}
-                                                width={isMobile ? 96 : 100}
+                                                width={isMobile ? 80 : 100}
                                             />
                                             <Tooltip
                                                 content={({ active, payload }) => {
