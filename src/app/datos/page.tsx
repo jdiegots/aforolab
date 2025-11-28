@@ -261,7 +261,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div className="mb-12">
-                    <h2 className="text-2xl font-bold mb-6">Los estadios de LaLiga</h2>
+                    <h2 className="text-2xl font-bold mb-3 md:mb-6">Los estadios de LaLiga</h2>
                     <MapComponent hideListOnMobile />
                 </div>
             </div >
