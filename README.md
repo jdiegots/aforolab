@@ -1,4 +1,4 @@
-# Asistencia360
+# AforoLab
 
 Aplicación Next.js para visualizar aforos, ocupación y asistencia en estadios de LaLiga. La interfaz muestra comparativas por estadio y permite explorar datos agregados por equipo y territorio.
 
