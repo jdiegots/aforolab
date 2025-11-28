@@ -249,9 +249,15 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
     const shouldShowList = showStadiumList !== false;
 
     return (
-        <div className={`w-full h-[600px] relative ${shouldShowList ? "flex gap-4" : ""}`}>
+        <div
+            className={`w-full min-h-[420px] md:min-h-[520px] lg:h-[600px] relative ${shouldShowList ? "flex gap-4" : ""}`}
+        >
             {/* Mapa */}
-            <div className={shouldShowList ? "flex-1 relative flex items-center justify-center" : "w-full h-full relative flex items-center justify-center"}>
+            <div
+                className={shouldShowList
+                    ? "flex-1 relative flex items-start justify-center"
+                    : "w-full h-full relative flex items-start justify-center"}
+            >
                 {/* Mapa Península + Baleares */}
                 <div className="w-full h-full">
                     <MapRender

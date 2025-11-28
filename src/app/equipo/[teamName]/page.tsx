@@ -1826,18 +1826,18 @@ export default function TeamPage() {
                                     data={densityData}
                                     barGap={0}
                                     barCategoryGap="10%"
-                                    margin={{ top: 8, left: 0, right: 0, bottom: 28 }}
+                                    margin={{ top: 8, left: 0, right: 0, bottom: 82 }}
                                 >
                                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff08" vertical={false} />
                                     <XAxis
                                         dataKey="range"
                                         stroke="#ffffff30"
-                                        tick={{ fill: "#ffffff50", fontSize: 11 }}
+                                        tick={{ fill: "#ffffff50", fontSize: 11, dy: 4 }}
                                         tickLine={false}
                                         interval={0}
-                                        tickMargin={12}
-                                        angle={-20}
-                                        textAnchor="end"
+                                        tickMargin={4}
+                                        angle={-90}
+                                        textAnchor="start"
                                     />
                                     <YAxis
                                         stroke="#ffffff30"
@@ -1931,9 +1931,9 @@ export default function TeamPage() {
                                             layout="horizontal"
                                             margin={{
                                                 top: 16,
-                                                right: isMobile ? 30 : 60,
+                                                right: isMobile ? 20 : 60,
                                                 bottom: isMobile ? 18 : 24,
-                                                left: isMobile ? 80 : 110,
+                                                left: isMobile ? 56 : 110,
                                             }}
                                         >
                                             <CartesianGrid
@@ -1958,7 +1958,7 @@ export default function TeamPage() {
                                                 stroke="#ffffff30"
                                                 tick={{ fill: "#ffffff70", fontSize: 11 }}
                                                 tickLine={false}
-                                                width={isMobile ? 80 : 100}
+                                                width={isMobile ? 68 : 100}
                                             />
                                             <Tooltip
                                                 content={({ active, payload }) => {
