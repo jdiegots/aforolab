@@ -100,8 +100,8 @@ const MapRender = ({
                 <Marker key={index} coordinates={[stadium.lng, stadium.lat]}>
                     <g
                         className="cursor-pointer transition-all duration-200"
-                        onMouseEnter={() => onHover(stadium)}
-                        onMouseLeave={() => onHover(null)}
+                        onMouseEnter={isMobile ? undefined : () => onHover(stadium)}
+                        onMouseLeave={isMobile ? undefined : () => onHover(null)}
                         onClick={() => onHover(stadium)}
                     >
                         {/* Dot marker */}
