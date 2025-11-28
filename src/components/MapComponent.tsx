@@ -15,6 +15,7 @@ import { Search } from "lucide-react";
 interface MapProps {
     stadiums?: any[];
     onStadiumClick?: (stadium: any) => void;
+    showStadiumList?: boolean;
 }
 
 // Ruta pública al GeoJSON (en /public/data)
@@ -125,7 +126,7 @@ const MapRender = ({
     </ComposableMap>
 );
 
-export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onStadiumClick }) => {
+export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onStadiumClick, showStadiumList = true }) => {
     const [spainGeo, setSpainGeo] = useState<SpainGeoJSON | null>(null);
     const [mapData, setMapData] = useState<any[]>([]);
     const [hovered, setHovered] = useState<any | null>(null);
@@ -236,10 +237,12 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
     // El estadio destacado puede venir del mapa o de la lista
     const highlightedStadium = hovered || hoveredFromList;
 
+    const shouldShowList = showStadiumList !== false;
+
     return (
-        <div className="w-full h-[600px] relative flex gap-4">
+        <div className={`w-full h-[600px] relative ${shouldShowList ? "flex gap-4" : ""}`}>
             {/* Mapa */}
-            <div className="flex-1 relative flex items-center justify-center">
+            <div className={shouldShowList ? "flex-1 relative flex items-center justify-center" : "w-full h-full relative flex items-center justify-center"}>
                 {/* Mapa Península + Baleares */}
                 <div className="w-full h-full">
                     <MapRender
@@ -313,55 +316,58 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
             </div>
 
             {/* Panel de búsqueda - Más compacto y corto */}
-            <div className="w-56 h-[400px] bg-black/20 backdrop-blur-sm border border-white/5 rounded-xl p-3 overflow-hidden flex flex-col">
-                <div className="mb-3">
-                    <div className="group relative flex items-center overflow-hidden rounded-full bg-white/5 p-1 shadow-sm ring-1 ring-white/5 backdrop-blur-sm transition-all focus-within:bg-white/10 focus-within:ring-white/20">
-                        <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-neutral-400">
-                            <Search className="h-3 w-3" />
+            {shouldShowList && (
+                <div className="w-56 h-[400px] bg-black/20 backdrop-blur-sm border border-white/5 rounded-xl p-3 overflow-hidden flex flex-col">
+                    <div className="mb-3">
+                        <div className="group relative flex items-center overflow-hidden rounded-full bg-white/5 p-1 shadow-sm ring-1 ring-white/5 backdrop-blur-sm transition-all focus-within:bg-white/10 focus-within:ring-white/20">
+                            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-neutral-400">
+                                <Search className="h-3 w-3" />
+                            </div>
+                            <input
+                                type="text"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                                placeholder="Buscar..."
+                                className="flex-1 bg-transparent px-2 text-xs text-white placeholder:text-neutral-500 focus:outline-none"
+                            />
                         </div>
-                        <input
-                            type="text"
-                            value={searchTerm}
-                            onChange={(e) => setSearchTerm(e.target.value)}
-                            placeholder="Buscar..."
-                            className="flex-1 bg-transparent px-2 text-xs text-white placeholder:text-neutral-500 focus:outline-none"
-                        />
+                    </div>
+
+                    <div className="flex-1 overflow-y-auto space-y-0.5 pr-1 custom-scrollbar">
+                        {filteredStadiums.length === 0 ? (
+                            <div className="text-white/20 text-xs text-center py-4">
+                                Sin resultados
+                            </div>
+                        ) : (
+                            filteredStadiums.map((stadium) => (
+                                <div
+                                    key={stadium.stadium_name}
+                                    className={`px-2 py-1 rounded-md cursor-pointer transition-all duration-200 ${highlightedStadium?.stadium_name === stadium.stadium_name
+                                        ? "bg-cyan-400/15 border-l-2 border-cyan-400"
+                                        : "bg-white/0 border-l-2 border-transparent hover:bg-white/5"
+                                        }`}
+                                    onMouseEnter={() => handleListHover(stadium)}
+                                    onMouseLeave={() => setHoveredFromList(null)}
+                                    onClick={() => {
+                                        const teamName = stadium.team_primary || stadium.team || stadium.team_name || "";
+                                        if (teamName) {
+                                            const slug = getTeamSlug(teamName);
+                                            window.location.href = `/equipo/${slug}`;
+                                        }
+                                    }}
+                                >
+                                    <div className="text-white/70 text-xs leading-snug">
+                                        {stadium.stadium_name}
+                                    </div>
+                                </div>
+                            ))
+                        )}
                     </div>
                 </div>
+            )}
 
-                <div className="flex-1 overflow-y-auto space-y-0.5 pr-1 custom-scrollbar">
-                    {filteredStadiums.length === 0 ? (
-                        <div className="text-white/20 text-xs text-center py-4">
-                            Sin resultados
-                        </div>
-                    ) : (
-                        filteredStadiums.map((stadium) => (
-                            <div
-                                key={stadium.stadium_name}
-                                className={`px-2 py-1 rounded-md cursor-pointer transition-all duration-200 ${highlightedStadium?.stadium_name === stadium.stadium_name
-                                    ? "bg-cyan-400/15 border-l-2 border-cyan-400"
-                                    : "bg-white/0 border-l-2 border-transparent hover:bg-white/5"
-                                    }`}
-                                onMouseEnter={() => handleListHover(stadium)}
-                                onMouseLeave={() => setHoveredFromList(null)}
-                                onClick={() => {
-                                    const teamName = stadium.team_primary || stadium.team || stadium.team_name || "";
-                                    if (teamName) {
-                                        const slug = getTeamSlug(teamName);
-                                        window.location.href = `/equipo/${slug}`;
-                                    }
-                                }}
-                            >
-                                <div className="text-white/70 text-xs leading-snug">
-                                    {stadium.stadium_name}
-                                </div>
-                            </div>
-                        ))
-                    )}
-                </div>
-            </div>
-
-            <style jsx>{`
+            {shouldShowList && (
+                <style jsx>{`
         .custom-scrollbar::-webkit-scrollbar {
           width: 4px;
         }
@@ -376,6 +382,7 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
           background: rgba(6, 182, 212, 0.4);
         }
       `}</style>
+            )}
         </div>
     );
 };
