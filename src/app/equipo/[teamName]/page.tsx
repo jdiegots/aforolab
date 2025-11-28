@@ -1687,37 +1687,35 @@ export default function TeamPage() {
 
                         {/* Patrón semanal (Radar) */}
                         < div id="chart-patron-semanal" className="relative" >
-                            <div className="flex items-center justify-between mb-3 gap-3">
+                            <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between mb-3">
                                 <div>
                                     <h2 className="text-lg font-bold mb-1">Distribución semanal de asistencia</h2>
                                     <p className="text-sm text-white/50">
                                         {weeklyMetric === "attendance" ? "Asistencia" : "Ocupación"} promedio por día de la semana.
                                     </p>
                                 </div>
-                                <div className="flex flex-col items-end gap-2">
-                                    <div className="flex items-center gap-2">
-                                        <div className="flex bg-white/10 rounded-lg p-0.5">
-                                            <button
-                                                onClick={() => setWeeklyMetric("attendance")}
-                                                className={`px-2 py-1 text-[10px] rounded-md transition-colors ${weeklyMetric === "attendance" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
-                                            >
-                                                Asistencia
-                                            </button>
-                                            <button
-                                                onClick={() => setWeeklyMetric("occupancy")}
-                                                className={`px-2 py-1 text-[10px] rounded-md transition-colors ${weeklyMetric === "occupancy" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
-                                            >
-                                                % Ocupación
-                                            </button>
-                                        </div>
+                                <div className="flex flex-col gap-2 w-full sm:w-auto sm:items-end">
+                                    <div className="flex bg-white/10 rounded-lg p-0.5 w-full sm:w-auto justify-between sm:justify-start">
+                                        <button
+                                            onClick={() => setWeeklyMetric("attendance")}
+                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors flex-1 sm:flex-none text-center ${weeklyMetric === "attendance" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
+                                        >
+                                            Asistencia
+                                        </button>
+                                        <button
+                                            onClick={() => setWeeklyMetric("occupancy")}
+                                            className={`px-2 py-1 text-[10px] rounded-md transition-colors flex-1 sm:flex-none text-center ${weeklyMetric === "occupancy" ? "bg-white/20 text-white" : "text-white/50 hover:text-white/80"}`}
+                                        >
+                                            % Ocupación
+                                        </button>
                                     </div>
-                                    <div className="flex items-center gap-2">
+                                    <div className="flex items-center gap-2 w-full sm:w-auto">
                                         <select
                                             value={comparisonTeam}
                                             onChange={(e) =>
                                                 setComparisonTeam(e.target.value as string)
                                             }
-                                            className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none max-w-[120px]"
+                                            className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none w-full sm:w-auto max-w-[150px]"
                                         >
                                             <option value="">Sin comparativa</option>
                                             {comparisonOptions.map((opt) => (
@@ -1798,15 +1796,17 @@ export default function TeamPage() {
 
                         {/* Distribución de ocupación */}
                         < div id="chart-distribucion-ocupacion" >
-                            <div className="flex items-center justify-between mb-2">
-                                <h2 className="text-lg font-bold">
-                                    Distribución de ocupación
-                                </h2>
-                                <div className="flex items-center gap-2">
+                            <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between mb-2">
+                                <div>
+                                    <h2 className="text-lg font-bold">
+                                        Distribución de ocupación
+                                    </h2>
+                                </div>
+                                <div className="flex items-center gap-2 w-full sm:w-auto">
                                     <select
                                         value={densityComparison}
                                         onChange={(e) => setDensityComparison(e.target.value)}
-                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none max-w-[120px]"
+                                        className="bg-black/60 border border-white/15 text-xs px-2 py-1 rounded-md text-white/80 outline-none w-full sm:w-auto max-w-[150px]"
                                     >
                                         <option value="">Sin comparativa</option>
                                         {comparisonOptions.map((opt) => (
@@ -1821,13 +1821,18 @@ export default function TeamPage() {
                             <p className="text-sm text-white/50 mb-6">
                                 Frecuencia relativa de partidos por rango de ocupación
                             </p>
-                            <ResponsiveContainer width="100%" height={300}>
-                                <BarChart data={densityData} barGap={0} barCategoryGap="10%">
+                            <ResponsiveContainer width="100%" height={320}>
+                                <BarChart
+                                    data={densityData}
+                                    barGap={0}
+                                    barCategoryGap="10%"
+                                    margin={{ top: 8, left: 0, right: 0, bottom: 28 }}
+                                >
                                     <CartesianGrid strokeDasharray="3 3" stroke="#ffffff08" vertical={false} />
                                     <XAxis
                                         dataKey="range"
                                         stroke="#ffffff30"
-                                        tick={{ fill: "#ffffff50", fontSize: 10 }}
+                                        tick={{ fill: "#ffffff50", fontSize: 11 }}
                                         tickLine={false}
                                         interval={0}
                                         tickMargin={12}
