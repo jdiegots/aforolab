@@ -246,11 +246,11 @@ async function exportChartAsPng(
             });
         }
 
-        // Añadir "Fuente: Asistencia360" discreto
+        // Añadir "Fuente: AforoLab" discreto
         ctx.font = `${10 * scale}px Inter, sans-serif`;
         ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
         ctx.textAlign = "right";
-        ctx.fillText("Fuente: Asistencia360", width - margin, height - (10 * scale));
+        ctx.fillText("Fuente: AforoLab", width - margin, height - (10 * scale));
 
         URL.revokeObjectURL(url);
 
