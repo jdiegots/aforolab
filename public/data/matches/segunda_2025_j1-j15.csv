@@ -1,0 +1,172 @@
+season,spieltag,date,time,home_team,away_team,home_goals,away_goals,attendance
+2025,1,15/08/2025,21:30:00,Burgos CF,Cultural Leonesa,5,1,5434
+2025,1,15/08/2025,21:30:00,Real Valladolid CF,AD Ceuta FC,3,0,14584
+2025,1,16/08/2025,17:00:00,Real Racing Club,CD Castellón,3,1,21796
+2025,1,16/08/2025,19:30:00,Málaga CF,SD Eibar,1,1,24819
+2025,1,16/08/2025,21:30:00,Granada CF,RC Deportivo,1,3,13824
+2025,1,17/08/2025,17:00:00,Real Sociedad B,Real Zaragoza,1,0,6323
+2025,1,17/08/2025,19:30:00,Cádiz CF,CD Mirandés,1,0,15674
+2025,1,17/08/2025,21:30:00,UD Las Palmas,FC Andorra,1,1,19664
+2025,1,17/08/2025,21:30:00,SD Huesca,CD Leganés,1,1,5568
+2025,1,18/08/2025,19:00:00,Real Sporting,Córdoba CF,2,1,24896
+2025,1,18/08/2025,21:30:00,UD Almería,Albacete Balompié,4,4,15119
+2025,2,22/08/2025,19:30:00,SD Eibar,Granada CF,3,0,3953
+2025,2,22/08/2025,21:30:00,CD Leganés,Cádiz CF,1,1,9448
+2025,2,22/08/2025,21:30:00,CD Castellón,Real Valladolid CF,0,1,11370
+2025,2,23/08/2025,17:00:00,CD Mirandés,SD Huesca,0,1,3683
+2025,2,23/08/2025,19:00:00,AD Ceuta FC,Real Sporting,0,1,4473
+2025,2,23/08/2025,21:30:00,Real Zaragoza,FC Andorra,1,3,13126
+2025,2,24/08/2025,00:00:00,Málaga CF,Real Sociedad B,1,0,25075
+2025,2,24/08/2025,17:00:00,RC Deportivo,Burgos CF,0,0,25954
+2025,2,24/08/2025,19:30:00,Cultural Leonesa,UD Almería,0,1,10621
+2025,2,25/08/2025,19:30:00,Albacete Balompié,Real Racing Club,2,3,11758
+2025,2,25/08/2025,21:30:00,Córdoba CF,UD Las Palmas,1,3,16450
+2025,3,29/08/2025,19:30:00,Real Sociedad B,UD Almería,2,2,4172
+2025,3,29/08/2025,21:30:00,Real Sporting,Cultural Leonesa,1,0,25146
+2025,3,30/08/2025,17:00:00,Real Racing Club,AD Ceuta FC,4,1,20789
+2025,3,30/08/2025,19:00:00,Real Valladolid CF,Córdoba CF,0,0,17846
+2025,3,30/08/2025,21:30:00,CD Castellón,Real Zaragoza,1,1,12255
+2025,3,31/08/2025,17:00:00,FC Andorra,Burgos CF,2,1,2031
+2025,3,31/08/2025,17:00:00,Cádiz CF,Albacete Balompié,2,1,15483
+2025,3,31/08/2025,19:30:00,UD Las Palmas,Málaga CF,0,1,22039
+2025,3,31/08/2025,21:30:00,Granada CF,CD Mirandés,1,2,13815
+2025,3,01/09/2025,19:30:00,SD Huesca,SD Eibar,2,1,6471
+2025,3,01/09/2025,21:30:00,CD Leganés,RC Deportivo,2,2,12256
+2025,4,05/09/2025,19:30:00,Albacete Balompié,CD Mirandés,1,4,11253
+2025,4,05/09/2025,21:30:00,Córdoba CF,CD Castellón,2,1,16134
+2025,4,06/09/2025,16:15:00,RC Deportivo,Real Sporting,1,0,25089
+2025,4,06/09/2025,18:30:00,Real Zaragoza,Real Valladolid CF,1,1,15601
+2025,4,06/09/2025,21:00:00,Málaga CF,Granada CF,2,2,26601
+2025,4,07/09/2025,14:00:00,AD Ceuta FC,SD Huesca,2,1,5043
+2025,4,07/09/2025,16:15:00,Burgos CF,UD Las Palmas,0,0,9687
+2025,4,07/09/2025,16:15:00,Real Sociedad B,Cádiz CF,3,3,4490
+2025,4,07/09/2025,18:30:00,Cultural Leonesa,CD Leganés,0,0,10351
+2025,4,07/09/2025,18:30:00,UD Almería,Real Racing Club,2,3,14328
+2025,4,08/09/2025,20:30:00,SD Eibar,FC Andorra,2,0,4693
+2025,5,12/09/2025,20:30:00,UD Las Palmas,Real Sociedad B,2,1,17899
+2025,5,13/09/2025,16:15:00,CD Mirandés,RC Deportivo,1,5,3684
+2025,5,13/09/2025,16:15:00,Cádiz CF,SD Eibar,1,0,14108
+2025,5,13/09/2025,18:30:00,SD Huesca,Málaga CF,1,0,6230
+2025,5,13/09/2025,21:00:00,Real Valladolid CF,UD Almería,3,1,16345
+2025,5,14/09/2025,14:00:00,FC Andorra,Córdoba CF,3,1,3731
+2025,5,14/09/2025,16:15:00,Real Racing Club,Cultural Leonesa,2,4,22176
+2025,5,14/09/2025,18:30:00,Real Sporting,Burgos CF,2,3,23842
+2025,5,14/09/2025,18:30:00,CD Castellón,AD Ceuta FC,3,3,11801
+2025,5,14/09/2025,21:00:00,Granada CF,CD Leganés,0,2,13735
+2025,5,15/09/2025,20:30:00,Real Zaragoza,Albacete Balompié,0,0,15704
+2025,6,19/09/2025,20:30:00,RC Deportivo,SD Huesca,4,0,23206
+2025,6,20/09/2025,16:15:00,Cultural Leonesa,CD Castellón,1,3,9068
+2025,6,20/09/2025,18:30:00,CD Leganés,UD Las Palmas,0,1,10773
+2025,6,20/09/2025,18:30:00,FC Andorra,CD Mirandés,1,1,3931
+2025,6,20/09/2025,21:00:00,UD Almería,Real Sporting,2,1,12588
+2025,6,21/09/2025,14:00:00,AD Ceuta FC,Real Zaragoza,1,0,5102
+2025,6,21/09/2025,16:15:00,Albacete Balompié,Real Valladolid CF,2,0,11013
+2025,6,21/09/2025,18:30:00,SD Eibar,Real Sociedad B,2,1,5730
+2025,6,21/09/2025,18:30:00,Málaga CF,Cádiz CF,0,1,26932
+2025,6,21/09/2025,21:00:00,Córdoba CF,Real Racing Club,2,2,15809
+2025,6,22/09/2025,20:30:00,Burgos CF,Granada CF,1,1,8887
+2025,7,26/09/2025,20:30:00,CD Mirandés,Real Zaragoza,0,1,3352
+2025,7,27/09/2025,18:30:00,SD Eibar,RC Deportivo,1,1,5980
+2025,7,27/09/2025,18:30:00,Real Racing Club,FC Andorra,1,2,19896
+2025,7,27/09/2025,21:00:00,UD Las Palmas,UD Almería,0,1,19901
+2025,7,28/09/2025,14:00:00,Real Sociedad B,Córdoba CF,1,1,1840
+2025,7,28/09/2025,16:15:00,Burgos CF,Málaga CF,2,1,8808
+2025,7,28/09/2025,16:15:00,Cádiz CF,AD Ceuta FC,0,0,16587
+2025,7,28/09/2025,18:30:00,Real Sporting,Albacete Balompié,3,4,22398
+2025,7,28/09/2025,18:30:00,Real Valladolid CF,Cultural Leonesa,0,1,20507
+2025,7,28/09/2025,21:00:00,SD Huesca,Granada CF,0,1,4589
+2025,7,29/09/2025,20:30:00,CD Leganés,CD Castellón,0,1,10291
+2025,8,03/10/2025,20:00:00,AD Ceuta FC,SD Eibar,1,0,5207
+2025,8,04/10/2025,16:15:00,RC Deportivo,UD Almería,1,1,23646
+2025,8,04/10/2025,18:30:00,FC Andorra,CD Leganés,1,2,3520
+2025,8,04/10/2025,18:30:00,SD Huesca,Burgos CF,2,1,5904
+2025,8,04/10/2025,21:00:00,Granada CF,Real Sociedad B,5,2,12851
+2025,8,05/10/2025,14:00:00,Real Zaragoza,Córdoba CF,0,1,15808
+2025,8,05/10/2025,16:15:00,CD Castellón,Real Sporting,3,1,11711
+2025,8,05/10/2025,18:30:00,Real Racing Club,Málaga CF,3,0,20259
+2025,8,05/10/2025,18:30:00,Real Valladolid CF,CD Mirandés,1,1,18574
+2025,8,05/10/2025,21:00:00,UD Las Palmas,Cádiz CF,1,0,18413
+2025,8,06/10/2025,20:30:00,Cultural Leonesa,Albacete Balompié,0,0,9849
+2025,9,10/10/2025,20:30:00,Granada CF,UD Las Palmas,0,0,13295
+2025,9,11/10/2025,16:15:00,CD Mirandés,CD Leganés,0,0,2839
+2025,9,11/10/2025,18:30:00,UD Almería,Real Zaragoza,4,2,13231
+2025,9,11/10/2025,18:30:00,Real Sociedad B,FC Andorra,3,0,2766
+2025,9,12/10/2025,14:00:00,Albacete Balompié,AD Ceuta FC,0,0,10630
+2025,9,12/10/2025,16:15:00,SD Eibar,CD Castellón,0,0,4950
+2025,9,12/10/2025,16:15:00,Real Sporting,Real Racing Club,2,1,23906
+2025,9,12/10/2025,18:30:00,Burgos CF,Real Valladolid CF,0,1,11011
+2025,9,12/10/2025,18:30:00,Cádiz CF,SD Huesca,1,0,16070
+2025,9,12/10/2025,21:00:00,Málaga CF,RC Deportivo,3,0,25514
+2025,9,13/10/2025,20:30:00,Córdoba CF,Cultural Leonesa,1,0,16983
+2025,10,17/10/2025,20:30:00,FC Andorra,Granada CF,0,0,3620
+2025,10,18/10/2025,16:15:00,AD Ceuta FC,CD Mirandés,2,0,5041
+2025,10,18/10/2025,18:30:00,Real Zaragoza,Cultural Leonesa,0,5,15574
+2025,10,19/10/2025,14:00:00,CD Leganés,Málaga CF,2,0,10794
+2025,10,19/10/2025,16:15:00,CD Castellón,Albacete Balompié,0,1,12269
+2025,10,19/10/2025,16:15:00,Real Valladolid CF,Real Sporting,2,3,19335
+2025,10,19/10/2025,18:30:00,Real Racing Club,RC Deportivo,2,1,22207
+2025,10,19/10/2025,18:30:00,Córdoba CF,UD Almería,1,1,16667
+2025,10,19/10/2025,21:00:00,UD Las Palmas,SD Eibar,3,1,18472
+2025,10,20/10/2025,20:30:00,Cádiz CF,Burgos CF,1,3,15127
+2025,10,05/11/2025,20:00:00,Real Sociedad B,SD Huesca,2,0,1596
+2025,11,24/10/2025,20:30:00,SD Huesca,UD Las Palmas,1,1,6044
+2025,11,25/10/2025,14:00:00,Cultural Leonesa,AD Ceuta FC,0,1,8635
+2025,11,25/10/2025,16:15:00,Albacete Balompié,Córdoba CF,1,3,10995
+2025,11,25/10/2025,16:15:00,SD Eibar,CD Leganés,0,0,4145
+2025,11,25/10/2025,18:30:00,Burgos CF,Real Sociedad B,1,0,8672
+2025,11,25/10/2025,18:30:00,Granada CF,Cádiz CF,0,0,16828
+2025,11,25/10/2025,21:00:00,CD Mirandés,Real Racing Club,1,3,3238
+2025,11,26/10/2025,14:00:00,Málaga CF,FC Andorra,4,1,22106
+2025,11,26/10/2025,18:30:00,Real Sporting,Real Zaragoza,1,0,22640
+2025,11,26/10/2025,18:30:00,UD Almería,CD Castellón,1,0,12258
+2025,11,26/10/2025,21:00:00,RC Deportivo,Real Valladolid CF,1,1,19392
+2025,12,31/10/2025,20:30:00,Real Racing Club,Real Sociedad B,1,0,18723
+2025,12,01/11/2025,16:15:00,Cultural Leonesa,CD Mirandés,3,2,9010
+2025,12,01/11/2025,18:30:00,Albacete Balompié,SD Huesca,2,1,9703
+2025,12,01/11/2025,18:30:00,CD Leganés,Burgos CF,1,2,10500
+2025,12,01/11/2025,21:00:00,UD Almería,SD Eibar,3,1,11631
+2025,12,02/11/2025,14:00:00,FC Andorra,Cádiz CF,0,0,3320
+2025,12,02/11/2025,16:15:00,Córdoba CF,AD Ceuta FC,2,0,17818
+2025,12,02/11/2025,16:15:00,Real Sporting,UD Las Palmas,0,0,23302
+2025,12,02/11/2025,18:30:00,CD Castellón,Málaga CF,2,1,11345
+2025,12,02/11/2025,21:00:00,Real Zaragoza,RC Deportivo,0,2,14566
+2025,12,03/11/2025,20:30:00,Real Valladolid CF,Granada CF,2,1,14320
+2025,13,07/11/2025,20:30:00,CD Mirandés,Real Sporting,2,1,2970
+2025,13,08/11/2025,14:00:00,Real Sociedad B,CD Leganés,2,1,1659
+2025,13,08/11/2025,16:15:00,SD Huesca,FC Andorra,2,2,5938
+2025,13,08/11/2025,16:15:00,SD Eibar,Albacete Balompié,3,2,3941
+2025,13,08/11/2025,18:30:00,RC Deportivo,Cultural Leonesa,3,0,25078
+2025,13,08/11/2025,21:00:00,Málaga CF,Córdoba CF,2,2,26149
+2025,13,09/11/2025,14:00:00,UD Las Palmas,Real Racing Club,3,1,21496
+2025,13,09/11/2025,18:30:00,Granada CF,Real Zaragoza,3,1,14272
+2025,13,09/11/2025,21:00:00,Cádiz CF,Real Valladolid CF,0,0,13801
+2025,13,10/11/2025,20:30:00,Burgos CF,CD Castellón,0,0,9152
+2025,13,26/11/2025,16:15:00,AD Ceuta FC,UD Almería,3,2,3623
+2025,14,14/11/2025,20:30:00,Real Valladolid CF,UD Las Palmas,0,1,14894
+2025,14,15/11/2025,16:00:00,Albacete Balompié,FC Andorra,1,0,8705
+2025,14,15/11/2025,16:00:00,CD Castellón,Real Sociedad B,5,4,10344
+2025,14,15/11/2025,21:00:00,Real Racing Club,Granada CF,2,2,20236
+2025,14,16/11/2025,14:00:00,AD Ceuta FC,CD Leganés,1,2,5002
+2025,14,16/11/2025,16:15:00,UD Almería,Cádiz CF,3,0,13884
+2025,14,16/11/2025,16:15:00,Real Sporting,SD Eibar,1,1,21802
+2025,14,16/11/2025,18:30:00,Córdoba CF,RC Deportivo,1,3,17123
+2025,14,16/11/2025,18:30:00,CD Mirandés,Burgos CF,0,2,4895
+2025,14,16/11/2025,21:00:00,Real Zaragoza,SD Huesca,1,0,16078
+2025,14,17/11/2025,20:30:00,Cultural Leonesa,Málaga CF,1,0,8849
+2025,15,21/11/2025,20:30:00,UD Las Palmas,Albacete Balompié,2,1,17063
+2025,15,22/11/2025,16:15:00,FC Andorra,CD Castellón,1,3,
+2025,15,22/11/2025,18:30:00,CD Leganés,UD Almería,0,3,9960
+2025,15,22/11/2025,18:30:00,SD Eibar,Real Zaragoza,1,2,4261
+2025,15,22/11/2025,21:00:00,Granada CF,Córdoba CF,1,1,13815
+2025,15,23/11/2025,14:00:00,RC Deportivo,AD Ceuta FC,2,1,20151
+2025,15,23/11/2025,16:15:00,Cádiz CF,Cultural Leonesa,1,2,14210
+2025,15,23/11/2025,16:15:00,SD Huesca,Real Sporting,2,0,5634
+2025,15,23/11/2025,18:30:00,Burgos CF,Real Racing Club,0,2,11087
+2025,15,23/11/2025,21:00:00,Málaga CF,CD Mirandés,3,2,19737
+2025,15,24/11/2025,20:30:00,Real Sociedad B,Real Valladolid CF,1,0,1481
+2025,16,28/11/2025,20:30:00,Real Sporting,FC Andorra,1,1,18574
+2025,16,29/11/2025,14:00:00,AD Ceuta FC,Burgos CF,1,0,
+2025,16,29/11/2025,16:15:00,Cultural Leonesa,Granada CF,0,1,
+2025,16,29/11/2025,18:30:00,Albacete Balompié,RC Deportivo,0,2,
+2025,16,29/11/2025,18:30:00,UD Almería,SD Huesca,0,0,
+2025,16,29/11/2025,21:00:00,Real Valladolid CF,Málaga CF,1,1,
