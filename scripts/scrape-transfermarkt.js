@@ -1,6 +1,6 @@
 // scripts/scrape-transfermarkt.js
 // Uso típico:
-// node scripts/scrape-transfermarkt.js --season 2025 --maxES1 13 --maxES2 15 --outES1 laliga_2025_j1-13.csv --outES2 segunda_2025_j1-15.csv --timeoutMs 60000
+// node scripts/scrape-transfermarkt.js --season 2025 --outES1 public/data/matches/laliga_2025_j1-13.csv --outES2 public/data/matches/segunda_2025_j1-15.csv --timeoutMs 60000
 //
 // Dependencias: axios cheerio minimist
 // npm i axios cheerio minimist
@@ -13,10 +13,12 @@ const minimist = require("minimist");
 
 const argv = minimist(process.argv.slice(2));
 const SEASON = String(argv.season || 2025);
-const MAX_ES1 = Number(argv.maxES1 || 13);
-const MAX_ES2 = Number(argv.maxES2 || 0);
-const OUT_ES1 = String(argv.outES1 || `transfermarkt_ES1_${SEASON}_j1-${MAX_ES1}.csv`);
-const OUT_ES2 = String(argv.outES2 || (MAX_ES2 ? `transfermarkt_ES2_${SEASON}_j1-${MAX_ES2}.csv` : ""));
+const OUT_ES1 = String(
+  argv.outES1 || findExistingOutPath("laliga", SEASON) || `public/data/matches/laliga_${SEASON}.csv`
+);
+const OUT_ES2 = String(
+  argv.outES2 || findExistingOutPath("segunda", SEASON) || ""
+);
 const TIMEOUT_MS = Number(argv.timeoutMs || 45000); // sube si hace falta (p.ej. 60000)
 
 const BASE = "https://www.transfermarkt.com";
@@ -24,6 +26,21 @@ const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119 Safari/537.36";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+function findExistingOutPath(prefix, season) {
+  const dir = path.resolve(process.cwd(), "public/data/matches");
+  if (!fs.existsSync(dir)) return null;
+  const matches = fs
+    .readdirSync(dir)
+    .filter((f) => f.startsWith(`${prefix}_${season}_`) && f.endsWith(".csv"));
+  if (matches.length === 0) return null;
+  const bySpieltag = matches.sort((a, b) => {
+    const aNum = Number((a.match(/j1-(\d+)/) || [])[1] || 0);
+    const bNum = Number((b.match(/j1-(\d+)/) || [])[1] || 0);
+    return aNum - bNum;
+  });
+  return path.join("public/data/matches", bySpieltag[bySpieltag.length - 1]);
+}
 
 // === Normalización de nombres de equipo (según tus reglas) ===
 const TEAM_MAP = new Map([
@@ -174,6 +191,10 @@ function parseMatchBox($, box, spieltag) {
   );
   const { home_goals, away_goals } = parseResultText(resultText);
 
+  // Si no hay marcador numérico, es un partido no disputado: saltarlo
+  const hasScore = home_goals !== "" && away_goals !== "";
+  if (!hasScore) return null;
+
   // Fecha y hora
   const $dateRow = $box
     .find("tr")
@@ -258,28 +279,45 @@ function toCsv(rows) {
   return lines.join("\n");
 }
 
-async function runCompetition(competition, maxSpieltag, outfile) {
-  if (!maxSpieltag || maxSpieltag < 1) return;
+async function runCompetition(competition, outfile) {
   const all = [];
-  for (let s = 1; s <= maxSpieltag; s++) {
+  let lastSpieltagWithMatches = 0;
+  for (let s = 1; ; s++) {
     console.log(`[${competition}] jornada ${s}…`);
     const rows = await fetchSpieltag(competition, s);
-    console.log(`   partidos: ${rows.length}`);
+    if (rows.length === 0) {
+      console.log(`   jornada ${s} sin partidos finalizados; parada automática.`);
+      break;
+    }
+    console.log(`   partidos finalizados: ${rows.length}`);
     all.push(...rows);
+    lastSpieltagWithMatches = s;
     // delay extra entre jornadas para evitar rate limit
     await sleep(1500 + Math.floor(Math.random() * 700));
   }
-  const csv = toCsv(all);
-  const outPath = path.resolve(process.cwd(), outfile);
-  fs.writeFileSync(outPath, csv, "utf8");
-  console.log(`✔ ${competition} → ${outPath} (${all.length} filas)`);
+
+  if (all.length === 0) {
+    console.warn(`⚠ ${competition} no tiene partidos finalizados para ${SEASON}`);
+    return;
+  }
+
+  const resolvedOutfile = outfile.includes("{last}")
+    ? outfile.replace("{last}", String(lastSpieltagWithMatches))
+    : outfile;
+
+  const outPath = path.resolve(process.cwd(), resolvedOutfile);
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, toCsv(all), "utf8");
+  console.log(
+    `✔ ${competition} → ${outPath} (j1-${lastSpieltagWithMatches}, ${all.length} filas)`
+  );
 }
 
 (async () => {
   try {
-    await runCompetition("ES1", MAX_ES1, OUT_ES1);
-    if (MAX_ES2 && OUT_ES2) {
-      await runCompetition("ES2", MAX_ES2, OUT_ES2);
+    await runCompetition("ES1", OUT_ES1);
+    if (OUT_ES2) {
+      await runCompetition("ES2", OUT_ES2);
     }
   } catch (err) {
     console.error("ERROR:", err?.message || err);
