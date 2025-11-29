@@ -13,10 +13,16 @@ const minimist = require("minimist");
 
 const argv = minimist(process.argv.slice(2));
 const SEASON = String(argv.season || 2025);
-const MAX_ES1 = Number(argv.maxES1 || 13);
-const MAX_ES2 = Number(argv.maxES2 || 0);
-const OUT_ES1 = String(argv.outES1 || `transfermarkt_ES1_${SEASON}_j1-${MAX_ES1}.csv`);
-const OUT_ES2 = String(argv.outES2 || (MAX_ES2 ? `transfermarkt_ES2_${SEASON}_j1-${MAX_ES2}.csv` : ""));
+const MAX_ES1 = Number(argv.maxES1 ?? 0); // 0 o undefined = sin límite: avanza hasta la última jornada jugada
+const MAX_ES2 = Number(argv.maxES2 ?? 0);
+
+function buildOutfile(competition, max) {
+  const base = `transfermarkt_${competition}_${SEASON}`;
+  return max > 0 ? `${base}_j1-${max}.csv` : `${base}.csv`;
+}
+
+const OUT_ES1 = String(argv.outES1 || buildOutfile("ES1", MAX_ES1));
+const OUT_ES2 = String(argv.outES2 || buildOutfile("ES2", MAX_ES2));
 const TIMEOUT_MS = Number(argv.timeoutMs || 45000); // sube si hace falta (p.ej. 60000)
 
 const BASE = "https://www.transfermarkt.com";
@@ -229,7 +235,9 @@ async function fetchSpieltag(competition, spieltag) {
   const rows = [];
   for (const box of boxes) {
     const m = parseMatchBox($, box, spieltag);
-    if (m) rows.push(m);
+    if (m && /^\d+$/.test(m.home_goals) && /^\d+$/.test(m.away_goals)) {
+      rows.push(m);
+    }
   }
   return rows;
 }
@@ -259,15 +267,23 @@ function toCsv(rows) {
 }
 
 async function runCompetition(competition, maxSpieltag, outfile) {
-  if (!maxSpieltag || maxSpieltag < 1) return;
+  if (!outfile) return;
   const all = [];
-  for (let s = 1; s <= maxSpieltag; s++) {
+  let s = 1;
+  while (true) {
+    if (maxSpieltag > 0 && s > maxSpieltag) break;
     console.log(`[${competition}] jornada ${s}…`);
     const rows = await fetchSpieltag(competition, s);
-    console.log(`   partidos: ${rows.length}`);
+    console.log(`   partidos con marcador: ${rows.length}`);
+    if (rows.length === 0) break;
     all.push(...rows);
+    s += 1;
     // delay extra entre jornadas para evitar rate limit
     await sleep(1500 + Math.floor(Math.random() * 700));
+  }
+  if (all.length === 0) {
+    console.warn(`✖ ${competition} → sin datos descargados`);
+    return;
   }
   const csv = toCsv(all);
   const outPath = path.resolve(process.cwd(), outfile);
@@ -278,7 +294,7 @@ async function runCompetition(competition, maxSpieltag, outfile) {
 (async () => {
   try {
     await runCompetition("ES1", MAX_ES1, OUT_ES1);
-    if (MAX_ES2 && OUT_ES2) {
+    if (OUT_ES2) {
       await runCompetition("ES2", MAX_ES2, OUT_ES2);
     }
   } catch (err) {

@@ -1,0 +1,56 @@
+name: Update Transfermarkt data
+
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Descargar jornadas disputadas
+        run: >-
+          node scripts/scrape-transfermarkt.js
+          --season 2025
+          --maxES1 0
+          --maxES2 0
+          --outES1 data/transfermarkt_ES1_2025.csv
+          --outES2 data/transfermarkt_ES2_2025.csv
+
+      - name: Commit y push si hay cambios
+        env:
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          git status --short
+          if git status --porcelain | grep -q .; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            if [ -f data/transfermarkt_ES1_2025.csv ]; then
+              git add data/transfermarkt_ES1_2025.csv
+            fi
+            if [ -f data/transfermarkt_ES2_2025.csv ]; then
+              git add data/transfermarkt_ES2_2025.csv
+            fi
+            git commit -m "chore: update Transfermarkt data"
+            git push origin HEAD:${BRANCH}
+          else
+            echo "Sin cambios de datos"
+          fi
