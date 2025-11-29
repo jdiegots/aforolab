@@ -1,0 +1,48 @@
+name: Update Transfermarkt data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    env:
+      SEASON: 2025
+      OUT_ES1: public/data/matches/laliga_2025_j1-13.csv
+      OUT_ES2: public/data/matches/segunda_2025_j1-15.csv
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape Transfermarkt data
+        run: |
+          node scripts/scrape-transfermarkt.js --season $SEASON --outES1 "$OUT_ES1" --outES2 "$OUT_ES2"
+
+      - name: Commit updated datasets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "$OUT_ES1"
+          if [ -n "$OUT_ES2" ] && [ -f "$OUT_ES2" ]; then
+            git add "$OUT_ES2"
+          fi
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: update Transfermarkt data"
+          git push origin HEAD:master
