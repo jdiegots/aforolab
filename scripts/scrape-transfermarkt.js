@@ -195,7 +195,8 @@ function parseResultText(text) {
 // ----------- HTTP con reintentos y backoff -----------
 async function fetchHtml(url, { tries = 5, baseDelayMs = 1500 } = {}) {
   let lastErr = null;
-  for (let i = 1; i <= tries; i++) {
+  let effectiveTries = tries;
+  for (let i = 1; i <= effectiveTries; i++) {
     try {
       const res = await axios.get(url, {
         headers: {
@@ -214,11 +215,20 @@ async function fetchHtml(url, { tries = 5, baseDelayMs = 1500 } = {}) {
       lastErr = err;
       // si es 429/503/timeout o ECONNABORTED, backoff más largo
       const code = err?.response?.status;
+      // Transfermarkt devuelve a veces 405 de forma transitoria; dale un intento extra y un pelín más de pausa
+      const isTransient405 = code === 405;
+      if (isTransient405 && effectiveTries === tries) effectiveTries += 1;
       const isRetryable =
-        code === 429 || code === 503 || code === 502 || code === 403 || err?.code === "ECONNABORTED";
-      const delay = Math.round(baseDelayMs * Math.pow(2, i - 1)) + Math.floor(Math.random() * 500);
-      if (i < tries && isRetryable) {
-        console.warn(`   intento ${i}/${tries} falló (${code || err.code || err.message}); reintentando en ${delay} ms…`);
+        code === 429 ||
+        code === 503 ||
+        code === 502 ||
+        code === 403 ||
+        isTransient405 ||
+        err?.code === "ECONNABORTED";
+      const delayBase = isTransient405 ? Math.round(baseDelayMs * 1.1) : baseDelayMs;
+      const delay = Math.round(delayBase * Math.pow(2, i - 1)) + Math.floor(Math.random() * 500);
+      if (i < effectiveTries && isRetryable) {
+        console.warn(`   intento ${i}/${effectiveTries} falló (${code || err.code || err.message}); reintentando en ${delay} ms…`);
         await sleep(delay);
         continue;
       }
