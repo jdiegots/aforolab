@@ -25,6 +25,18 @@ const BASE = "https://www.transfermarkt.com";
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119 Safari/537.36";
 
+const HEADERS = [
+  "season",
+  "spieltag",
+  "date",
+  "time",
+  "home_team",
+  "away_team",
+  "home_goals",
+  "away_goals",
+  "attendance"
+];
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 function findExistingOutPath(prefix, season) {
@@ -89,6 +101,54 @@ function parseAttendance(s) {
   if (!digits) return "";
   const n = parseInt(digits, 10);
   return Number.isFinite(n) ? String(n) : "";
+}
+
+function parseCsvLine(line) {
+  const out = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (ch === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === "," && !inQuotes) {
+      out.push(current);
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+
+  out.push(current);
+  return out;
+}
+
+function loadExistingCsv(filePath, header) {
+  if (!fs.existsSync(filePath)) return [];
+  const raw = fs.readFileSync(filePath, "utf8").trim();
+  if (!raw) return [];
+  const lines = raw.split(/\r?\n/);
+  const rows = [];
+  const headerLine = lines.shift();
+  const cols = headerLine ? parseCsvLine(headerLine) : header;
+
+  for (const line of lines) {
+    if (!line.trim()) continue;
+    const parts = parseCsvLine(line).map((v) => v.replace(/\r?\n/g, ""));
+    const obj = {};
+    cols.forEach((k, idx) => {
+      obj[k] = parts[idx] ?? "";
+    });
+    rows.push(obj);
+  }
+
+  return rows;
 }
 
 function cleanText($el) {
@@ -256,17 +316,7 @@ async function fetchSpieltag(competition, spieltag) {
 }
 
 function toCsv(rows) {
-  const header = [
-    "season",
-    "spieltag",
-    "date",
-    "time",
-    "home_team",
-    "away_team",
-    "home_goals",
-    "away_goals",
-    "attendance"
-  ];
+  const header = HEADERS;
   const lines = [header.join(",")];
   for (const r of rows) {
     const vals = header.map((k) => {
@@ -277,6 +327,41 @@ function toCsv(rows) {
     lines.push(vals.join(","));
   }
   return lines.join("\n");
+}
+
+function buildKey(row) {
+  return `${row.spieltag}-${row.home_team}-${row.away_team}`;
+}
+
+function mergeRows(existingRows, scrapedRows) {
+  const header = HEADERS;
+  const byKey = new Map();
+  existingRows.forEach((row) => byKey.set(buildKey(row), row));
+
+  for (const scraped of scrapedRows) {
+    const key = buildKey(scraped);
+    if (!byKey.has(key)) {
+      const newRow = { ...scraped };
+      existingRows.push(newRow);
+      byKey.set(key, newRow);
+      continue;
+    }
+
+    const target = byKey.get(key);
+    for (const col of header) {
+      const existingVal = target[col] ?? "";
+      const scrapedVal = scraped[col] ?? "";
+      if ((existingVal === null || existingVal === undefined || existingVal === "") && scrapedVal !== "") {
+        target[col] = scrapedVal;
+      }
+    }
+  }
+
+  return existingRows;
+}
+
+function findRowsMissingAttendance(rows) {
+  return rows.filter((row) => (row.attendance ?? "") === "");
 }
 
 async function runCompetition(competition, outfile) {
@@ -306,11 +391,28 @@ async function runCompetition(competition, outfile) {
     : outfile;
 
   const outPath = path.resolve(process.cwd(), resolvedOutfile);
+  const existingRows = loadExistingCsv(outPath, HEADERS);
+  const merged = mergeRows(existingRows, all);
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, toCsv(all), "utf8");
+  fs.writeFileSync(outPath, toCsv(merged), "utf8");
   console.log(
-    `✔ ${competition} → ${outPath} (j1-${lastSpieltagWithMatches}, ${all.length} filas)`
+    `✔ ${competition} → ${outPath} (j1-${lastSpieltagWithMatches}, ${merged.length} filas)`
   );
+
+  const missingAttendance = findRowsMissingAttendance(merged);
+  if (missingAttendance.length > 0) {
+    console.warn("⚠ Faltan asistencias en", missingAttendance.length, "partidos:");
+    missingAttendance
+      .slice(0, 10)
+      .forEach((row) =>
+        console.warn(
+          `   jornada ${row.spieltag}: ${row.home_team} vs ${row.away_team} (fecha ${row.date || "?"})`
+        )
+      );
+    if (missingAttendance.length > 10) {
+      console.warn(`   ... y ${missingAttendance.length - 10} más`);
+    }
+  }
 }
 
 (async () => {
