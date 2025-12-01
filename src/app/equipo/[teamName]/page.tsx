@@ -1500,11 +1500,11 @@ export default function TeamPage() {
                         </div >
 
                         {/* Matches List Panel (1/3) */}
-                        < div className="lg:col-span-1 bg-white/5 border border-white/5 rounded-xl p-4 flex flex-col h-[450px]" >
-                            <h2 className="text-lg font-bold mb-4 sticky top-0 z-10">Partidos en casa</h2>
+                        < div className="lg:col-span-1 rounded-xl p-4 flex flex-col h-[450px]" >
+                            <h2 className="text-lg font-bold mb-4 sticky top-0 z-10 bg-transparent">Partidos en casa</h2>
                             <div className="flex-1 overflow-y-auto custom-scrollbar space-y-3 pr-2">
                                 {homeMatches.map((match, index) => (
-                                    <div key={index} className="bg-white/5 border border-white/5 rounded-lg p-3 hover:bg-white/10 transition-all">
+                                    <div key={index} className="rounded-lg p-3 hover:bg-white/10 transition-all">
                                         <div className="flex justify-between items-center mb-2">
                                             <div className="flex items-center gap-2">
                                                 <span className="text-[10px] text-white/40 font-mono">
