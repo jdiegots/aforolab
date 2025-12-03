@@ -120,13 +120,14 @@ export function BeeswarmChart({ data }: { data: Stadium[] }) {
 
             simulation = d3
                 .forceSimulation(initialNodes)
-                .force("x", d3.forceX(width / 2).strength(0.05))
-                .force("y", d3.forceY((d: any) => yScale(d.occ_avg_pct)).strength(1))
+                .force("x", d3.forceX(width / 2).strength(0.02))
+                .force("y", d3.forceY((d: any) => yScale(d.occ_avg_pct)).strength(0.2))
                 .force(
                     "collide",
-                    d3.forceCollide((d: any) => radiusScale(d.capacity) + 1)
+                    d3.forceCollide((d: any) => radiusScale(d.capacity) + 2).strength(0.8)
                 )
-                .alphaDecay(0.02)
+                .velocityDecay(0.5)
+                .alphaDecay(0.01)
                 .on("tick", () => {
                     setNodes([...initialNodes]);
                 });
