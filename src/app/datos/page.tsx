@@ -119,7 +119,7 @@ export default function DashboardPage() {
         );
     }
 
-    const stadiumList = Array.isArray(data.all_stadiums) ? data.all_stadiums : [];
+    const stadiumList = data.all_stadiums || [];
 
     const teamStats = stadiumList.reduce((acc, stadium) => {
         const team = stadium.team_primary || "Sin equipo";
