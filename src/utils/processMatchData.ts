@@ -33,21 +33,31 @@ export interface MatchData {
 
 export const processMatchData = async (stadiumData: any[]) => {
     try {
+        if (!Array.isArray(stadiumData) || stadiumData.length === 0) {
+            return { primera: [], segunda: [], allMatches: [] };
+        }
+
         // Crear mapa de estadios por equipo
         const stadiumMap: Record<string, { capacity: number; name: string }[]> = {};
-        stadiumData.forEach(s => {
-            if (s.team_primary) {
-                const normalizedName = getTeamDisplayName(s.team_primary);
-                if (!stadiumMap[normalizedName]) {
-                    stadiumMap[normalizedName] = [];
+        stadiumData
+            .filter(Boolean)
+            .forEach(s => {
+                if (s.team_primary) {
+                    const normalizedName = getTeamDisplayName(s.team_primary);
+                    if (!stadiumMap[normalizedName]) {
+                        stadiumMap[normalizedName] = [];
+                    }
+                    stadiumMap[normalizedName].push({ capacity: s.capacity, name: s.stadium_name });
                 }
-                stadiumMap[normalizedName].push({ capacity: s.capacity, name: s.stadium_name });
-            }
-        });
+            });
 
         // Ordenar estadios de menor a mayor capacidad para la heurística
-        Object.keys(stadiumMap).forEach(team => {
-            stadiumMap[team].sort((a, b) => a.capacity - b.capacity);
+        Object.entries(stadiumMap).forEach(([team, entries]) => {
+            if (Array.isArray(entries)) {
+                entries.sort((a, b) => a.capacity - b.capacity);
+            } else {
+                delete stadiumMap[team];
+            }
         });
 
         // Cargar y procesar archivos CSV
