@@ -129,6 +129,7 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
     const [hoveredFromList, setHoveredFromList] = useState<any | null>(null);
     const [searchTerm, setSearchTerm] = useState("");
     const [isMobile, setIsMobile] = useState(false);
+    const [dataError, setDataError] = useState<string | null>(null);
 
     useEffect(() => {
         const handleResize = () => {
@@ -145,6 +146,7 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
     // Cargar datos
     useEffect(() => {
         const loadData = async () => {
+            setDataError(null);
             try {
                 // Always load map
                 const geoRes = await fetch(SPAIN_MAP_URL);
@@ -176,43 +178,68 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                     const popData = await popRes.json().catch(() => ({}));
                     const coordsData = await coordsRes.json();
 
+                    const isPlainObject = (value: any) =>
+                        value && typeof value === "object" && !Array.isArray(value) && Object.getPrototypeOf(value) === Object.prototype;
+
+                    const safeRawData = Array.isArray(rawData) ? rawData : [];
+                    const safeCoordsData = Array.isArray(coordsData) ? coordsData : [];
+                    const safePopData = isPlainObject(popData) ? popData : {};
+
+                    let foundDataIssue = false;
+
                     if (!Array.isArray(rawData)) {
                         console.error("stadium_full_data no tiene el formato esperado (array)", rawData);
+                        foundDataIssue = true;
+                    }
+
+                    if (!Array.isArray(coordsData)) {
+                        console.error("stadium_coords no tiene el formato esperado (array)", coordsData);
+                        foundDataIssue = true;
+                    }
+
+                    if (!isPlainObject(popData)) {
+                        console.error("stadium_populations no tiene el formato esperado (objeto plano)", popData);
+                    }
+
+                    if (foundDataIssue) {
+                        setDataError("Los datos de estadios no están disponibles en este momento.");
                         setMapData([]);
                         return;
                     }
 
-                    const safePopData =
-                        popData && typeof popData === "object" && !Array.isArray(popData) ? popData : {};
-
-                    const safeCoordsData = Array.isArray(coordsData) ? coordsData : [];
-                    if (!Array.isArray(coordsData)) {
-                        console.error("stadium_coords no tiene el formato esperado (array)", coordsData);
-                    }
-
                     // Create a map of coordinates by stadium name
                     const coordsMap = new Map();
-                    safeCoordsData.forEach((coord: any) => {
-                        coordsMap.set(coord.stadium_name, { lat: coord.lat, lng: coord.lng });
-                    });
+                    if (safeCoordsData.length > 0) {
+                        safeCoordsData.forEach((coord: any) => {
+                            coordsMap.set(coord.stadium_name, { lat: coord.lat, lng: coord.lng });
+                        });
+                    }
 
                     // Merge population data and coordinates
-                    const mergedData = rawData.map((s: any) => {
-                        const pop = safePopData?.[s.stadium_name];
-                        const coords = coordsMap.get(s.stadium_name);
+                    const mergedData = safeRawData.length > 0
+                        ? safeRawData.map((s: any) => {
+                            const pop = safePopData?.[s.stadium_name];
+                            const coords = coordsMap.get(s.stadium_name);
 
-                        return {
-                            ...s,
-                            lat: coords?.lat ?? s.lat ?? 0,
-                            lng: coords?.lng ?? s.lng ?? 0,
-                            pop_muni: pop?.pop_muni ?? s.pop_muni,
-                            pop_prov: pop?.pop_prov ?? s.pop_prov,
-                            pop_ccaa: pop?.pop_ccaa ?? s.pop_ccaa,
-                            municipality: pop?.municipality ?? s.municipality,
-                            province: pop?.province ?? s.province,
-                            ccaa: pop?.ccaa ?? s.ccaa
-                        };
-                    });
+                            return {
+                                ...s,
+                                lat: coords?.lat ?? s.lat ?? 0,
+                                lng: coords?.lng ?? s.lng ?? 0,
+                                pop_muni: pop?.pop_muni ?? s.pop_muni,
+                                pop_prov: pop?.pop_prov ?? s.pop_prov,
+                                pop_ccaa: pop?.pop_ccaa ?? s.pop_ccaa,
+                                municipality: pop?.municipality ?? s.municipality,
+                                province: pop?.province ?? s.province,
+                                ccaa: pop?.ccaa ?? s.ccaa
+                            };
+                        })
+                        : [];
+
+                    if (mergedData.length === 0) {
+                        setDataError("No hay datos disponibles para mostrar el mapa de estadios.");
+                        setMapData([]);
+                        return;
+                    }
 
                     setMapData(mergedData);
                 }
@@ -233,6 +260,14 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
         setHoveredFromList(stadium);
         setHovered(null);
     };
+
+    if (dataError) {
+        return (
+            <div className="w-full h-[500px] flex items-center justify-center bg-black text-white/70 text-center px-4">
+                {dataError}
+            </div>
+        );
+    }
 
     if (!spainGeo) {
         return (
