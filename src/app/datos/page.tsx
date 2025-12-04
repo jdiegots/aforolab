@@ -77,8 +77,8 @@ export default function DashboardPage() {
             .then((res) => res.json())
             .then((coords) => {
                 if (!Array.isArray(coords)) {
-                    console.error("Coordenadas inválidas en stadium_coords.json");
-                    setMapData(null);
+                    console.error("Coordenadas inválidas en stadium_coords.json:", coords);
+                    setMapData([]);
                     setMapError("Las coordenadas de los estadios no tienen el formato esperado.");
                     return;
                 }
