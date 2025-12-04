@@ -827,11 +827,11 @@ export default function TeamPage() {
         const daySet = new Set<number>();
         const hourSet = new Set<number>();
 
-        Object.keys(byHourDay).forEach((k) => {
+        Object.keys(byHourDay || {}).forEach((k) => {
             const [dStr, hStr] = k.split(":");
             const d = parseInt(dStr);
             const h = parseInt(hStr);
-            const entry = byHourDay[k];
+            const entry = byHourDay?.[k];
             if (entry && entry.count > 0) {
                 daySet.add(d);
                 hourSet.add(h);
