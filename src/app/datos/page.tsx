@@ -129,7 +129,7 @@ export default function DashboardPage() {
         return acc;
     }, {} as Record<string, { team: string; avgOccupancy: number }>);
 
-    data.all_stadiums.forEach((stadium) => {
+    stadiumList.forEach((stadium) => {
         const team = stadium.team_primary || "Sin equipo";
         if (teamStats[team]) {
             teamStats[team].avgOccupancy = stadium.occ_avg_pct;
