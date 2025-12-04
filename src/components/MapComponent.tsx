@@ -176,15 +176,29 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                     const popData = await popRes.json().catch(() => ({}));
                     const coordsData = await coordsRes.json();
 
+                    if (!Array.isArray(rawData)) {
+                        console.error("stadium_full_data no tiene el formato esperado (array)", rawData);
+                        setMapData([]);
+                        return;
+                    }
+
+                    const safePopData =
+                        popData && typeof popData === "object" && !Array.isArray(popData) ? popData : {};
+
+                    const safeCoordsData = Array.isArray(coordsData) ? coordsData : [];
+                    if (!Array.isArray(coordsData)) {
+                        console.error("stadium_coords no tiene el formato esperado (array)", coordsData);
+                    }
+
                     // Create a map of coordinates by stadium name
                     const coordsMap = new Map();
-                    coordsData.forEach((coord: any) => {
+                    safeCoordsData.forEach((coord: any) => {
                         coordsMap.set(coord.stadium_name, { lat: coord.lat, lng: coord.lng });
                     });
 
                     // Merge population data and coordinates
                     const mergedData = rawData.map((s: any) => {
-                        const pop = popData[s.stadium_name];
+                        const pop = safePopData?.[s.stadium_name];
                         const coords = coordsMap.get(s.stadium_name);
 
                         return {
