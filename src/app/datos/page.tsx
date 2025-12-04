@@ -32,7 +32,7 @@ const MapComponent = dynamic(
 );
 
 export default function DashboardPage() {
-    const [data, setData] = useState<{ all_stadiums: Stadium[] } | null>(null);
+    const [data, setData] = useState<{ all_stadiums?: Stadium[] } | null>(null);
     const [mapData, setMapData] = useState<StadiumPoint[] | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
 
@@ -47,8 +47,15 @@ export default function DashboardPage() {
             .then((json) => {
                 setData(json);
                 // Procesar datos de partidos una vez que tenemos los estadios (para capacidades)
-                if (json.all_stadiums) {
-                    processMatchData(json.all_stadiums).then(setJornadaData);
+                if (Array.isArray(json?.all_stadiums) && json.all_stadiums.length > 0) {
+                    processMatchData(json.all_stadiums)
+                        .then(setJornadaData)
+                        .catch((err) => {
+                            console.error("Error procesando datos de partidos:", err);
+                            setJornadaData({ primera: [], segunda: [] });
+                        });
+                } else {
+                    setJornadaData({ primera: [], segunda: [] });
                 }
             })
             .catch((err) => {
@@ -112,7 +119,9 @@ export default function DashboardPage() {
         );
     }
 
-    const teamStats = data.all_stadiums.reduce((acc, stadium) => {
+    const stadiumList = data.all_stadiums || [];
+
+    const teamStats = stadiumList.reduce((acc, stadium) => {
         const team = stadium.team_primary || "Sin equipo";
         if (!acc[team]) {
             acc[team] = { team, avgOccupancy: 0 };

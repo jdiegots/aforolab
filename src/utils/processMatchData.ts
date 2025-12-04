@@ -33,6 +33,10 @@ export interface MatchData {
 
 export const processMatchData = async (stadiumData: any[]) => {
     try {
+        if (!Array.isArray(stadiumData) || stadiumData.length === 0) {
+            return { primera: [], segunda: [], allMatches: [] };
+        }
+
         // Crear mapa de estadios por equipo
         const stadiumMap: Record<string, { capacity: number; name: string }[]> = {};
         stadiumData.forEach(s => {
