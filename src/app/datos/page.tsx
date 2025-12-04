@@ -35,6 +35,8 @@ export default function DashboardPage() {
     const [data, setData] = useState<{ all_stadiums?: Stadium[] } | null>(null);
     const [mapData, setMapData] = useState<StadiumPoint[] | null>(null);
     const [searchQuery, setSearchQuery] = useState("");
+    const [dataError, setDataError] = useState<string | null>(null);
+    const [mapError, setMapError] = useState<string | null>(null);
 
     // Estado para datos de jornadas y filtros independientes
     const [jornadaData, setJornadaData] = useState<{ primera: JornadaData[], segunda: JornadaData[] }>({ primera: [], segunda: [] });
@@ -45,6 +47,14 @@ export default function DashboardPage() {
         fetch("/data/home_metrics.json")
             .then((res) => res.json())
             .then((json) => {
+                if (!Array.isArray(json?.all_stadiums)) {
+                    console.error("Datos de estadios inválidos en home_metrics.json");
+                    setData(null);
+                    setJornadaData({ primera: [], segunda: [] });
+                    setDataError("Los datos de estadios no tienen el formato esperado.");
+                    return;
+                }
+
                 setData(json);
                 // Procesar datos de partidos una vez que tenemos los estadios (para capacidades)
                 if (Array.isArray(json?.all_stadiums) && json.all_stadiums.length > 0) {
@@ -60,15 +70,24 @@ export default function DashboardPage() {
             })
             .catch((err) => {
                 console.error("Error loading home_metrics data:", err);
+                setDataError("No se pudo cargar la información de estadios.");
             });
 
         fetch("/data/stadium_coords.json")
             .then((res) => res.json())
             .then((coords) => {
+                if (!Array.isArray(coords)) {
+                    console.error("Coordenadas inválidas en stadium_coords.json");
+                    setMapData(null);
+                    setMapError("Las coordenadas de los estadios no tienen el formato esperado.");
+                    return;
+                }
+
                 setMapData(coords);
             })
             .catch((err) => {
                 console.error("Error loading stadium coordinates:", err);
+                setMapError("No se pudieron cargar las coordenadas de los estadios.");
             });
     }, []);
 
@@ -110,6 +129,17 @@ export default function DashboardPage() {
 
         return Array.from(teamGroups.entries()).slice(0, 8).map(([team, stadiums]) => ({ team, stadiums }));
     }, [data, searchQuery]);
+
+    if (dataError || mapError) {
+        return (
+            <div className="min-h-screen bg-black flex items-center justify-center px-6 text-center">
+                <div className="text-white/70">
+                    <p className="text-base font-semibold">Se produjo un problema al cargar los datos.</p>
+                    <p className="text-sm text-white/50 mt-2">{dataError || mapError}</p>
+                </div>
+            </div>
+        );
+    }
 
     if (!data || !mapData) {
         return (
