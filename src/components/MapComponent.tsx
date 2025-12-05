@@ -322,11 +322,10 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
 
                 {/* Mapa Canarias (Inset) */}
                 <div
-                    className={`${
-                        isMobile
+                    className={`${isMobile
                             ? "relative mt-3 w-40 h-28"
                             : "absolute bottom-4 left-4 w-48 h-32"
-                    } border border-white/10 bg-black/80 rounded-lg overflow-hidden shadow-lg`}
+                        } border border-white/10 bg-black/80 rounded-lg overflow-hidden shadow-lg`}
                 >
                     <MapRender
                         geoData={canariasGeo}
@@ -341,13 +340,41 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                 </div>
 
                 {/* Fixed Tooltip - SOLO cuando se pasa por el mapa */}
+                {/* Tooltip / Bottom Sheet */}
                 {hovered && (
-                    <div className="absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 w-[320px] shadow-2xl z-50 pointer-events-auto">
-                        <div className="text-xs text-white/50 uppercase tracking-wider mb-1">
-                            {hovered.stadium_name}
-                        </div>
-                        <div className="text-lg font-bold text-white mb-3">
-                            {hovered.team_primary}
+                    <div
+                        className={
+                            isMobile
+                                ? "fixed bottom-0 left-0 w-full bg-black/95 backdrop-blur-xl border-t border-white/20 rounded-t-3xl p-5 z-50 shadow-[0_-10px_40px_rgba(0,0,0,0.8)] animate-in slide-in-from-bottom-10"
+                                : "absolute top-4 left-4 bg-black/90 backdrop-blur-md border border-white/20 rounded-2xl p-4 w-[320px] shadow-2xl z-50 pointer-events-auto"
+                        }
+                        onClick={(e) => e.stopPropagation()} // Prevent map click from closing
+                    >
+                        {/* Mobile Handle / Close */}
+                        {isMobile && (
+                            <div className="w-full flex justify-center mb-4" onClick={() => setHovered(null)}>
+                                <div className="w-12 h-1.5 bg-white/20 rounded-full" />
+                            </div>
+                        )}
+
+                        <div className="flex justify-between items-start mb-3">
+                            <div>
+                                <div className="text-xs text-white/50 uppercase tracking-wider mb-1">
+                                    {hovered.stadium_name}
+                                </div>
+                                <div className="text-lg font-bold text-white leading-tight">
+                                    {hovered.team_primary}
+                                </div>
+                            </div>
+                            {/* Close button for mobile */}
+                            {isMobile && (
+                                <button
+                                    onClick={() => setHovered(null)}
+                                    className="p-2 -mr-2 -mt-2 text-white/40 hover:text-white"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
+                                </button>
+                            )}
                         </div>
 
                         <div className="space-y-3 text-sm">
@@ -393,9 +420,9 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                                     <div className="pt-3 border-t border-white/10">
                                         <a
                                             href={`/equipo/${slug}`}
-                                            className="text-sm font-semibold text-cyan-300 hover:text-cyan-200"
+                                            className="block w-full text-center py-2 bg-white/5 hover:bg-white/10 rounded-lg text-sm font-semibold text-cyan-300 transition-colors"
                                         >
-                                            Ir a la página del equipo
+                                            Ver análisis completo
                                         </a>
                                     </div>
                                 );

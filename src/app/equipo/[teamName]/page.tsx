@@ -282,6 +282,16 @@ export default function TeamPage() {
     const teamHeaderRef = useRef<HTMLDivElement | null>(null);
     const [showMiniHeader, setShowMiniHeader] = useState<boolean>(false);
 
+    // Mobile state
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
     // equipo para comparar en el patrón semanal
     const [comparisonTeam, setComparisonTeam] = useState<string>("");
     const [weeklyMetric, setWeeklyMetric] = useState<"attendance" | "occupancy">("attendance");
@@ -1115,7 +1125,7 @@ export default function TeamPage() {
         return Math.ceil(max * 1.05);
     }, [scatterData, teamStadium, scatterComparison, fullStadiumData]);
 
-    const isMobile = typeof window !== "undefined" ? window.innerWidth < 768 : false;
+    // Time helpers moved to shared utils/timeHelpers.ts
 
     // Time helpers moved to shared utils/timeHelpers.ts
 
@@ -1170,14 +1180,14 @@ export default function TeamPage() {
                 </div>
             </header>
 
-            <div className="mx-auto max-w-[1600px] px-6 py-8">
+            <div className="mx-auto max-w-[1600px] px-4 md:px-6 py-8">
                 {/* Team Header */}
                 <div ref={teamHeaderRef} className="mb-12 pb-8 border-b border-white/10">
                     <div className="flex flex-col gap-3 mb-4 sm:flex-row sm:items-center sm:justify-between">
                         <div className="flex items-center gap-4">
                             <TeamInitialsBadge teamName={teamName} size={56} className="rounded-full shadow-lg" />
                             <div>
-                                <h1 className="text-4xl font-bold leading-tight">{teamName}</h1>
+                                <h1 className="text-3xl md:text-4xl font-bold leading-tight">{teamName}</h1>
                             </div>
                         </div>
                         <div className="flex flex-col gap-2 text-sm text-white/50 sm:flex-row sm:items-center sm:gap-3">
@@ -1236,7 +1246,7 @@ export default function TeamPage() {
 
                     {
                         stats && (
-                            <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+                            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-8">
                                 <div>
                                     <div className="text-xs text-white/40 uppercase tracking-wider mb-1">
                                         Promedio
@@ -1347,7 +1357,7 @@ export default function TeamPage() {
                                     ? "Asistencia por jornada con intervalo de confianza (±1σ)"
                                     : "Porcentaje de ocupación del estadio por jornada"}
                             </p>
-                            <ResponsiveContainer width="100%" height={350}>
+                            <ResponsiveContainer width="100%" height={isMobile ? 280 : 350}>
                                 <ComposedChart data={timeSeriesData}>
                                     <defs>
                                         <linearGradient
@@ -1500,7 +1510,7 @@ export default function TeamPage() {
                         </div >
 
                         {/* Matches List Panel (1/3) */}
-                        < div className="lg:col-span-1 rounded-xl p-4 flex flex-col h-[450px]" >
+                        < div className="lg:col-span-1 rounded-xl p-4 flex flex-col h-[350px] md:h-[450px]" >
                             <h2 className="text-lg font-bold mb-4 sticky top-0 z-10 bg-transparent">Partidos en casa</h2>
                             <div className="flex-1 overflow-y-auto custom-scrollbar space-y-3 pr-2">
                                 {homeMatches.map((match, index) => (
@@ -1586,7 +1596,7 @@ export default function TeamPage() {
                                 Correlación entre asistencia absoluta y porcentaje de
                                 ocupación
                             </p>
-                            <ResponsiveContainer width="100%" height={350}>
+                            <ResponsiveContainer width="100%" height={isMobile ? 280 : 350}>
                                 <ScatterChart
                                     margin={{ top: 20, right: 20, bottom: 20, left: 20 }}
                                 >
@@ -1731,7 +1741,7 @@ export default function TeamPage() {
                                 </div>
                             </div>
 
-                            <ResponsiveContainer width="100%" height={350}>
+                            <ResponsiveContainer width="100%" height={isMobile ? 300 : 350}>
                                 <RadarChart data={combinedWeeklyRadarData}>
                                     <PolarGrid stroke="#ffffff15" />
                                     <PolarAngleAxis
@@ -1823,7 +1833,7 @@ export default function TeamPage() {
                             <p className="text-sm text-white/50 mb-6">
                                 Frecuencia relativa de partidos por rango de ocupación
                             </p>
-                            <ResponsiveContainer width="100%" height={320}>
+                            <ResponsiveContainer width="100%" height={isMobile ? 280 : 320}>
                                 <BarChart
                                     data={densityData}
                                     barGap={0}
@@ -2019,7 +2029,7 @@ export default function TeamPage() {
                                         {/* container for both heatmaps: side-by-side */}
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
                                             {/* Heatmap 1 — ocupación media (integrated with page background) */}
-                                            <div className="rounded-md p-2">
+                                            <div className="rounded-md p-2 overflow-x-auto">
                                                 <div className="flex items-center justify-between mb-3">
                                                     <div>
                                                         <h3 className="text-sm font-semibold">Ocupación media por hora y día</h3>
@@ -2104,7 +2114,7 @@ export default function TeamPage() {
                                             </div>
 
                                             {/* Heatmap 2 — frecuencia (integrated with page background) */}
-                                            <div className="rounded-md p-2">
+                                            <div className="rounded-md p-2 overflow-x-auto">
                                                 <div className="flex items-center justify-between mb-3">
                                                     <div>
                                                         <h3 className="text-sm font-semibold">Frecuencia de partidos por hora y día</h3>

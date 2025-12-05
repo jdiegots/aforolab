@@ -183,7 +183,7 @@ export default function DashboardPage() {
                 </div>
             </header>
 
-            <div className="mx-auto max-w-7xl px-6 py-8 focus:outline-none" tabIndex={-1}>
+            <div className="mx-auto max-w-7xl px-4 md:px-6 py-6 md:py-8 focus:outline-none" tabIndex={-1}>
                 {/* 1. Buscador Principal */}
                 <div className="mb-8">
                     <div className="relative max-w-md mx-auto">
@@ -211,7 +211,7 @@ export default function DashboardPage() {
                 </div>
 
                 {/* 2. Analizar por competición y equipos */}
-                <div className="mb-12 relative h-36 flex items-center group/link">
+                <div className="mb-8 md:mb-12 relative h-28 md:h-36 flex items-center group/link">
                     <div className="absolute inset-0 z-10 opacity-70 flex items-center left-0 overflow-hidden">
                         <div className="flex space-x-4 px-4">
                             {previewTeams.map((team, index) => (
@@ -300,7 +300,7 @@ export default function DashboardPage() {
                 </div>
 
                 <div className="mb-12">
-                    <h2 className="text-2xl font-bold mb-6">Los estadios de LaLiga</h2>
+                    <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Los estadios de LaLiga</h2>
                     <MapComponent showStadiumList={false} />
                 </div>
             </div >
