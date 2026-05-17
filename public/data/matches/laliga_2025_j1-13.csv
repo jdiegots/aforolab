@@ -359,12 +359,13 @@ season,spieltag,date,time,home_team,away_team,home_goals,away_goals,attendance
 2025,36,14/05/2026,19:00:00,Valencia CF,Rayo Vallecano,1,1,45851
 2025,36,14/05/2026,20:00:00,Girona FC,Real Sociedad,0,1,12519
 2025,36,14/05/2026,21:30:00,Real Madrid,Real Oviedo,2,0,62774
-2025,37,17/05/2026,19:00:00,Athletic Bilbao,RC Celta,0,0,
-2025,37,17/05/2026,19:00:00,Atlético de Madrid,Girona FC,0,0,
-2025,37,17/05/2026,19:00:00,Elche CF,Getafe CF,0,0,
-2025,37,17/05/2026,19:00:00,Levante UD,RCD Mallorca,0,0,
-2025,37,17/05/2026,19:00:00,Rayo Vallecano,Villarreal CF,0,0,
-2025,37,17/05/2026,19:00:00,Real Sociedad,Valencia CF,0,0,
-2025,37,17/05/2026,19:00:00,Real Oviedo,Deportivo Alavés,0,0,
-2025,37,17/05/2026,19:00:00,CA Osasuna,RCD Espanyol,0,0,
-2025,37,17/05/2026,19:00:00,Sevilla FC,Real Madrid,0,0,
+2025,37,17/05/2026,19:00:00,Athletic Bilbao,RC Celta,0,0,45105
+2025,37,17/05/2026,19:00:00,Atlético de Madrid,Girona FC,0,0,64396
+2025,37,17/05/2026,19:00:00,Elche CF,Getafe CF,0,0,28372
+2025,37,17/05/2026,19:00:00,Levante UD,RCD Mallorca,0,0,22958
+2025,37,17/05/2026,19:00:00,Rayo Vallecano,Villarreal CF,0,0,12836
+2025,37,17/05/2026,19:00:00,Real Sociedad,Valencia CF,0,0,28466
+2025,37,17/05/2026,19:00:00,Real Oviedo,Deportivo Alavés,0,0,21111
+2025,37,17/05/2026,19:00:00,CA Osasuna,RCD Espanyol,0,0,21186
+2025,37,17/05/2026,19:00:00,Sevilla FC,Real Madrid,0,0,40845
+2025,37,17/05/2026,21:15:00,FC Barcelona,Real Betis,3,1,56870
