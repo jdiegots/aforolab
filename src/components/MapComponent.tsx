@@ -2,6 +2,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import { feature } from "topojson-client";
 import { getTeamSlug, TEAM_MAPPINGS } from "../utils/teamMappings";
 import { formatNumber } from "../utils/formatNumber";
 import {
@@ -152,15 +153,47 @@ export const MapComponent: React.FC<MapProps> = ({ stadiums: propStadiums, onSta
                 const geoRes = await fetch(SPAIN_MAP_URL);
                 const rawGeo = await geoRes.json();
 
-                let filtered: SpainGeoJSON = {
-                    type: "FeatureCollection",
-                    features: rawGeo.features.filter(
-                        (f: any) => f.properties?.year === "2022"
-                    ),
-                };
+                const isObject = rawGeo && typeof rawGeo === "object" && !Array.isArray(rawGeo);
+                const hasFeaturesArray = Array.isArray(rawGeo?.features);
+                const hasObjects = isObject && rawGeo.type === "Topology" &&
+                    rawGeo.objects && typeof rawGeo.objects === "object" && !Array.isArray(rawGeo.objects);
 
-                if (filtered.features.length === 0) {
-                    filtered = rawGeo;
+                if (!isObject || (!hasFeaturesArray && !hasObjects)) {
+                    console.error("El mapa de España no tiene el formato esperado", rawGeo);
+                    setDataError("No se pudo cargar el mapa de España.");
+                    setSpainGeo(null);
+                    setMapData([]);
+                    return;
+                }
+
+                let filtered: SpainGeoJSON = { type: "FeatureCollection", features: [] };
+
+                if (hasFeaturesArray) {
+                    filtered = {
+                        type: "FeatureCollection",
+                        features: rawGeo.features.filter(
+                            (f: any) => f.properties?.year === "2022"
+                        ),
+                    };
+
+                    if (filtered.features.length === 0) {
+                        filtered = rawGeo;
+                    }
+                } else if (hasObjects) {
+                    const objectKeys = Object.keys(rawGeo.objects || {});
+                    const primaryObjectKey = objectKeys[0];
+
+                    if (!primaryObjectKey) {
+                        filtered = { type: "FeatureCollection", features: [] };
+                    } else {
+                        const topoObject = rawGeo.objects[primaryObjectKey];
+                        const converted = feature(rawGeo, topoObject) as SpainGeoJSON;
+
+                        filtered = {
+                            type: "FeatureCollection",
+                            features: Array.isArray(converted.features) ? converted.features : [],
+                        };
+                    }
                 }
 
                 setSpainGeo(filtered);
